@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 3.7.4"
 gem 'github-pages', group: :jekyll_plugins
-gem 'emc2-theme', :path => '.'
+#gem 'emc2-theme', :path => '.'
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
