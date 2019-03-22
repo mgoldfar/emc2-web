@@ -26,7 +26,7 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-remote-theme: mgodlfar/emc2-theme
+remote-theme: mgoldfar/emc2-theme
 #jekyll-theme-cayman
 plugins:
   - jekyll-feed
