@@ -1,10 +1,9 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.7.4"
-gem 'github-pages', group: :jekyll_plugins
-#gem 'emc2-theme', :path => '.'
+gem "jekyll"
 
 group :jekyll_plugins do
+  gem 'github-pages'
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-remote-theme"
 end
