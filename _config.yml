@@ -11,3 +11,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+
+collections:
+  editions:
+     output: true
