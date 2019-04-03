@@ -5,7 +5,8 @@ permalink: /previous-editions
 <h3 class="header">Previous Editions</h3>
 
 <ul class="collection">
-  {% for ed in site.editions | reverse %}
+  {% assign editions_rev = site.editions | reverse %}
+  {% for ed in editions_rev %}
     <li class="collection-item">
       <a href="{{ ed.url }}">{{ ed.edition_number }} Edition</a> on {{ ed.event_date }} co-located with <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a>
     </li>
