@@ -12,3 +12,23 @@ main {
     font-weight: 300;
     color: #607d8b;
 }
+/*
+ul.list {
+    margin: 0;
+    padding: 0;
+}
+
+ul.list li::before {
+    content: 'keyboard_arrow_right';
+    font-family: "Material Icons";
+
+    font-weight:bold;
+    font-size:18px;
+    text-align:right;
+    padding-right:6px;
+    
+    position: relative;
+    left: 0;
+    top: 0.18em;
+}
+*/
