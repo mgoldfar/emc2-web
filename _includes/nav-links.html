@@ -1,0 +1,11 @@
+<li><a href="/">Home</a></li>
+
+{% for ed in site.editions %}
+{% if ed.is_upcomming %}
+<li><a href="{{ ed.url }}">{{ ed.colocated_short }}</a></li>
+{% endif %}
+{% endfor %}
+
+<li><a href="/submission">Submission</a></li>
+<li><a href="/program-committee">Committies</a></li>
+<li><a href="/previous-editions">Previous Editions</li>
