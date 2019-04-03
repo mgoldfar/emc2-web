@@ -4,19 +4,14 @@ permalink: /index
 ---
 <div class="row">
   <div class="col s12 center-align">
-    <h3 class="blue-grey-text">{{ site.title }}</h3>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s8 offset-s2 center-align">
+    <h3 class="header">{{ site.title }}</h3>
     <img src="assets/images/wordcloud.svg" class="responsive-img" style="max-height: 300px;" />
   </div>
 </div>
 
 <div class="row">
   <div class="col s12">
-    <h5 class="blue-grey-text text-darken-2"><i class="material-icons">memory</i> Upcomming Workshops</h5>
+    <h5 class="header"><i class="material-icons">memory</i> Upcomming Workshops</h5>
     <ul class="collection">
         {% for ed in site.editions %}
           {% if ed.is_upcomming %}
@@ -37,7 +32,7 @@ permalink: /index
 
 <div class="row">
   <div class="col s12 m6">
-    <h5 class="blue-grey-text text-darken-2"><i class="material-icons">description</i> Objectives</h5>
+    <h5 class="header"><i class="material-icons">description</i> Objectives</h5>
     <p>
       As artificial intelligence and other forms of cognitive computing continue to proliferate into new domains, many
       new forums for dialogue and knowledge sharing have emerged. In the proposed workshop, the primary focus is on the
@@ -49,7 +44,7 @@ permalink: /index
       energy efficient machine learning and artificial intelligence for embedded applications. We also hope to psrovide a
       solid platform for forging relationships and exchange of ideas between the industry and the academic world through
       discussions and active collaborations.</p>
-    <h5 class="blue-grey-text text-darken-2"><i class="material-icons">chat</i> Call for Papers</h5>
+    <h5 class="header"><i class="material-icons">chat</i> Call for Papers</h5>
     <p>
       A new wave of intelligent computing, driven by recent advances in machine learning and cognitive algorithms
       coupled with process technology and new design methodologies, has the potential to usher unprecedented disruption
@@ -64,7 +59,7 @@ permalink: /index
       software, and intelligence algorithms to achieve the best power, performance, and area (PPA).</p>
   </div>
   <div class="col s12 m6">
-    <h5 class="blue-grey-text text-darken-2"><i class="material-icons">format_list_bulleted</i> List of Potential Ideas</h5>
+    <h5 class="header"><i class="material-icons">format_list_bulleted</i> List of Potential Ideas</h5>
     <ul class="browser-default">
       <li>Computing techniques for IoT, edge devices, automotive, and mobile intelligence</li>
       <li>Communication and computation overlapping for better performance and energy</li>
