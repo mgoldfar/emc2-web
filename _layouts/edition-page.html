@@ -1,29 +1,29 @@
 {% include header.html %}
 
 <main>
-<div class="container">
-    <div class="section">
-        <div class="row">
-            <div class="col s12 center-align">
-                <h3>The {{page.edition_number }} {{ site.title }}</h3>
-                <img src="{{ page.header_image }}" class="responsive-img" style="max-height: 300px;" />
-                <h5>Co-located with the {{ page.colocated_long }} (<a href="{{ page.colocated_url }}" target="_blank">{{ page.colocated_short }}</a>)</h5>
-            </div>
-            <div class="col s12 right-align">
-                <h5>{{ page.event_date }}</h5>
-                <h5>{{ page.event_location }}</h5>
-            </div>
-            <div class="col s12">
-                <h5>Program</h5>
-                TBD
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <div class="col s12 center-align">
+                    <h3 class="header">The {{page.edition_number }} {{ site.title }}</h3>
+                    <img src="{{ page.header_image }}" class="responsive-img" style="max-height: 300px;" />
+                    <h5>Co-located with the {{ page.colocated_long }} (<a href="{{ page.colocated_url }}" target="_blank">{{ page.colocated_short }}</a>)</h5>
+                </div>
+                <div class="col s12 right-align">
+                    <h5>{{ page.event_date }}</h5>
+                    <h5>{{ page.event_location }}</h5>
+                </div>
+                <div class="col s12">
+                    <h5 class="header">Program</h5>
+                    TBD
+                </div>
             </div>
         </div>
+        <div class="section">
+            {{ content }}
+        </div>
+        <br /><br />
     </div>
-    <div class="section">
-        {{ content }}
-    </div>
-    <br /><br />
-</div>
 </main>
 
 {% include footer.html %}

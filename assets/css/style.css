@@ -8,3 +8,7 @@ main {
     flex: 1 0 auto;
 }
 
+.header {
+    font-weight: 300;
+    color: #607d8b;
+}
