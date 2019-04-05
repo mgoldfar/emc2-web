@@ -13,5 +13,7 @@ plugins:
   - jekyll-remote-theme
 
 collections:
+  organizers:
   editions:
-     output: true
+    output: true
+
