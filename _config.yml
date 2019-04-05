@@ -16,4 +16,5 @@ collections:
   organizers:
   editions:
     output: true
+  programs:
 
