@@ -15,6 +15,20 @@
                     <h5>{{ page.event_location }}</h5>
                 </div>
             </div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="header">Program</h3>
+                </div>
+            </div>
+            {% assign program = site.programs | where: "edition",page.edition | sort: "start_time" %}
+            {% for p in program %}
+                <div class="row">
+                    <div class="col s12">
+                    <h5 class="header">{{ p.title }}</h5>
+                    {{ p.content | markdownify }}
+                    </div>
+                 </div>
+            {% endfor %}
             {{ content }}
         </div>
     </div>
