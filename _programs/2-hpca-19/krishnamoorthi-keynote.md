@@ -4,7 +4,10 @@ type: keynote
 time_start: 9:00
 time_end: 10:00
 title: Quantizing Deep Convolutional Networks for Efficient Inference
-speaker: Raghuraman Krishnamoorthi
+speaker:
+    name: Raghuraman Krishnamoorthi
+    affiliation: Facebook
+    avatar: krishnamoorthir.jpg
 ---
 Abstract
 
