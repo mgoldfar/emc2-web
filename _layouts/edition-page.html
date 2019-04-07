@@ -22,12 +22,26 @@
             </div>
             {% assign program = site.programs | where: "edition",page.edition | sort: "start_time" %}
             {% for p in program %}
+                {% if p.type == "program_note" %}
                 <div class="row">
                     <div class="col s12">
-                    <h5 class="header">{{ p.title }}</h5>
-                    {{ p.content | markdownify }}
+                        <h5 class="header">{{ p.title }}</h6>
                     </div>
-                 </div>
+                </div>
+                {% endif %}
+
+                {% if p.type == "keynote" or p.type == "invited_talk" %}
+                <div class="row">
+                    <div class="col s12">
+                        <h5 class="header">{{ p.title }}</h6>
+                        <h6 class="header">{{ p.speaker.name }}, {{ p.speaker.affiliation }}</h6>
+                        <img src="assets/images/speakers/{{ p.edition }}/{{ p.speaker.avatar }}"
+                            class="z-depth-1 responsive-img valign-wrapper avatar-image valign-wrapper" style="float: right;" />
+                        <p>{{ p.content | markdownify }}</p>
+                    </div>
+                </div>
+                {% endif %}
+                
             {% endfor %}
             {{ content }}
         </div>
