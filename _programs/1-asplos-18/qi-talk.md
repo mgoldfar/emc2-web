@@ -1,8 +1,8 @@
 ---
 edition: asplos-18
 type: invited_talk
-time_start: 16:00
-time_end: 17:00
+time_start: 2018-03-25 16:00
+time_end: 2018-03-25 17:00
 title: Challenges and Solutions for Embedding Vision AI
 speaker:
     name: Charles Qi

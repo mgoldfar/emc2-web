@@ -1,8 +1,8 @@
 ---
 edition: hpca-19
 type: keynote
-time_start: 10:00
-time_end: 11:00
+time_start: 2019-02-17 10:00
+time_end: 2019-02-17 11:00
 title: Efficient Machine Learning Architectures
 speaker:
     name: T. N. Vijaykumar

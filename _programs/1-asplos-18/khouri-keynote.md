@@ -1,8 +1,8 @@
 ---
 edition: asplos-18
 type: keynote
-time_start: 13:30
-time_end: 14:30
+time_start: 2018-03-25 13:30
+time_end: 2018-03-25 14:30
 title: Safety and Security at the Heart of Autonomous Driving
 speaker:
     name: Kamal Khouri
