@@ -1,8 +1,8 @@
 ---
 edition: asplos-18
 type: invited_talk
-time_start: 18:00
-time_end: 18:45
+time_start: 2018-03-25 18:00
+time_end: 2018-03-25 18:45
 title: 'Introducing ReQuEST: an Open Platform for Reproducible and Quality-Efficient Systems-ML Tournaments'
 speaker:
     name: Grigori Fursin

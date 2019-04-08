@@ -1,8 +1,8 @@
 ---
 edition: asplos-18
 type: paper_session
-time_start: 14:30
-time_end: 15:50
+time_start: 2018-03-25 14:30
+time_end: 2018-03-25 15:50
 papers:
     - title: A High Efficiency Accelerator for Deep Neural Networks
       authors: Aliasger Zaidy, Andre Xian Ming Chang, Vinayak Gokhale and Eugenio Culurciello

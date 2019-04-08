@@ -15,7 +15,7 @@
                     <h5>{{ page.event_location }}</h5>
                 </div>
             </div>
-            {% assign program = site.programs | where: "edition",page.edition | sort: "start_time" %}
+            {% assign program = site.programs | where: "edition",page.edition | sort: "time_start" %}
             {% assign program_size = program|size %}
             {% if program_size > 0 %}
             <div class="row">
@@ -37,7 +37,7 @@
                         {% assign invited_talk_counter = invited_talk_counter|plus:1 %}
                         {% assign talk_class_header = "Invited Talk #"|append:invited_talk_counter %}
                     {% when 'paper_session' %}
-                        {% assign paper_session_counter = paper_session|plus:1 %}
+                        {% assign paper_session_counter = paper_session_counter|plus:1 %}
                         {% assign talk_class_header = "Paper Session #"|append:paper_session_counter %}
                     {% when 'program_note' %}
                         {% assign talk_class_header = "Program Note" %}
@@ -58,13 +58,12 @@
                         <h5 class="header">
                             {{ talk_class_header }} 
                         </h5>
-                        <h6 class="header">{{ p.time_start }} - {{ p.time_end }}</h6>
+                        <h6 class="header">{{ p.time_start|date: "%H:%M" }} - {{ p.time_end|date: '%H:%M' }}</h6>
                         {% if p.type == "keynote" or p.type == "invited_talk" %}
                         <img src="assets/images/speakers/{{ p.edition }}/{{ p.speaker.avatar }}"
                         class="z-depth-1 responsive-img valign-wrapper avatar-image valign-wrapper center-align" />
                         {% endif %}
                     </div>
-        
                     <div class="col s9">
                         {% if p.type == "keynote" or p.type == "invited_talk" %}
                             <h5 class="header">{{ p.title }}</h5>
