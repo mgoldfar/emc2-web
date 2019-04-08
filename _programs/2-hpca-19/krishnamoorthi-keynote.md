@@ -7,7 +7,7 @@ title: Quantizing Deep Convolutional Networks for Efficient Inference
 speaker:
     name: Raghuraman Krishnamoorthi
     affiliation: Facebook
-    avatar: krishnamoorthir.jpg
+    avatar: krishnamoorthi.jpg
 ---
 Abstract
 
