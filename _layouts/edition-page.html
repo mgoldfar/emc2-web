@@ -15,33 +15,71 @@
                     <h5>{{ page.event_location }}</h5>
                 </div>
             </div>
+            {% assign program = site.programs | where: "edition",page.edition | sort: "start_time" %}
+            {% assign program_size = program|size %}
+            {% if program_size > 0 %}
             <div class="row">
                 <div class="col s12">
                     <h3 class="header">Program</h3>
                 </div>
             </div>
-            {% assign program = site.programs | where: "edition",page.edition | sort: "start_time" %}
+            {% endif %}
+            {% assign keynote_counter = 0 %}
+            {% assign invited_talk_counter = 0 %}
+            {% assign paper_session_counter = 0 %}
+            {% assign talk_class_header = "" %}
             {% for p in program %}
-                {% if p.type == "program_note" %}
-                <div class="row">
-                    <div class="col s12">
-                        <h5 class="header">{{ p.title }}</h6>
-                    </div>
-                </div>
-                {% endif %}
+                {% case p.type %}
+                    {% when 'keynote' %}
+                        {% assign keynote_counter = keynote_counter|plus:1 %}
+                        {% assign talk_class_header = "Keynote #"|append:keynote_counter %}
+                    {% when 'invited_talk' %}
+                        {% assign invited_talk_counter = invited_talk_counter|plus:1 %}
+                        {% assign talk_class_header = "Invited Talk #"|append:invited_talk_counter %}
+                    {% when 'paper_session' %}
+                        {% assign paper_session_counter = paper_session|plus:1 %}
+                        {% assign talk_class_header = "Paper Session #"|append:paper_session_counter %}
+                    {% when 'program_note' %}
+                        {% assign talk_class_header = "Program Note" %}
+                    {% when 'welcome' %}
+                        {% assign talk_class_header = "Welcome" %}
+                    {% when 'close' %}
+                        {% assign talk_class_header = "Close" %}
+                    {% when 'coffee_break' %}
+                        {% assign talk_class_header = "Break" %}
+                    {% when 'lunch_break' %}
+                        {% assign talk_class_header = "Lunch Break" %}
+                    {% else %}
+                        {% assign talk_class_header = "" %}
+                {% endcase %}
 
-                {% if p.type == "keynote" or p.type == "invited_talk" %}
                 <div class="row">
-                    <div class="col s12">
-                        <h5 class="header">{{ p.title }}</h6>
-                        <h6 class="header">{{ p.speaker.name }}, {{ p.speaker.affiliation }}</h6>
+                    <div class="col s3">
+                        <h5 class="header">
+                            {{ talk_class_header }} 
+                        </h5>
+                        <h6 class="header">{{ p.time_start }} - {{ p.time_end }}</h6>
+                        {% if p.type == "keynote" or p.type == "invited_talk" %}
                         <img src="assets/images/speakers/{{ p.edition }}/{{ p.speaker.avatar }}"
-                            class="z-depth-1 responsive-img valign-wrapper avatar-image valign-wrapper" style="float: right;" />
+                        class="z-depth-1 responsive-img valign-wrapper avatar-image valign-wrapper center-align" />
+                        {% endif %}
+                    </div>
+        
+                    <div class="col s9">
+                        {% if p.type == "keynote" or p.type == "invited_talk" %}
+                            <h5 class="header">{{ p.title }}</h5>
+                            <h6 class="header">{{ p.speaker.name }}, {{ p.speaker.affiliation }}</h6>
+                        {% endif %}
+                        {% if p.type == "paper_session" %}
+                            {% for paper in p.papers %}
+                                <h5 class="header">{{ paper.title }}</h5>
+                                <h6 class="header">{{ paper.authors }}</h6>
+                                <h6 class="header">{{ paper.affiliation }}</h6>
+                            {% endfor %}
+                        {% endif %}
                         <p>{{ p.content | markdownify }}</p>
                     </div>
                 </div>
-                {% endif %}
-                
             {% endfor %}
             {{ content }}
         </div>
