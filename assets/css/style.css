@@ -10,8 +10,40 @@ main {
 
 .header {
     font-weight: 300;
-    /*color: #607d8b;*/
     color: #005E93;
+}
+
+.dark-primary {
+    color: #1976D2 !important;
+}
+.light-primary {
+    color: #6f9fc7 !important;
+}
+.primary {
+    color: #2196f3 !important;
+}
+.accent {
+    color: #ff5722 !important;
+}
+.secondary-text {
+    color: #757575 !important;
+}
+.secondary-text {
+    color: #bdbdbd !important;
+}
+.primary-text {
+    color: #212121 !important;
+}
+.program-item-content > h1 {
+    color: #ff5722;
+    font-size: 1em;
+    margin: 2em 0 0 0;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.program-item-content > p {
+    margin: 0;
 }
 
 img.avatar-image {
