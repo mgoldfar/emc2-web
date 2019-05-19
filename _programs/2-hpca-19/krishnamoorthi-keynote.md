@@ -15,10 +15,10 @@ Modeling quantization during training can provide further improvements, reducing
 
 We recommend that per-channel quantization of weights and per-layer quantization of activations be the preferred quantization scheme for hardware acceleration and kernel optimization. We also propose that future processors and hardware accelerators for optimized inference support:
 
-* precisions of 4, 8 and 16 bits for computation
-* Per-channel quantization of weights
-* Per layer selection of bitwidths for weights and activations
-* Support for on the fly weight compression techniques for memory bandwidth efficiency.
+- precisions of 4, 8 and 16 bits for computation
+- Per-channel quantization of weights
+- Per layer selection of bitwidths for weights and activations
+- Support for on the fly weight compression techniques for memory bandwidth efficiency.
 
 **Raghuraman Krishnamoorthi** is a software engineer in the Pytorch team at Facebook, where he leads the effort to develop and optimize quantized deep networks for inference. Prior to that he was part of the Tensorflow team at google working on quantization for mobile inference as part of TensorflowLite.
 
