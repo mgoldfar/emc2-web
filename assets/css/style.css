@@ -81,6 +81,19 @@ main {
     list-style-type: disc;
 }
 
+.program-item-content h1 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.program-item-content h2 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 100;
+}
+
 .program-item-content-paper {
     margin-bottom: 2em;
 }
