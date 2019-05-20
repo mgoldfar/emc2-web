@@ -16,6 +16,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="section program">
             {% assign program = site.programs | where: "edition",page.edition | sort: "time_end" %}
             {% assign program_size = program|size %}
@@ -45,11 +47,13 @@
                 {% endcase %}
 
                 <div class="flex row program-item">
-                    <div class="col s3 program-item-side-content">
-                        <h1 class="talk-class-header dark-primary">{{ talk_class_header }}</h1>
+                    <div class="col s2 program-item-side-content">
+                        
                         <h1 class="time dark-primary">
                             {{ p.time_start|date: "%H:%M" }} - {{ p.time_end|date: "%H:%M" }}
                         </h1>
+                        <h1 class="talk-class-header dark-primary">{{ talk_class_header }}</h1>
+                        
                         {% if p.type == "keynote" or p.type == "invited_talk" %}
                             {% if p.speaker.avatar %}
                                 <br/>
@@ -58,18 +62,18 @@
                             {% endif %}
                         {% endif %}
                     </div>
-                    <div class="col s9 program-item-content">
+                    <div class="col s10 program-item-content">
                         {% if p.type == "welcome" or p.type == "coffee_break" or p.type == "lunch_break" %}
-                            <h5 class="dark-primary">{{ p.title }}</h5>
+                            <h1 class="dark-primary">{{ p.title }}</h1>
                         {% elsif p.type == "keynote" or p.type == "invited_talk" %}
-                            <h5 class="dark-primary">{{ p.title }}</h5>
-                            <h6 class="light-primary">{{ p.speaker.name }}, {{ p.speaker.affiliation }}</h6>
+                            <h1 class="dark-primary">{{ p.title }}</h1>
+                            <h2 class="light-primary">{{ p.speaker.name }}, {{ p.speaker.affiliation }}</h2>
                             {{ p.content | markdownify }}
                         {% elsif p.type == "paper_session" %}
                             {% for paper in p.papers %}
-                                <h5 class="dark-primary">{{ paper.title }}</h5>
-                                <h6 class="light-primary">{{ paper.authors }}</h6>
-                                <h6 class="secondary-text">{{ paper.affiliation }}</h6>
+                                <h1 class="dark-primary">{{ paper.title }}</h1>
+                                <h2 class="light-primary">{{ paper.authors }}</h2>
+                                <h2 class="secondary-text">{{ paper.affiliation }}</h2>
                                 <br/>
                             {% endfor %}
                         {% endif %}
