@@ -1,23 +1,42 @@
 {% include header.html %}
 
+{% case page.event_session %}
+    {% when 'morning' %}
+        {% assign event_session_header = "Half Day (Morning Session)" %}
+    {% when 'afternoon' %}
+        {% assign event_session_header = "Half Day (Afternoon Session)" %}
+    {% when 'full' %}
+        {% assign event_session_header = "Full Day" %}
+    {% else %}
+        {% assign event_session_header = "" %}
+{% endcase %}
+
+
 <main>
     <div class="container">
-        <div class="section">
+        <div class="section program-header">
             <div class="row">
                 <div class="col s12 center-align">
-                    <h3 class="header">The {{page.edition_number }} {{ site.title }}</h3>
+                    <h1 class="header">The {{page.edition_number }} {{ site.title }}</h1>
                     <img src="{{ page.header_image }}" class="responsive-img z-depth-1" style="max-height: 300px;" />
-                    <h5 class="header">Co-located with the {{ page.colocated_long }} (<a href="{{ page.colocated_url }}"
-                            target="_blank">{{ page.colocated_short }}</a>)</h5>
+                    <h2 class="header">Co-located with the {{ page.colocated_long }} (<a href="{{ page.colocated_url }}"
+                            target="_blank">{{ page.colocated_short }}</a>)</h2>
                 </div>
-                <div class="col s12 right-align">
-                    <h6 class="dark-primary">{{ page.event_date }}</h6>
-                    <h6 class="light-primary">{{ page.event_location }}</h6>
+            </div>
+            <div class="row">
+                <div class="col s6">
+                    <h3 class="dark-primary">{{ page.event_date|date: "%A, %B %d, %Y" }}</h3>
+                    <h3 class="primary-text">{{ page.event_location }}</h3>
+                </div>
+                <div class="col s6 right-align">
+                    <h3 class="dark-primary">{{ page.event_room }}</h3>
+                    <h3 class="primary-text">{{ event_session_header }}</h3>
                 </div>
             </div>
         </div>
     </div>
-    <div>
+    <div class="program-separator"></div>
+    <div class="program-container">
         <div class="section program">
             {% assign program = site.programs | where: "edition",page.edition | sort: "time_end" %}
             {% assign program_size = program|size %}
@@ -49,10 +68,10 @@
                 <div class="flex row program-item">
                     <div class="col s2 program-item-side-content">
                         
-                        <h1 class="time dark-primary">
+                        <h1 class="time primary-text">
                             {{ p.time_start|date: "%H:%M" }} - {{ p.time_end|date: "%H:%M" }}
                         </h1>
-                        <h1 class="talk-class-header dark-primary">{{ talk_class_header }}</h1>
+                        <h1 class="talk-class-header primary-text">{{ talk_class_header }}</h1>
                         
                         {% if p.type == "keynote" or p.type == "invited_talk" %}
                             {% if p.speaker.avatar %}
@@ -64,16 +83,16 @@
                     </div>
                     <div class="col s10 program-item-content">
                         {% if p.type == "welcome" or p.type == "coffee_break" or p.type == "lunch_break" %}
-                            <h1 class="dark-primary">{{ p.title }}</h1>
+                            <h1 class="dark-primary"><strong>{{ p.title }}</strong></h1>
                         {% elsif p.type == "keynote" or p.type == "invited_talk" %}
-                            <h1 class="dark-primary">{{ p.title }}</h1>
-                            <h2 class="light-primary">{{ p.speaker.name }}, {{ p.speaker.affiliation }}</h2>
+                            <h1 class="dark-primary"><strong>{{ p.title }}</strong></h1>
+                            <h2 class="dark-primary">{{ p.speaker.name }}, {{ p.speaker.affiliation }}</h2>
                             {{ p.content | markdownify }}
                         {% elsif p.type == "paper_session" %}
                             {% for paper in p.papers %}
-                                <h1 class="dark-primary">{{ paper.title }}</h1>
-                                <h2 class="light-primary">{{ paper.authors }}</h2>
-                                <h2 class="secondary-text">{{ paper.affiliation }}</h2>
+                                <h2 class="dark-primary"><strong>{{ paper.title }}</strong></h1>
+                                <h3 class="dark-primary">{{ paper.authors }}</h2>
+                                <h3 class="light-primary">{{ paper.affiliation }}</h2>
                                 <br/>
                             {% endfor %}
                         {% endif %}

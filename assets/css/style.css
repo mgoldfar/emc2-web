@@ -28,20 +28,50 @@ main {
 .primary {
     color: #2196f3 !important;
 }
-.accent {
+.accent-text {
     color: #ff5722 !important;
 }
 .secondary-text {
     color: #757575 !important;
 }
-.secondary-text {
-    color: #bdbdbd !important;
-}
 .primary-text {
-    color: #212121 !important;
+    color: #303030 !important;
+}
+
+/* Program Header */
+.program-header {
+    
+}
+
+.program-header h1 {
+    font-size: 46px;
+    margin-bottom: 26px;
+    margin-top: 0;
+}
+
+.program-header h2 {
+    font-size: 30px;
+    margin-bottom: 0;
+    margin-top: 26px;
+}
+
+.program-header h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.program-separator {
+    margin: 20px 0 80px 0;
 }
 
 /* Program Content */
+.program-container {
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .program {
     
 }
@@ -59,11 +89,32 @@ main {
 .program-item-content {
     margin: 0;
     padding: 0;
+    color: #303030 !important;
 }
 
-.program-item-content > h5 {
+.program-item-content h1 {
+    font-size: 26px;
     margin-top: 0;
-    font-weight: 300;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.program-item-content h2 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.program-item-content h3 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+.program-item-content p {
+    line-height: 1.5em;
 }
 
 .program-item-content ul {
@@ -81,31 +132,19 @@ main {
     list-style-type: disc;
 }
 
-.program-item-content h1 {
-    font-size: 28px;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-weight: 100;
-}
-
-.program-item-content h2 {
-    font-size: 20px;
-    margin: 0;
-    font-weight: 100;
-}
-
 .program-item-content-paper {
     margin-bottom: 2em;
+    font-size: 75%;
 }
 
 .program-item-content-paper:last-child {
     margin-bottom: 0;
 }
 
-.program-item-side-content > .time {
+.program-item-side-content .time {
     margin-top: 0;
     margin-right: 24px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-size: 24px;
     text-align: right;
 }
@@ -113,7 +152,6 @@ main {
 .program-item-side-content > .talk-class-header {
     margin-top: 0;
     margin-right: 24px;
-    margin-bottom: 8px;
     font-size: 20px;
     text-align: right;
 }
