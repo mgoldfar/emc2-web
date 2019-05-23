@@ -15,4 +15,4 @@ There has been a significant amount of research on the topic of efficient proces
 
 Prof. Sze received the B.A.Sc. degree from the University of Toronto in 2004, and the S.M. and Ph.D. degree from MIT in 2006 and 2010, respectively. In 2011, she received the Jin-Au Kong Outstanding Doctoral Thesis Prize in Electrical Engineering at MIT.  She is a recipient of the 2018 Facebook Faculty Award, the 2018 & 2017 Qualcomm Faculty Award, the 2018 & 2016 Google Faculty Research Award, the 2016 AFOSR Young Investigator Research Program (YIP) Award, the 2016 3M Non-Tenured Faculty Award, the 2014 DARPA Young Faculty Award, the 2007 DAC/ISSCC Student Design Contest Award, and a co-recipient of the 2017 CICC Outstanding Invited Paper Award, the 2016 IEEE Micro Top Picks Award and the 2008 A-SSCC Outstanding Design Award. 
 
-For more information about research in the Energy-Efficient Multimedia Systems Group at MIT visit: (http://www.rle.mit.edu/eems/)[http://www.rle.mit.edu/eems/] 
+For more information about research in the Energy-Efficient Multimedia Systems Group at MIT visit: [http://www.rle.mit.edu/eems/](http://www.rle.mit.edu/eems/)

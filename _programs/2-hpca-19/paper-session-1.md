@@ -9,5 +9,5 @@ papers:
       affiliation: University of Cambridge and ARM ML Research
     - title: On Merging MobileNets for Efficient Multitask Inference   
       authors: Cheng-En Wu, Yi-Ming Chan and Chu-Song Chen
-      affiliation: Institute of Information Science, Academia Sinica; MOST Joint Research Center for AI Technology and All Vista Healthcare
+      affiliation: Institute of Information Science, Academia Sinica
 ---
