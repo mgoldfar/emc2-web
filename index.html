@@ -4,7 +4,7 @@ permalink: /index
 ---
 <div class="row">
   <div class="col s12 center-align">
-    <h3 class="header">{{ site.title }}</h3>
+    <h1 class="header">{{ site.title }}</h1>
     <img src="assets/images/wordcloud.svg" class="responsive-img" style="max-height: 300px;" />
   </div>
 </div>
@@ -17,7 +17,7 @@ permalink: /index
           {% if ed.is_upcomming %}
           <li class="collection-item">
             <a href="{{ ed.url }}">{{ ed.edition_number }} Edition</a> on {{ ed.event_date }} in {{ ed.event_location }} co-located with
-            <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a>
+            <a href="{{ ed.colocated_url }}" target="_blank"><span style="white-space: nowrap;">{{ ed.colocated_short }}</span></a>
             {% if ed.is_accepting_submission %}
             <a href="/submission">
                 <span class="new badge" data-badge-caption="">Accepting Submissions!</span>

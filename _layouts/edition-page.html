@@ -11,95 +11,100 @@
         {% assign event_session_header = "" %}
 {% endcase %}
 
+{% assign program = site.programs | where: "edition",page.edition | sort: "time_end" %}
+{% assign program_size = program|size %}
+{% assign paper_session_counter = 0 %}
+{% assign talk_class_header = "" %}
 
 <main>
-    <div class="container">
-        <div class="section program-header">
-            <div class="row">
-                <div class="col s12 center-align">
-                    <h1 class="header">The {{page.edition_number }} {{ site.title }}</h1>
-                    <img src="{{ page.header_image }}" class="responsive-img z-depth-1" style="max-height: 300px;" />
-                    <h2 class="header">Co-located with the {{ page.colocated_long }} (<a href="{{ page.colocated_url }}"
-                            target="_blank">{{ page.colocated_short }}</a>)</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s6">
-                    <h3 class="dark-primary">{{ page.event_date|date: "%A, %B %d, %Y" }}</h3>
-                    <h3 class="primary-text">{{ page.event_location }}</h3>
-                </div>
-                <div class="col s6 right-align">
-                    <h3 class="dark-primary">{{ page.event_room }}</h3>
-                    <h3 class="primary-text">{{ event_session_header }}</h3>
-                </div>
-            </div>
+
+    <!-- Header Content -->
+    <div class="ed-grid-container-header"
+         style="background-image: url({{ page.header_image }}); background-size: cover; background-position: center;">
+        <div class="ed-grid-item-header-title">
+            <h1>The {{page.edition_number }} {{ site.title }}</h1>
+        </div>
+        <div class="ed-grid-item-header-sub-title">
+            <h2>Co-located with the {{ page.colocated_long }} <a href="{{ page.colocated_url }}"
+                target="_blank"><span style="white-space: nowrap;">{{ page.colocated_short }}</span></a></h2>
         </div>
     </div>
-    <div class="program-separator"></div>
-    <div class="program-container">
-        <div class="section program">
-            {% assign program = site.programs | where: "edition",page.edition | sort: "time_end" %}
-            {% assign program_size = program|size %}
-            {% assign paper_session_counter = 0 %}
-            {% assign talk_class_header = "" %}
-            {% for p in program %}
-                {% case p.type %}
-                    {% when 'keynote' %}
-                        {% assign talk_class_header = "Keynote" %}
-                    {% when 'invited_talk' %}
-                        {% assign talk_class_header = "Invited Talk" %}
-                    {% when 'paper_session' %}
-                        {% assign paper_session_counter = paper_session_counter|plus:1 %}
-                        {% assign talk_class_header = "Paper Session #"|append:paper_session_counter %}
-                    {% when 'program_note' %}
-                        {% assign talk_class_header = "Note" %}
-                    {% when 'welcome' %}
-                        {% assign talk_class_header = "Welcome" %}
-                    {% when 'close' %}
-                        {% assign talk_class_header = "Close" %}
-                    {% when 'coffee_break' %}
-                        {% assign talk_class_header = "Break" %}
-                    {% when 'lunch_break' %}
-                        {% assign talk_class_header = "Lunch" %}
-                    {% else %}
-                        {% assign talk_class_header = "" %}
-                {% endcase %}
 
-                <div class="flex row program-item">
-                    <div class="col s2 program-item-side-content">
-                        
-                        <h1 class="time primary-text">
-                            {{ p.time_start|date: "%H:%M" }} - {{ p.time_end|date: "%H:%M" }}
-                        </h1>
-                        <h1 class="talk-class-header primary-text">{{ talk_class_header }}</h1>
-                        
-                        {% if p.type == "keynote" or p.type == "invited_talk" %}
-                            {% if p.speaker.avatar %}
-                                <br/>
-                                <img src="assets/images/speakers/{{ p.edition }}/{{ p.speaker.avatar }}"
-                                class="z-depth-1  valign-wrapper avatar-image center-align" />
-                            {% endif %}
-                        {% endif %}
-                    </div>
-                    <div class="col s10 program-item-content">
-                        {% if p.type == "welcome" or p.type == "coffee_break" or p.type == "lunch_break" %}
-                            <h1 class="dark-primary"><strong>{{ p.title }}</strong></h1>
-                        {% elsif p.type == "keynote" or p.type == "invited_talk" %}
-                            <h1 class="dark-primary"><strong>{{ p.title }}</strong></h1>
-                            <h2 class="dark-primary">{{ p.speaker.name }}, {{ p.speaker.affiliation }}</h2>
-                            {{ p.content | markdownify }}
-                        {% elsif p.type == "paper_session" %}
-                            {% for paper in p.papers %}
-                                <h2 class="dark-primary"><strong>{{ paper.title }}</strong></h1>
-                                <h3 class="dark-primary">{{ paper.authors }}</h2>
-                                <h3 class="light-primary">{{ paper.affiliation }}</h2>
-                                <br/>
-                            {% endfor %}
-                        {% endif %}
-                    </div>
-                </div>
-            {% endfor %}
+    <!-- Meta Content -->
+    <div class="ed-grid-container-header-meta">
+        <div class="ed-grid-item-header-meta-left">
+            <h5 class="dark-primary" style="margin: 0;">{{ page.event_date|date: "%A, %B %d, %Y" }}</h5>
+            <h5 class="primary-text" style="margin: 0;">{{ page.event_location }}</h5>
         </div>
+        <div class="ed-grid-item-header-meta-right">
+            <h5 class="dark-primary" style="margin: 0;">Room: {{ page.event_room }}</h5>
+            <h5 class="primary-text" style="margin: 0;">{{ event_session_header }}</h5>
+        </div>
+        <div class="ed-grid-item-header-note">
+            
+        </div>
+    </div>
+    <div class="program-container">
+        {% for p in program %}
+        <div class="ed-grid-container-program-item">
+            {% case p.type %}
+                {% when 'keynote' %}
+                    {% assign talk_class_header = "Keynote" %}
+                {% when 'invited_talk' %}
+                    {% assign talk_class_header = "Invited Talk" %}
+                {% when 'paper_session' %}
+                    {% assign paper_session_counter = paper_session_counter|plus:1 %}
+                    {% assign talk_class_header = "Paper Session #"|append:paper_session_counter %}
+                {% when 'program_note' %}
+                    {% assign talk_class_header = "Note" %}
+                {% when 'welcome' %}
+                    {% assign talk_class_header = "Welcome" %}
+                {% when 'close' %}
+                    {% assign talk_class_header = "Close" %}
+                {% when 'coffee_break' %}
+                    {% assign talk_class_header = "Break" %}
+                {% when 'lunch_break' %}
+                    {% assign talk_class_header = "Lunch" %}
+                {% else %}
+                    {% assign talk_class_header = "" %}
+            {% endcase %}
+
+            <div class="ed-grid-item-program-item-time">
+                <h5 class="time primary-text">
+                    <strong>{{ p.time_start|date: "%H:%M" }} - {{ p.time_end|date: "%H:%M" }}</strong>
+                </h5>
+            </div>
+            <div class="ed-grid-item-program-item-type">
+                <h5 class="time primary-text">
+                    {{ talk_class_header }}
+                </h5>
+            </div>
+            <div class="ed-grid-item-program-item-avatar">
+                {% if p.type == "keynote" or p.type == "invited_talk" %}
+                    {% if p.speaker.avatar %}
+                        <img src="assets/images/speakers/{{ p.edition }}/{{ p.speaker.avatar }}"
+                        class="z-depth-1 valign-wrapper avatar-image" />
+                    {% endif %}
+                {% endif %}
+            </div>
+            <div class="ed-grid-item-program-item-content">
+                {% if p.type == "welcome" or p.type == "coffee_break" or p.type == "lunch_break" %}
+                    <h3 class="dark-primary">{{ p.title }}</h3>
+                {% elsif p.type == "keynote" or p.type == "invited_talk" %}
+                    <h3 class="dark-primary">{{ p.title }}</h3>
+                    <h4 class="light-primary">{{ p.speaker.name }}, {{ p.speaker.affiliation }}</h4>
+                    {{ p.content | markdownify }}
+                {% elsif p.type == "paper_session" %}
+                    {% for paper in p.papers %}
+                        <h4 class="dark-primary">{{ paper.title }}</h4>
+                        <h5 class="secondary-text">{{ paper.authors }}</h5>
+                        <h6 class="secondary-text">{{ paper.affiliation }}</h6>
+                        <br/>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </main>
 
