@@ -1,5 +1,5 @@
 ---
-name: Satyam Srivastava
+name: Mahdi N. Bojnordi
 affiliation: University of Utah
 avatar: mahdib.jpg
 profile_url: http://www.cs.utah.edu/~bojnordi/
