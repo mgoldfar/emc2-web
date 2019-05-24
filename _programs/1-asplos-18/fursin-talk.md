@@ -9,6 +9,7 @@ speaker:
     affiliation: dividiti and cTuning foundation
     avatar: fursing.png
     url: https://fursin.net/research.html
+presentation: fursin-talk.pdf
 ---
 Co-designing efficient machine learning based systems across the whole application/hardware/software stack to trade off speed, accuracy, energy and costs is becoming extremely complex and time consuming. Researchers often struggle to evaluate and compare different published works across rapidly evolving software frameworks, heterogeneous hardware platforms, compilers, libraries, algorithms, data sets, models, and environments. I will present our community effort to develop an open co-design tournament platform with an online public scoreboard based on Collective Knowledge workflow framework (CK). It gradually incorporates best research practices while providing a common way for multidisciplinary researchers to optimize and compare the quality vs. efficiency Pareto optimality of various workloads on diverse and complete hardware/software systems. All the winning solutions will be made available to the community as portable and customizable "plug&play" components with a common API to accelerate research and innovation!
 

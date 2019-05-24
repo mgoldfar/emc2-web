@@ -8,6 +8,7 @@ speaker:
     name: Megha Daga
     affiliation: Cadence
     avatar: daga.jpg
+presentation: daga-keynote.pdf
 ---
 Deep learning is inﬂuencing not only the technology itself but also our everyday lives. With the increasing demand on mobile artificial intelligence (AI), conventional hardware solutions face their ordeal because of their low energy efﬁciency on such power-hungry applications. For the past few years, dedicated DNN accelerator inference has been under the spotlight. However, with the rising emphasis on privacy and personalization, the ability to learn on mobile platforms is becoming the second hurdle for “on-device AI.” The Cadence® Tensilica® DNA 100 Processor IP, is the first deep neural-network accelerator (DNA) AI processor IP to deliver both high performance and power efficiency across a full range of compute from 0.5 TeraMAC (TMAC) to 100 TMACs. As a result, the DNA 100 processor is well suited for on-device neural network inference applications spanning autonomous vehicles (AVs), ADAS, surveillance, robotics, drones, augmented reality (AR) /virtual reality (VR), smartphones, smart home, and IoT. 
 

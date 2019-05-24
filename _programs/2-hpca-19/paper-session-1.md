@@ -7,7 +7,11 @@ papers:
     - title: Efficient Winograd or Cook-Toom Convolution Kernel Implementation on Widely Used Mobile CPUs
       authors: Partha Maji, Andrew Mundy, Ganesh Dasika, Jesse Beu, Matthew Mattina, Robert Mullins
       affiliation: University of Cambridge and ARM ML Research
+      paper: paper1.pdf
+      presentation: paper1-presentation.pdf
     - title: On Merging MobileNets for Efficient Multitask Inference   
       authors: Cheng-En Wu, Yi-Ming Chan and Chu-Song Chen
       affiliation: Institute of Information Science, Academia Sinica
+      paper: paper2.pdf
+      presentation: paper2-presentation.pdf
 ---

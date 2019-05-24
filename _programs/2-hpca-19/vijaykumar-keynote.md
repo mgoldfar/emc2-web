@@ -9,6 +9,7 @@ speaker:
     affiliation: Purdue University
     avatar: vijaykumar.jpg
     url: https://engineering.purdue.edu/~vijay/
+presentation: vijaykumar-keynote.pdf
 ---
 Advances in machine learning (ML) are resulting in highly-accurate recognition (e.g., image and speech recognition).  ML models, however, place high computational demand during both training and inference, requiring efficient architectures. The models? computations are fine-grained, regular and highly parallel, have high data reuse, and use low-precision arithmetic for inference (e.g., int8).  Modern ML architectures (e.g., GPGPUs, TPU, and FPGA-based) exploit these characteristics to achieve high performance and energy efficiency.
 

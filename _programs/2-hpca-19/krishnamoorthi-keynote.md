@@ -8,6 +8,7 @@ speaker:
     name: Raghuraman Krishnamoorthi
     affiliation: Facebook
     avatar: krishnamoorthi.jpg
+presentation: krishnamoorthi-keynote.pdf
 ---
 We present an overview of techniques for quantizing convolutional neural networks for inference with integer weights and activations. We discuss different quantization schemes and show that simple techniques provide very good performance (4x reduction in model size, 2x speed up in CPUs) for classification use cases, with 1-2% accuracy drop.
 
