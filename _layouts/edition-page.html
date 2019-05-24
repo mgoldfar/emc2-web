@@ -92,6 +92,11 @@
                 {% if p.type == "welcome" or p.type == "coffee_break" or p.type == "lunch_break" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                 {% elsif p.type == "keynote" or p.type == "invited_talk" %}
+                    {% if p.presentation %}
+                    <a href="assets/docs/{{ p.edition }}/{{ p.presentation }}">
+                        <span class="new badge blue" data-badge-caption="">Presentation</span>
+                    </a>
+                    {% endif %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                     <h4 class="light-primary">
                         {% if p.speaker.url %}
@@ -106,6 +111,16 @@
                     {{ p.content | markdownify }}
                 {% elsif p.type == "paper_session" %}
                     {% for paper in p.papers %}
+                        {% if paper.paper %}
+                        <a href="assets/docs/{{ p.edition }}/{{ paper.paper }}">
+                            <span class="new badge blue" data-badge-caption="">Paper</span>
+                        </a>
+                        {% endif %}
+                        {% if paper.presentation %}
+                        <a href="assets/docs/{{ p.edition }}/{{ paper.presentation }}">
+                            <span class="new badge blue" data-badge-caption="">Presentation</span>
+                        </a>
+                        {% endif %} 
                         <h4 class="dark-primary">{{ paper.title }}</h4>
                         <h5 class="secondary-text">{{ paper.authors }}</h5>
                         <h6 class="secondary-text">{{ paper.affiliation }}</h6>
