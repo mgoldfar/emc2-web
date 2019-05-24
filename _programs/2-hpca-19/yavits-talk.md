@@ -8,6 +8,7 @@ speaker:
     name: Leonid Yavits
     affiliation: Technion
     avatar: yavits.jpg
+    presentation: yavits-talk.pdf
 ---
 Advances in genomics have triggered a revolution in healthcare and our understanding of life. Recent years saw exponential increase in genomic data, far outpacing Moore’s Law. Coupled with prohibitively high computational costs of bioinformatics tasks, it presents a challenge but also a great opportunity for hardware acceleration.
 
