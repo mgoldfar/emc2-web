@@ -41,9 +41,11 @@
             <h5 class="primary-text" style="margin: 0;">{{ event_session_header }}</h5>
         </div>
         <div class="ed-grid-item-header-note">
-            
+            {{ page.content }}
         </div>
     </div>
+
+    <!-- Program -->
     <div class="program-container">
         {% for p in program %}
         <div class="ed-grid-container-program-item">
