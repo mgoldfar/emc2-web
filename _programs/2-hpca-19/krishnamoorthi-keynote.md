@@ -18,7 +18,7 @@ We recommend that per-channel quantization of weights and per-layer quantization
 
 - precisions of 4, 8 and 16 bits for computation
 - Per-channel quantization of weights
-- Per layer selection of bitwidths for weights and activations
+- Per layer selection of bit widths for weights and activations
 - Support for on the fly weight compression techniques for memory bandwidth efficiency.
 
 **Raghuraman Krishnamoorthi** is a software engineer in the Pytorch team at Facebook, where he leads the effort to develop and optimize quantized deep networks for inference. Prior to that he was part of the Tensorflow team at google working on quantization for mobile inference as part of TensorflowLite.
