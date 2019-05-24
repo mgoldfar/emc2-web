@@ -8,4 +8,5 @@ speaker:
     name: Song Han
     affiliation: MIT
     avatar: han.jpg
+    url: https://songhan.mit.edu
 ---

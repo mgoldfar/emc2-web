@@ -17,9 +17,8 @@
 {% assign talk_class_header = "" %}
 
 <main>
-
     <!-- Header Content -->
-    <div class="ed-grid-container-header"
+    <div class="ed-grid-container-header z-depth-2"
          style="background-image: url({{ page.header_image }}); background-size: cover; background-position: center;">
         <div class="ed-grid-item-header-title">
             <h1>The {{page.edition_number }} {{ site.title }}</h1>
@@ -94,7 +93,16 @@
                     <h3 class="dark-primary">{{ p.title }}</h3>
                 {% elsif p.type == "keynote" or p.type == "invited_talk" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
-                    <h4 class="light-primary">{{ p.speaker.name }}, {{ p.speaker.affiliation }}</h4>
+                    <h4 class="light-primary">
+                        {% if p.speaker.url %}
+                        <a href="{{ p.speaker.url }}" target="_blank">
+                        {% endif %}
+                            {{ p.speaker.name }}, {{ p.speaker.affiliation }}
+                        {% if p.speaker.url %}
+                            <i class="material-icons" style="vertical-align: middle;">link</i>
+                        </a>
+                        {% endif %}
+                    </h4>
                     {{ p.content | markdownify }}
                 {% elsif p.type == "paper_session" %}
                     {% for paper in p.papers %}
