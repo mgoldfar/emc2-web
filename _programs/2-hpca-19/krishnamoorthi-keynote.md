@@ -1,8 +1,8 @@
 ---
 edition: hpca-19
 type: keynote
-time_start: 2019-02-17 9:00
-time_end: 2019-02-17 10:00
+time_start: 2019-02-17 9:00:00
+time_end: 2019-02-17 10:00:00
 title: Quantizing Deep Convolutional Networks for Efficient Inference
 speaker:
     name: Raghuraman Krishnamoorthi

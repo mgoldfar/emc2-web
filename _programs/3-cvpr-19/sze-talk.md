@@ -1,8 +1,8 @@
 ---
 edition: cvpr-19
 type: invited_talk
-time_start: 16-06-2019 8:00
-time_end: 16-06-2019 8:45
+time_start: 2019-06-16 8:00:00
+time_end: 2019-06-16 8:45:00
 title: Balancing Efficiency and Flexibility for DNN Acceleration
 speaker:
     name: Vivienne Sze

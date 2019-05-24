@@ -1,8 +1,8 @@
 ---
 edition: hpca-19
 type: invited_talk
-time_start: 2019-02-17 17:00
-time_end: 2019-02-17 17:30
+time_start: 2019-02-17 17:00:00
+time_end: 2019-02-17 17:30:00
 title: Hardware Acceleration Opportunities in Bioinformatics and Computational Biology
 speaker:
     name: Leonid Yavits

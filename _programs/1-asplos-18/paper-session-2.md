@@ -1,8 +1,8 @@
 ---
 edition: asplos-18
 type: paper_session
-time_start: 2018-03-25 17:00
-time_end: 2018-03-25 18:00
+time_start: 2018-03-25 17:00:00
+time_end: 2018-03-25 18:00:00
 papers:
     - title: Efficient Compiler Code Generation for Deep Learning Snowflake Co-processor
       authors: Andre Xian Ming Chang, Aliasger Zaidy and Eugenio Culurciello 
