@@ -223,6 +223,10 @@
     list-style-type: disc;
 }
 
+.ed-grid-item-program-item-content p {
+    line-height: 160%;
+}
+
 @media screen and (min-width: 768px) {
     .ed-grid-item-program-item-time {
         text-align: right;
