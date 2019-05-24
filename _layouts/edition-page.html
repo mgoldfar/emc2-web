@@ -110,6 +110,9 @@
                     </h4>
                     {{ p.content | markdownify }}
                 {% elsif p.type == "paper_session" %}
+                    {% if page.is_accepting_submission %}
+                        <p>Under review.</p>
+                    {% endif %}
                     {% for paper in p.papers %}
                         {% if paper.paper %}
                         <a href="assets/docs/{{ p.edition }}/{{ paper.paper }}">
