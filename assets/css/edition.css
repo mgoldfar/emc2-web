@@ -1,6 +1,6 @@
 /* Header Grid */
 nav {
-    border-bottom: 2px solid #455a65;
+    /*border-bottom: 2px solid #455a65;*/
 }
 
 .program-container {
@@ -224,6 +224,11 @@ nav {
     .ed-grid-item-program-item-time {
         text-align: right;
         margin-bottom: 0;
+    }
+
+    
+    .ed-grid-item-program-item-time * {
+        margin-top: 0.125em;
     }
 
     .ed-grid-item-program-item-type {
