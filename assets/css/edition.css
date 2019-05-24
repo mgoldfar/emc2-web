@@ -1,8 +1,3 @@
-/* Header Grid */
-nav {
-    /*border-bottom: 2px solid #455a65;*/
-}
-
 .program-container {
     width: 100%;
     padding: 2em;
@@ -16,6 +11,7 @@ nav {
     }
 }
 
+/* Header Grid */
 .ed-grid-container-header {
     width: 100%;
     display: grid;
@@ -35,11 +31,11 @@ nav {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
-
-    border-bottom: #263238 5px solid;
 }
 
 .ed-grid-container-header-meta {
+    padding-left: 15%;
+    padding-right: 15%;
     width: 100%;
     display: grid;
     grid-template-columns: auto;
@@ -76,7 +72,8 @@ nav {
     .ed-grid-container-header {
         padding-left: 15%;
         padding-right: 15%;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
+        grid-template-rows: 50% 50%;
         grid-template-areas:
             "header-title"
             "header-sub-title";
@@ -90,6 +87,8 @@ nav {
         2px -2px 1px #000,
         -2px 2px 1px #000,
         2px 2px 1px #000;
+
+        min-height: 350px;
     }
 
     .ed-grid-container-header-meta {
@@ -128,6 +127,10 @@ nav {
     grid-area: header-sub-title;
     text-align: center;
     padding: 0.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ed-grid-item-header-meta-left {
