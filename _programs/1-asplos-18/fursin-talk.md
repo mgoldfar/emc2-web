@@ -6,7 +6,7 @@ time_end: 2018-03-25 18:45:00
 title: 'Introducing ReQuEST: an Open Platform for Reproducible and Quality-Efficient Systems-ML Tournaments'
 speaker:
     name: Grigori Fursin
-    affiliation: dividiti and cTuning foundation
+    affiliation: dividiti and cTuning Foundation
     avatar: fursing.png
     url: https://fursin.net/research.html
 presentation: fursin-talk.pdf

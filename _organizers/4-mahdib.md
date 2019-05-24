@@ -1,5 +1,5 @@
 ---
-name: Mahdi N. Bojnordi
+name: Mahdi Bojnordi
 affiliation: University of Utah
 avatar: mahdib.jpg
 profile_url: http://www.cs.utah.edu/~bojnordi/
