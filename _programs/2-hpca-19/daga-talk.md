@@ -1,8 +1,8 @@
 ---
 edition: hpca-19
 type: invited_talk
-time_start: 2019-02-17 13:30
-time_end: 2019-02-17 14:15
+time_start: 2019-02-17 13:30:00
+time_end: 2019-02-17 14:15:00
 title: 'Tensilica DNA 100 Processor: A High-Performance, Power-Efficient DNN Processor for On-Device Inference'
 speaker:
     name: Megha Daga
