@@ -1,0 +1,159 @@
+PPA
+PPA
+PPA
+PPA
+embedded
+embedded
+embedded
+embedded
+embedded
+embedded
+artificial intelligence
+cognitive
+computing
+energy
+efficient
+cognitive
+computing
+machine learning
+embedded
+applications
+systems
+resource
+constrained
+performance
+balance
+performance
+power
+energy
+area
+PPA
+energy
+efficient
+machine learning
+artificial intelligence
+artificial intelligence
+artificial intelligence
+embedded
+intelligent
+computing
+machine learning
+cognitive
+algorithms
+process
+technology 
+design
+methodologies
+innovative
+efficient
+performance
+power
+energy
+area
+mobile
+data centers
+servers
+intelligent
+solutions
+real-time
+on-device
+cognition
+edge
+vision
+image
+processing
+language translation
+autonomous driving
+malware detection
+gesture recognition
+performance
+energy
+reliability
+accuracy
+security
+hardware
+software
+intelligence algorithms
+power
+performance
+area
+PPA
+computing
+IoT
+edge
+devices
+automotive
+mobile
+intelligence
+communication
+computation
+performance
+energy
+efficient
+hardware
+neural networks
+power
+performance
+efficient
+memory
+architecture
+neural networks
+approximation
+quantization
+precision
+precision
+performance
+power
+energy
+neural networks
+architecture
+resource constrained
+devices
+efficient
+applications
+machine learning
+hardware
+software 
+sparsity
+locality
+machine learning
+benchmarks
+workloads
+performance
+simulation
+emulation
+machine learning
+power
+performance
+area
+PPA
+neural networks
+pruning
+tuning
+reconfigurable
+techniques
+efficient
+neural networks
+verification
+validation
+determinism
+neural networks
+efficient
+on-device learning
+techniques
+optimization
+performance
+inference
+training
+analysis
+power
+performance
+complexity
+systolic array
+architecture
+systems
+machine learning
+applications
+security
+safety
+privacy
