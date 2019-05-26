@@ -1,0 +1,83 @@
+---
+layout: default
+permalink: /index
+---
+<div class="row">
+  <div class="col s12 center-align">
+    <h1 class="header">{{ site.title }}</h1>
+    <img src="assets/images/wordcloud.svg" class="responsive-img" style="max-height: 300px;" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <h2 class="header"><i class="material-icons">memory</i> Upcomming Workshops</h2>
+    <ul class="collection">
+        {% for ed in site.editions %}
+          {% if ed.is_upcomming %}
+          <li class="collection-item">
+            <a href="{{ ed.url }}">{{ ed.edition_number }} Edition</a> on {{ ed.event_date|date: "%B %d, %Y" }} in {{ ed.event_location }} co-located with
+            <a href="{{ ed.colocated_url }}" target="_blank"><span style="white-space: nowrap;">{{ ed.colocated_short }}</span></a>
+            {% if ed.is_accepting_submission %}
+            <a href="/submission">
+                <span class="new badge" data-badge-caption="">Accepting Submissions!</span>
+            </a>
+            {% endif %}
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12 m6">
+    <h3 class="header"><i class="material-icons">description</i> Objectives</h3>
+    <p>
+      As artificial intelligence and other forms of cognitive computing continue to proliferate into new domains, many
+      forums for dialogue and knowledge sharing have emerged. In the proposed workshop, the primary focus is on the
+      exploration of energy efficient techniques and architectures for cognitive computing and machine learning, particularly
+      for applications and systems running at the edge. For such resource constrained environments, performance alone is never
+      sufficient, requiring system designers to carefully balance performance with power, energy, and area (overall PPA metric).
+    </p>
+    <p>The goal of this workshop is to provide a forum for researchers who are exploring novel ideas in the field of
+      energy efficient machine learning and artificial intelligence for embedded applications. We also hope to provide a
+      solid platform for forging relationships and exchange of ideas between the industry and the academic world through
+      discussions and active collaborations.</p>
+    <h3 class="header"><i class="material-icons">chat</i> Call for Papers</h3>
+    <p>
+      A new wave of intelligent computing, driven by recent advances in machine learning and cognitive algorithms
+      coupled with process technology and new design methodologies, has the potential to usher unprecedented disruption
+      in the way conventional computing solutions are designed and deployed. These new and innovative approaches often
+      provide an attractive and efficient alternative not only in terms of performance but also power, energy, and area.
+      This disruption is easily visible across the whole spectrum of computing systems -- ranging from low end mobile
+      devices to large scale data centers and servers.</p>
+    <p>A key class of these intelligent solutions is providing real-time, on-device cognition at the edge to enable many
+      novel applications including vision and image processing, language translation, autonomous driving, malware
+      detection, and gesture recognition. Naturally, these applications have diverse requirements for
+      performance,energy, reliability, accuracy, and security that demand a holistic approach to designing the hardware,
+      software, and intelligence algorithms to achieve the best power, performance, and area (PPA).</p>
+  </div>
+  <div class="col s12 m6">
+    <h3 class="header"><i class="material-icons">format_list_bulleted</i> Topics for the Workshop</h3>
+    <ul class="browser-default list">
+      <li>Architectures for the edge: IoT, automotive, and mobile</li>
+      <li>Approximation, quantization reduced precision computing</li>
+      <li>Hardware/software techniques for sparsity</li>
+      <li>Neural network architectures for resource constrained devices</li>
+      <li>Neural network pruning, tuning and and automatic architecture search</li>
+      <li>Novel memory architectures for machine learing</li>
+      <li>Communication/computation scheduling for better performance and energy</li>
+      <li>Load balancing and efficient task distribution techniques</li>
+      <li>Exploring the interplay between precision, performance, power and energy</li>
+      <li>Exploration of new and efficient applications for machine learning</li>
+      <li>Characterization of machine learning benchmarks and workloads</li>
+      <li>Performance profiling and synthesis of workloads</li>
+      <li>Simulation and emulation techniques, frameworks and platforms for machine learning</li>
+      <li>Power, performance and area (PPA) based comparison of neural networks</li>
+      <li>Verification, validation and determinism in neural networks</li>
+      <li>Efficient on-device learning techniques</li>
+      <li>Security, safety and privacy challenges and building secure AI systems</li>
+    </ul>
+  </div>
+</div>
