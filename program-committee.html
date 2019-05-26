@@ -1,0 +1,62 @@
+---
+layout: default
+permalink: /program-committee
+---
+
+<h3 class="header">Committees</h3>
+<div class="row">
+    <div class="col s12 m6">
+        <h4 class="header">Program Committee</h4>
+        <ul class="browser-default">
+            <li>Raj Parihar, Tensilica/Cadence</li>
+            <li>Michael Goldfarb, Nvidia</li>
+            <li>Chen Ding, University of Rochester</li>
+            <li>Mahdi Bojnordi, University of Utah</li>
+            <li>Andy Glew, Nvidia</li>
+            <li>Sreepathi Pai, University of Rochester</li>
+            <li>Raj Jain, Washington University in St. Louis</li>
+            <li>Smruti R Sarangi, IIT Delhi</li>
+            <li>Shaoshan Liu, PerceptIn</li>
+            <li>Ali Shafiee, Samsung</li>
+            <li>Satyam Srivastava, Intel</li>
+            <li>Danian Gong, Cadence</li>
+            <li>Debu Pal, Cadence</li>
+            <li>Krishna Nagar, Intel</li>
+            <li>Tao Sheng, Amazon</li>
+        </ul>
+    </div>
+    <div class="col s12 m6">
+        <h4 class="header">Publicity and Outreach Chairs</h4>
+        <ul class="browser-default">
+            <li>Debu Pal, Cadence</li>
+            <li>Mahdi Bojnordi, University of Utah</li>
+            <li>Krishna Nagar, Intel​</li>
+        </ul>
+        <h4 class="header">Submission and Publication Chairs</h4>
+        <ul class="browser-default">
+            <li>Satyam Srivastava, Intel (satyam.srivastava@intel.com)</li>
+            <li>Tao Sheng, Amazon (tsheng@amazon.com)</li>
+        </ul>
+        <h4 class="header">General Chairs</h4>
+        <ul class="browser-default">
+            <li>Raj Parihar, Tensilica/Cadence (parihar@cadence.com)</li>
+            <li>Michael Goldfarb, Nvidia (mgoldfarb@nvidia.com)</li>
+        </ul>
+    </div>
+</div>
+
+<h3 class="header">About the Organizers</h3>
+{% for o in site.organizers %}
+<div class="row">
+    <div class="col s12">
+        <h4 class="header" style="margin: 0;">
+            <a href="{{ o.profile_url }}" target="_blank">{{ o.name }} <i class="material-icons" style="vertical-align: middle;">link</i></a>
+        </h4>
+        <h5 class="header" style="margin: 0;">{{ o.affiliation }}</h5>
+        <a href="{{ o.profile_url }}" target="_blank">
+            <img src="assets/images/organizers/{{ o.avatar }}" class="z-depth-1 responsive-img valign-wrapper avatar-image valign-wrapper" style="float: right;" />
+        </a>
+        <p>{{ o.content | markdownify }}</p>
+    </div>
+</div>
+{% endfor %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>EMC^2: {{ site.title }}</title>
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Source+Sans+Pro" />
+  <link rel="stylesheet" href="assets/css/materialize.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/edition.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="blue-grey darken-4" role="navigation">
+      <div class="nav-wrapper container">
+
+        <a id="logo-container" href="/" class="brand-logo">
+          <!--<img src="assets/images/logo-small.png" />-->
+          EMC<sup>2</sup>
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+          {% include nav-links.html %}
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          {% include nav-links.html %}
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </header>
