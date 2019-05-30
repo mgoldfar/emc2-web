@@ -11,6 +11,40 @@ adding new content.
 * _editions - Contains the collection of instances of the workshop (e.g. HPCA-19)
 * _includes - Contains common page content to be included in most pages (e.g. nav bar)
 * _layouts - Contains tempaltes and logic to construct various pages of the website.
-* _organizers - Contains the collections of workshop organizer biographies.
+* _organizers - Contains the collection of workshop organizer biographies.
 * _programs - Contains the collection of workshop programs/schedules.
 * assets - Contains various site assets like images etc.
+* doc - Contains documentation for this site.
+
+## Collections
+
+Dynamic content for the site is defined in [collections](https://jekyllrb.com/docs/collections/).
+Collections allow for related content to be defined and manipulated using queries and filters.
+For example, a collection of program items can be filtered based on the date or workshop edition.
+
+# Editions
+
+The additions collection contains the instances (e.g. 2nd edition at HPCA 2019) of the workshop.
+Each instance is defined in an HTML file that should be named with the following convention:
+
+`NUMBER-CONFERENCE-YEAR.html`
+
+## Edition Data
+
+Most of what is contained in he edition page is configuration data related to the workshop.
+The table below describes the configuration fields:
+
+| Field                   | Description                                                                                                | Example                                                                                                    |
+|-------------------------|------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| permalink               | Defines the URL path for the workshop page. Should be set to `/CONFERENCE-YY`                              | /hpca-19                                                                                                   |
+| edition                 | Unique identifier for the workshop. Should be set to `CONFERENCE-YY`                                       | hpca-19                                                                                                    |
+| colocated_short         | A short name of the co-located conference.                                                                 | HPCA 2019                                                                                                  |
+| colocated_long          | A long form name of the co-located conference.                                                             | 23rd ACM International Conference on Architectural Support for Programming Languages and Operating Systems |
+| colocated_url           | A URL to the co-located conference website.                                                                | http://hpca2019.seas.gwu.edu/                                                                              |
+| event_date              | Date of the workshop. Must be formatted as `YYYY-MM-DD`                                                    | 2019-02-17                                                                                                 |
+| event_location          | The city where the workshop is to be held.                                                                 | Washington D.C.                                                                                            |
+| event_room              | The room at the conference venue whee the workshop is to be held.                                          | Doogwood Room                                                                                              |
+| event_session           | Specifies if the workshop is a full or half-day session. Must be one of `full` or `morning` or `afternoon` | full                                                                                                       |
+| header_image            | Name of the image that will be used for the header background.                                             | hpca-19.jpg                                                                                                |
+| is_upcoming             | Set to true to indicate this edition should be listed as an upcoming workshop.                             |                                                                                                            |
+| is_accepting_submission | Set to true to indicate this edition is accepting paper submissions.                                       |                                                                                                            |
