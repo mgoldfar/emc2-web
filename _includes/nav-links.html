@@ -1,7 +1,7 @@
 <li><a href="/">Home</a></li>
 
 {% for ed in site.editions %}
-{% if ed.is_upcomming %}
+{% if ed.is_upcoming %}
 <li><a href="{{ ed.url }}">{{ ed.colocated_short }}</a></li>
 {% endif %}
 {% endfor %}
