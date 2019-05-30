@@ -19,3 +19,11 @@ collections:
   programs:
 
 exclude: [doc]
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "editions"
+    values:
+      layout: "edition-page"
