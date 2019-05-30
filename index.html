@@ -16,7 +16,8 @@ permalink: /index
         {% for ed in site.editions %}
           {% if ed.is_upcomming %}
           <li class="collection-item">
-            <a href="{{ ed.url }}">{{ ed.edition_number }} Edition</a> on {{ ed.event_date|date: "%B %d, %Y" }} in {{ ed.event_location }} co-located with
+            {% assign edition_number = ed.title|split:" "|first %}
+            <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> on {{ ed.event_date|date: "%B %d, %Y" }} in {{ ed.event_location }} co-located with
             <a href="{{ ed.colocated_url }}" target="_blank"><span style="white-space: nowrap;">{{ ed.colocated_short }}</span></a>
             {% if ed.is_accepting_submission %}
             <a href="/submission">
