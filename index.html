@@ -11,10 +11,10 @@ permalink: /index
 
 <div class="row">
   <div class="col s12">
-    <h2 class="header"><i class="material-icons">memory</i> Upcomming Workshops</h2>
+    <h2 class="header"><i class="material-icons">memory</i> Upcoming Workshops</h2>
     <ul class="collection">
         {% for ed in site.editions %}
-          {% if ed.is_upcomming %}
+          {% if ed.is_upcoming %}
           <li class="collection-item">
             {% assign edition_number = ed.title|split:" "|first %}
             <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> on {{ ed.event_date|date: "%B %d, %Y" }} in {{ ed.event_location }} co-located with
