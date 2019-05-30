@@ -19,7 +19,7 @@
 <main>
     <!-- Header Content -->
     <div class="ed-grid-container-header z-depth-2"
-         style="background-image: url(assets/images/editions/{{ page.header_image }}); background-size: cover; background-position: center;">
+         style="background-image: url(assets/images/editions/{{ page.slug }}.jpg); background-size: cover; background-position: center;">
         <div class="ed-grid-item-header-title">
             {% assign edition_number = page.title|split:" "|first %}
             <h1>The {% include ordinal.html number=edition_number %} {{ site.title }}</h1>
