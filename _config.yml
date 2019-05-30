@@ -18,3 +18,4 @@ collections:
     output: true
   programs:
 
+exclude: [doc]
