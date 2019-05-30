@@ -57,16 +57,12 @@
                 {% when 'paper_session' %}
                     {% assign paper_session_counter = paper_session_counter|plus:1 %}
                     {% assign talk_class_header = "Paper Session #"|append:paper_session_counter %}
-                {% when 'program_note' %}
-                    {% assign talk_class_header = "Note" %}
                 {% when 'welcome' %}
                     {% assign talk_class_header = "Welcome" %}
                 {% when 'close' %}
                     {% assign talk_class_header = "Close" %}
-                {% when 'coffee_break' %}
+                {% when 'break' %}
                     {% assign talk_class_header = "Break" %}
-                {% when 'lunch_break' %}
-                    {% assign talk_class_header = "Lunch" %}
                 {% else %}
                     {% assign talk_class_header = "" %}
             {% endcase %}
