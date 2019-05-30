@@ -21,7 +21,8 @@
     <div class="ed-grid-container-header z-depth-2"
          style="background-image: url({{ page.header_image }}); background-size: cover; background-position: center;">
         <div class="ed-grid-item-header-title">
-            <h1>The {{page.edition_number }} {{ site.title }}</h1>
+            {% assign edition_number = page.title|split:" "|first %}
+            <h1>The {% include ordinal.html number=edition_number %} {{ site.title }}</h1>
         </div>
         <div class="ed-grid-item-header-sub-title">
             <h2>Co-located with the {{ page.colocated_long }} <a href="{{ page.colocated_url }}"

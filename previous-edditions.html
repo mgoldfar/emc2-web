@@ -8,7 +8,9 @@ permalink: /previous-editions
   {% assign editions_rev = site.editions | reverse %}
   {% for ed in editions_rev %}
     <li class="collection-item">
-      <a href="{{ ed.url }}">{{ ed.edition_number }} Edition</a> co-located with <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a> in {{ ed.event_location }}
+      {% assign edition_number = ed.title|split:" "|first %}
+      <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> co-located with
+      <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a> in {{ ed.event_location }}
       <span style="float: right;">{{ ed.event_date|date: "%B %d, %Y"}}</span> 
     </li>
   {% endfor %}
