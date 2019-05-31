@@ -1,0 +1,26 @@
+ {% assign program = include.program %}
+ 
+ <!-- Program Summary -->
+ <div class="program-summary" style="margin-top: 0; padding-top: 0;">
+    {% for p in program %}
+    <div class="ed-grid-program-summary">
+        <div class="ed-grid-program-summary-item-time">
+            <h5 class="primary-text" style="margin:0;">
+                <strong>{{ p.time_start|date: "%H:%M" }} - {{ p.time_end|date: "%H:%M" }}</strong>
+            </h5>
+        </div>
+        <div class="ed-grid-program-summary-item-title">
+            {% if p.title %}
+                <h5 class="dark-primary" style="margin:0;">
+                    <a href="#{{ p.id }}">{{ p.title }}</a>
+                </h5>
+                {% if p.speaker %}
+                    <h5 class="light-primary" style="margin:0;">
+                        {{ p.speaker.name }}, {{ p.speaker.affiliation }}
+                    </h5>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

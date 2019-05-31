@@ -46,9 +46,9 @@
     </div>
 
     <!-- Program -->
-    <div class="program-container">
+    <div class="program-container" style="">    
         {% for p in program %}
-        <div class="ed-grid-container-program-item">
+        <div class="ed-grid-container-program-item" id="{{ p.id }}">
             {% case p.type %}
                 {% when 'keynote' %}
                     {% assign talk_class_header = "Keynote" %}
@@ -86,7 +86,7 @@
                 {% endif %}
             </div>
             <div class="ed-grid-item-program-item-content">
-                {% if p.type == "welcome" or p.type == "coffee_break" or p.type == "lunch_break" %}
+                {% if p.type == "welcome" or p.type == "break" or p.type == "break" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                 {% elsif p.type == "keynote" or p.type == "invited_talk" %}
                     {% if p.presentation %}
