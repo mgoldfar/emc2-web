@@ -3,10 +3,22 @@
     padding: 2em;
 }
 
+.program-summary {
+    width: 100%;
+    padding: 2em;
+}
+
 @media screen and (min-width: 768px) {
     .program-container {
         max-width: 1440px;
         padding: 3em;
+        margin: auto;
+    }
+
+    .program-summary {
+        max-width: 1440px;
+        padding-left: 10%;
+        padding-right: 10%;
         margin: auto;
     }
 }
@@ -33,6 +45,7 @@
     1px 1px 0 #000;
 }
 
+/* Header Meta Content Grid */
 .ed-grid-container-header-meta {
     padding-left: 15%;
     padding-right: 15%;
@@ -48,6 +61,7 @@
     margin-top: 1em;
 }
 
+/* Program Item Content Grid */
 .ed-grid-container-program-item {
     width: 100%;
     display: grid;
@@ -66,6 +80,24 @@
 
 .ed-grid-container-program-item:last-child {
     border-bottom: none;
+}
+
+/* Program Summary Grid */
+.ed-grid-program-summary {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-template-rows: auto;
+    grid-auto-flow: column;
+    grid-template-areas:
+        "program-summary-item-time program-summary-item-title";
+    margin-left: auto;
+}
+
+.ed-grid-program-summary > div {
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
 }
 
 @media screen and (min-width: 768px) {
@@ -256,4 +288,12 @@
         width: 130px;
         height: 130px;
     }
+}
+
+.ed-grid-program-summary-item-time {
+    grid-area: program-summary-item-time;
+}
+
+.ed-grid-program-summary-item-title {
+    grid-area: program-summary-item-title;
 }
