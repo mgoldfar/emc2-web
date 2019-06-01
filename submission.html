@@ -20,16 +20,18 @@ show_note: True
 </div>
 {% endif %}
 
-
 <div class="row">
     <div class="col s12">
         <h4 class="header">Important Dates</h4>
+        {% if upcoming_editions.size > 0 %}
         <table>
             <thead>
                 <tr>
                     <th></th>
                     {% for ed in upcoming_editions %}
-                    <th>{{ ed.colocated_short }}</th>
+                    <th>
+                        <a href="{{ ed.url }}">{{ ed.colocated_short }}</a>
+                    </th>
                     {% endfor %}
                 </tr>
             </thead>
@@ -67,9 +69,13 @@ show_note: True
                 </tr>
             </tbody>
         </table>
+        {% else %}
+            <p>
+                There are currently no upcoming submission deadlines posted.<br/>
+            </p>
+        {% endif %}
     </div>
 </div>
-
 
 <div class="row">
     <div class="col s12">
@@ -90,6 +96,7 @@ show_note: True
                     Satyam Srivastava (<a href="mailto:satyam.srivastava@intel.com">satyam.srivastava@intel.com</a>) and
                     Tao Sheng (<a href="mailto:tsheng@amazon.com">tsheng@amazon.com</a>)</li>
             </ul>
+        {% if upcoming_editions.size > 0 %}
         <br /><br />
         <p><strong>​All papers will be submitted, reviewed, and notified through the EasyChair conference management
                 service. Please
@@ -102,5 +109,6 @@ show_note: True
             </a>
             {% endfor %}
         </div>
+        {% endif %}
     </div>
 </div>
