@@ -2,6 +2,8 @@
 layout: default
 permalink: /index
 ---
+{% assign upcoming_editions = site.editions|where: "is_upcoming",true|sort:"event_date" %}
+
 <div class="row">
   <div class="col s12 center-align">
     <h1 class="header">{{ site.title }}</h1>
@@ -9,12 +11,12 @@ permalink: /index
   </div>
 </div>
 
+{% if upcoming_editions.size > 0 %}
 <div class="row">
+  <h3 class="header"><i class="material-icons">memory</i> Upcoming Workshops</h3>
   <div class="col s12">
-    <h2 class="header"><i class="material-icons">memory</i> Upcoming Workshops</h2>
     <ul class="collection">
-        {% for ed in site.editions %}
-          {% if ed.is_upcoming %}
+        {% for ed in upcoming_editions %}
           <li class="collection-item">
             {% assign edition_number = ed.title|split:" "|first %}
             <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> on {{ ed.event_date|date: "%B %d, %Y" }} in {{ ed.event_location }} co-located with
@@ -25,26 +27,47 @@ permalink: /index
             </a>
             {% endif %}
           </li>
-          {% endif %}
         {% endfor %}
       </ul>
   </div>
 </div>
 
+{% assign next_upcoming_edition = upcoming_editions|first %}
+
+{% if next_upcoming_edition.show_program_summary %}
+{% assign next_upcoming_program = site.programs|where: "edition",next_upcoming_edition.edition|sort:"time_end" %}
+{% assign next_upcoming_edition_number = next_upcoming_edition.title|split:" "|first %}
+<div class="row">
+  <h3 class="header"><i class="material-icons">schedule</i> Program for EMC<sup>2</sup> at {{ next_upcoming_edition.colocated_short }}</h3>
+  {% include program-summary.html edition=next_upcoming_edition program=next_upcoming_program %}
+  <div class="center-align">
+    View the complete program for the
+    <a href="{{ next_upcoming_edition.url }}">{% include ordinal.html number=next_upcoming_edition_number %} Edition</a> of EMC<sup>2</sup>
+    <a href="{{ next_upcoming_edition.url }}">here</a>.
+  </div>
+</div>
+{% endif %}
+
+{% endif %}
+
+<div class="row">
+  <div class="col s12">
+      <h3 class="header"><i class="material-icons">description</i> Workshop Objective</h3>
+      <p>
+        As artificial intelligence and other forms of cognitive computing continue to proliferate into new domains, many
+        forums for dialogue and knowledge sharing have emerged. In the proposed workshop, the primary focus is on the
+        exploration of energy efficient techniques and architectures for cognitive computing and machine learning, particularly
+        for applications and systems running at the edge. For such resource constrained environments, performance alone is never
+        sufficient, requiring system designers to carefully balance performance with power, energy, and area (overall PPA metric).
+      </p>
+      <p>The goal of this workshop is to provide a forum for researchers who are exploring novel ideas in the field of
+        energy efficient machine learning and artificial intelligence for embedded applications. We also hope to provide a
+        solid platform for forging relationships and exchange of ideas between the industry and the academic world through
+        discussions and active collaborations.</p>
+  </div>
+</div>
 <div class="row">
   <div class="col s12 m6">
-    <h3 class="header"><i class="material-icons">description</i> Objectives</h3>
-    <p>
-      As artificial intelligence and other forms of cognitive computing continue to proliferate into new domains, many
-      forums for dialogue and knowledge sharing have emerged. In the proposed workshop, the primary focus is on the
-      exploration of energy efficient techniques and architectures for cognitive computing and machine learning, particularly
-      for applications and systems running at the edge. For such resource constrained environments, performance alone is never
-      sufficient, requiring system designers to carefully balance performance with power, energy, and area (overall PPA metric).
-    </p>
-    <p>The goal of this workshop is to provide a forum for researchers who are exploring novel ideas in the field of
-      energy efficient machine learning and artificial intelligence for embedded applications. We also hope to provide a
-      solid platform for forging relationships and exchange of ideas between the industry and the academic world through
-      discussions and active collaborations.</p>
     <h3 class="header"><i class="material-icons">chat</i> Call for Papers</h3>
     <p>
       A new wave of intelligent computing, driven by recent advances in machine learning and cognitive algorithms
