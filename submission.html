@@ -41,8 +41,8 @@ show_note: True
                     {% for ed in upcoming_editions %}
                     <td>
                         {% if ed.submission_deadline_extended %}
-                        <strong style="color: red;">{{ ed.submission_deadline_extended|date: "%b %d, %y" }} (23:59 PST)</strong>
-                        <span style="text-decoration: line-through;">{{ ed.submission_deadline|date: "%b %d, %y" }} (23:59 PST)</span>
+                        <strong style="color: red;">{{ ed.submission_deadline_extended|date: "%B %d, %y" }} (23:59 PST)</strong>
+                        <span style="text-decoration: line-through;">{{ ed.submission_deadline|date: "%B %d, %y" }} (23:59 PST)</span>
                         {% else %}
                         <strong>{{ ed.submission_deadline|date: "%B %d, %Y" }} (23:59 PST)</strong>
                         {% endif %}
