@@ -88,7 +88,7 @@
                 {% endif %}
             </div>
             <div class="ed-grid-item-program-item-content">
-                {% if p.type == "welcome" or p.type == "break" or p.type == "close" %}
+                {% if p.type == "welcome" or p.type == "break" or p.type == "lunch" or p.type == "close" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                 {% elsif p.type == "keynote" or p.type == "invited_talk" %}
                     {% if p.presentation %}
