@@ -109,7 +109,7 @@
                     </h4>
                     {{ p.content | markdownify }}
                 {% elsif p.type == "paper_session" %}
-                    {% if page.is_accepting_submission %}
+                    {% if p.papers.size == 0 %}
                         <p>Under review.</p>
                     {% endif %}
                     {% for paper in p.papers %}
