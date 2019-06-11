@@ -63,6 +63,8 @@
                     {% assign talk_class_header = "Close" %}
                 {% when 'break' %}
                     {% assign talk_class_header = "Break" %}
+                {% when 'lunch' %}
+                    {% assign talk_class_header = "Lunch Break" %}
                 {% else %}
                     {% assign talk_class_header = "" %}
             {% endcase %}
