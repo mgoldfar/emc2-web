@@ -3,7 +3,7 @@ layout: default
 permalink: /submission
 show_note: True
 ---
-{% assign upcoming_editions = site.editions|where: "is_accepting_submission",true|sort:"event_date" %}
+{% assign upcoming_editions = site.editions|where: "show_on_submission_page",true|sort:"event_date" %}
 
 <h3 class="header">Submit to the Workshop</h3>
 
