@@ -1,8 +1,8 @@
 ---
 edition: isca-19
 type: invited_talk
-time_start: 2019-06-23 15:30:00
-time_end: 2019-06-23 16:30:00
+time_start: 2019-06-23 16:00:00
+time_end: 2019-06-23 16:50:00
 title: Balancing Efficiency and Flexibility for DNN Acceleration
 speaker:
     name: Vivienne Sze
