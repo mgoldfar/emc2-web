@@ -3,6 +3,7 @@ layout: default
 permalink: /submission
 show_note: True
 ---
+{% assign accepting_editions = site.editions|where: "is_accepting_submission",true|sort:"event_date" %}
 {% assign upcoming_editions = site.editions|where: "show_on_submission_page",true|sort:"event_date" %}
 
 <h3 class="header">Submit to the Workshop</h3>
@@ -96,13 +97,13 @@ show_note: True
                     Satyam Srivastava (<a href="mailto:satyam.srivastava@intel.com">satyam.srivastava@intel.com</a>) and
                     Tao Sheng (<a href="mailto:tsheng@amazon.com">tsheng@amazon.com</a>)</li>
             </ul>
-        {% if upcoming_editions.size > 0 %}
+        {% if accepting_editions.size > 0 %}
         <br /><br />
         <p><strong>​All papers will be submitted, reviewed, and notified through the EasyChair conference management
                 service. Please
                 visit the link below to proceed with the submission.</strong></p>
         <div class="center-align">
-            {% for ed in upcoming_editions %}
+            {% for ed in accepting_editions %}
             <a class="waves-effect waves-light btn-large center-align"
                 href="{{ ed.submission_url }}" target="_blank">
                 Submit to EMC<sup>2</sup> ({{ ed.colocated_short}}) <i class="material-icons right">send</i>
