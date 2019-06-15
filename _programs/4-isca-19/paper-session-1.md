@@ -12,6 +12,5 @@ papers:
       affiliation: UC Santa Barbara
     - title: Accelerated CNN Training Through Gradient Approximation
       authors: Ziheng Wang, Sree Harsha Nelaturu and Saman Amarasinghe
-      affiliation: Massachusetts Institute of
-Technology and SRM Institute of Science and Technology
+      affiliation: Massachusetts Institute of Technology and SRM Institute of Science and Technology
 ---
