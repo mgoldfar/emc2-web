@@ -1,8 +1,8 @@
 ---
 edition: isca-19
 type: invited_talk
-time_start: 2019-06-23 15:30:00
-time_end: 2019-06-23 16:30:00
+time_start: 2019-06-23 15:10:00
+time_end: 2019-06-23 16:00:00
 title: Structured and Systematic Approach for Energy Efficient DNN Acceleration
 speaker:
     name: Xuehai Qian
