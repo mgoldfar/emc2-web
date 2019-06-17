@@ -1,8 +1,8 @@
 ---
 edition: isca-19
 type: invited_talk
-time_start: 2019-06-23 13:30:00
-time_end: 2019-06-23 14:30:00
+time_start: 2019-06-23 11:10:00
+time_end: 2019-06-23 12:00:00
 title: Enabling Continuous Learning through Synaptic Plasticity in Hardware
 speaker:
     name: Tushar Krishna

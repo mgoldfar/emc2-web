@@ -63,6 +63,8 @@
                     {% assign talk_class_header = "Close" %}
                 {% when 'break' %}
                     {% assign talk_class_header = "Break" %}
+                {% when 'lunch' %}
+                    {% assign talk_class_header = "Lunch Break" %}
                 {% else %}
                     {% assign talk_class_header = "" %}
             {% endcase %}
@@ -86,7 +88,7 @@
                 {% endif %}
             </div>
             <div class="ed-grid-item-program-item-content">
-                {% if p.type == "welcome" or p.type == "break" or p.type == "close" %}
+                {% if p.type == "welcome" or p.type == "break" or p.type == "lunch" or p.type == "close" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                 {% elsif p.type == "keynote" or p.type == "invited_talk" %}
                     {% if p.presentation %}
@@ -107,7 +109,7 @@
                     </h4>
                     {{ p.content | markdownify }}
                 {% elsif p.type == "paper_session" %}
-                    {% if page.is_accepting_submission %}
+                    {% if p.papers.size == 0 %}
                         <p>Under review.</p>
                     {% endif %}
                     {% for paper in p.papers %}

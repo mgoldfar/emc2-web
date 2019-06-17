@@ -2,7 +2,7 @@
 edition: isca-19
 type: invited_talk
 time_start: 2019-06-23 10:00:00
-time_end: 2019-06-23 11:00:00
+time_end: 2019-06-23 10:50:00
 title: Machine Learning at Scale
 speaker:
     name: Carole-Jean Wu

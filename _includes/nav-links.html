@@ -1,11 +1,13 @@
 <li><a href="/">Home</a></li>
 
-{% for ed in site.editions %}
-{% if ed.is_upcoming %}
-<li><a href="{{ ed.url }}">{{ ed.colocated_short }}</a></li>
-{% endif %}
+
+{% assign sorted_editions = site.editions|sort:"event_date"|reverse %}
+
+{% for ed in sorted_editions limit: 2 %}
+    <li><a href="{{ ed.url }}">{{ ed.colocated_short }}</a></li>
 {% endfor %}
 
 <li><a href="/submission">Submission</a></li>
 <li><a href="/program-committee">Committies</a></li>
-<li><a href="/previous-editions">Previous Editions</li>
+<li><a href="/previous-editions">Previous Editions</a></li>
+<li><a href="/feedback">Feedback</a></li>

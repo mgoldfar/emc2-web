@@ -87,7 +87,7 @@ The table below describes the common configuration fields for all program item t
 | Field | Description | Example |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | edition | Specifies the workshop edition to attach this program item to. Must be set to `CONFERENCE-YY` | hpca-19 |
-| type | Specifies the kind of item this represents. Must be one of `keynote`, `invited_talk`, `paper_session`, `welcome`, `close`, or `break` | invited_talk |
+| type | Specifies the kind of item this represents. Must be one of `keynote`, `invited_talk`, `paper_session`, `welcome`, `close`, `break` or `lunch` | invited_talk |
 | time_start | Specifies when this program item is scheduled to start. Must be formatted exactly as `YYYY-MM-DD hh:mm:ss` | 2018-03-25 14:30:00 |
 | time_end | Specifies when this program item is scheduled to end. Must be formatted exactly as `YYYY-MM-DD hh:mm:ss` |  |
 
