@@ -9,6 +9,7 @@ speaker:
     affiliation: MIT
     avatar: sze.jpg
     url: http://www.rle.mit.edu/people/directory/vivienne-sze/
+presentation: sze-talk.pdf
 ---
 There has been a significant amount of research on the topic of efficient processing of DNNs, from the design of efficient DNN algorithms to the design of efficient DNN accelerators. The wide range techniques used for efficient DNN algorithm design has resulted in a more diverse set of DNNs; this creates a new challenge for the DNN accelerators, as they now need to be sufficiently flexible to support a wide range of DNN workloads efficiently. However, many of the existing DNN accelerators rely on certain properties of the DNN which cannot be guaranteed (e.g., fixed weight sparsity, large number of channels, large batch size). In this talk, we will briefly discuss recent techniques that have been used to design efficient DNN algorithms and important properties to consider when applying these techniques. We will then present a systematic approach called Eyexam to identify the sources of inefficiencies in DNN accelerator designs for different DNN workloads. Finally, we will introduce a flexible accelerator called Eyeriss v2 that is computationally efficient across a wide range of diverse DNNs.
 
