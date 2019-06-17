@@ -9,6 +9,7 @@ speaker:
     affiliation: IBM Research
     avatar: feris.jpg
     url: http://rogerioferis.com/
+presentation: feris-talk.pdf
 ---
 Very deep convolutional neural networks have shown remarkable success in many computer vision tasks, yet their computational expense limits their impact in domains where fast inference is essential, particularly in delay-sensitive and real-time scenarios such as autonomous driving, robotic navigation, or user-interactive applications on mobile devices. In this talk, I will describe two complementary approaches for speeding up deep neural networks. The first approach, called BlockDrop, learns to dynamically choose which layers of a deep network to execute during inference so as to best reduce total computation without degrading prediction accuracy. The second approach, called Big-Little Net, relies on a multi-branch network architecture that has different computational complexities for different branches, with feature fusion at multiple scales. The model surpasses state-of-the-art CNN acceleration approaches by a large margin in accuracy and FLOPs reduction. Finally, I will conclude the talk describing ongoing efforts at IBM for energy efficient deep learning.
 
