@@ -9,6 +9,7 @@ speaker:
     affiliation: Stanford University
     url: https://murmann-group.stanford.edu/mediawiki/index.php/Main_Page
     avatar: murmann.jpg
+presentation: murmann-talk.pdf
 ---
 Over the past decade, machine learning algorithms have been deployed in many cloud-centric applications. However, as the application space continues to grow, various algorithms are now being embedded “closer to the sensor,” eliminating the latency, privacy and energy penalties associated with cloud access. In this talk, I will review mixed-signal circuit techniques that can improve the efficiency of moderate-complexity, low-power inference algorithms. Specific examples include feature analog extraction for image and audio processing, mixed-signal compute circuits for convolutional neural networks, as well as compute-in memory using resistive RAM.
 
