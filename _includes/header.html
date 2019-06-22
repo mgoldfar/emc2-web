@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="assets/css/materialize.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/edition.css" />
+  
+  {% if page.layout == "edition-page" %}
+  <meta property="og:image"
+        content="{{ https://www.emc2-workshop.com/assets/images/editions/{{ page.slug }}.jpg }}" />
+  {% endif %}
 </head>
 
 <body>
