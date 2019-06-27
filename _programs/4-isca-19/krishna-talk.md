@@ -9,6 +9,7 @@ speaker:
     affiliation: Georgia Institue of Technology
     url: https://tusharkrishna.ece.gatech.edu
     avatar: krishna.jpg
+presentation: emc2-isca19-krishna-talk.pdf
 ---
 Ever since modern computers were invented, the dream of creating artificial intelligence (AI) has captivated humanity. We are fortunate to live in an era when, thanks to deep learning (DL), computer programs have paralleled, and in many cases even surpassed human level accuracy in tasks like visual perception and speech synthesis. However, we are still far away from realizing general-purpose AI. The problem lies in the fact that the development of supervised learning based DL solutions today is mostly open loop.  A typical DL model is created by hand-tuning the deep neural network (DNN) topology by a team of experts over multiple iterations, followed by training over petabytes of labeled data. Once trained, the DNN provides high accuracy for the task at hand; if the task changes, however, the DNN model needs to be re-designed and re-trained before it can be deployed. A general-purpose AI system, in contrast, needs to have the ability to constantly interact with the environment and learn by adding and removing connections within the DNN autonomously, just like our brain does. This is known as synaptic plasticity.
 
