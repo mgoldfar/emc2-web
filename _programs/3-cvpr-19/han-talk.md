@@ -9,6 +9,7 @@ speaker:
     affiliation: MIT
     avatar: han.jpg
     url: https://songhan.mit.edu
+presentation: han-talk.pdf
 ---
 Efficient deep learning computing requires algorithm and hardware co-design to enable specialization: we usually need to change the algorithm to reduce memory footprint and improve energy efficiency. However, the extra degree of freedom from the algorithm creates a much larger design space: it’s not only about designing the hardware but also about how to change the algorithm to best fit the hardware. Human engineers can hardly exhaust the design space by heuristics. It’s labor consuming and sub-optimal. We propose design automation techniques for efficient neural networks. We investigate automatically designing small and fast models (ProxylessNAS), auto channel pruning (AMC), and auto mixed-precision quantization (HAQ). We demonstrate such learning-based, automated design achieves superior performance and efficiency than rule-based human design. Moreover, we shorten the design cycle by 200× than previous work, so that we can afford to design specialized neural network models for different hardware platforms.
 
