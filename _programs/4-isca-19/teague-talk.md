@@ -8,6 +8,7 @@ speaker:
     name: Harris Teague
     affiliation: Qualcomm AI Research
     avatar: ht.jpg
+presentation: emc2-isca19-teague-talk.pdf
 ---
 In this talk we’ll cover techniques to do post-training quantization that can improve model accuracy for 8-bit quantization significantly.  These techniques are especially useful when training/fine-tuning is not possible, a case that arises very frequently in commercial applications.  No training pipeline, optimized hyperparameters, nor full training datasets are needed.  We show the effectiveness of these techniques for popular models used for inference on resource constrained devices.
 
