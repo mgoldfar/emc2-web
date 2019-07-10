@@ -9,6 +9,7 @@ speaker:
     affiliation: Arizona State University and Facebook
     avatar: wu.jpg
     url: http://faculty.engineering.asu.edu/carolewu/
+presentation: emc2-isca19-wu-talk.pdf
 ---
 Machine learning systems are being widely deployed in production datacenter infrastructure and over billions of edge devices. This talk seeks to address key system design challenges when scaling machine learning solutions to billions of people. What are key similarities and differences between cloud and edge infrastructure? The talk will conclude with open system research directions for deploying machine learning at scale.
 
