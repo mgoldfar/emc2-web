@@ -1,7 +1,7 @@
 encoding: utf-8
 
 # Site settings
-title: Workshop on Energy Efficient Machine Learning and Cognitive Computing for Embedded Applications
+title: Workshop on Energy Efficient Machine Learning and Cognitive Computing
 short_title: EMC2
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -10,7 +10,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
 
 collections:
   organizers:
