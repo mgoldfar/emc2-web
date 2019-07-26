@@ -46,7 +46,11 @@
     </div>
 
     <!-- Program -->
-    <div class="program-container" style="">    
+    <div class="program-container" style="">
+        {% if program_size == 0 %}
+        {% include cfp.html %}
+        {% endif %}
+        
         {% for p in program %}
         <div class="ed-grid-container-program-item" id="{{ p.id }}">
             {% case p.type %}
