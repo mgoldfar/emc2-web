@@ -46,11 +46,24 @@
     </div>
 
     <!-- Program -->
-    <div class="program-container" style="">
-        {% if program_size == 0 %}
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#tab_cfp">CFP</a></li>
+          <li class="tab col s3">
+          {% if program_size > 0 %}
+            <a class="active" href="#tab_program">Program</a></li>
+          {% else %}
+            <a href="#tab_program">Program</a>
+          {% endif %}
+        </li>
+      </ul>
+    </div>
+
+    <div id="tab_cfp" class="program-container">
         {% include cfp.html %}
-        {% endif %}
-        
+    </div>
+
+    <div id="tab_program" class="program-container">
         {% for p in program %}
         <div class="ed-grid-container-program-item" id="{{ p.id }}">
             {% case p.type %}
