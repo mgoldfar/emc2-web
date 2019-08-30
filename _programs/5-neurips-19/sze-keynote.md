@@ -3,7 +3,7 @@ edition: neurips-19
 type: keynote
 time_start:
 time_end:
-title: TBD
+title:
 speaker:
     name: Vivienne Sze
     affiliation: MIT
