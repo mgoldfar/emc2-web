@@ -88,7 +88,9 @@
 
             <div class="ed-grid-item-program-item-time">
                 <h5 class="time primary-text">
-                    <strong>{{ p.time_start|date: "%H:%M" }} - {{ p.time_end|date: "%H:%M" }}</strong>
+                    {% if p.time_start %}
+                        <strong>{{ p.time_start|date: "%H:%M" }} - {{ p.time_end|date: "%H:%M" }}</strong>
+                    {% endif %}
                 </h5>
             </div>
             <div class="ed-grid-item-program-item-type">
