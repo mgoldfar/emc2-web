@@ -3,7 +3,7 @@ edition: neurips-19
 type: invited_talk
 time_start:
 time_end:
-title: TBDs
+title:
 speaker:
     name: Diana Marculescu
     affiliation: Carnegie Mellon University
