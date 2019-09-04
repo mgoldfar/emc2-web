@@ -46,19 +46,19 @@
     </div>
 
     <!-- Program -->
-    <div class="col s12">
+    <div class="program-tab-container">
       <ul class="tabs">
-        <li class="tab col s3"><a href="#tab_cfp">CFP</a></li>
+        <li class="tab col s3"><a href="#tab_cfp"><i class="material-icons">chat</i> CFP</a></li>
           <li class="tab col s3">
           {% if program_size > 0 %}
-            <a class="active" href="#tab_program">Program</a></li>
+            <a class="active" href="#tab_program"><i class="material-icons">description</i>  Program</a></li>
           {% else %}
-            <a href="#tab_program">Program</a>
+            <a href="#tab_program"><i class="material-icons">description</i>  Program</a>
           {% endif %}
           </li>
           {% if page.has_emcc_submission %}
             <li class="tab col s3">
-                <a href="#tab_emcc">EMCC</a>
+                <a href="#tab_emcc"><i class="material-icons">public</i>  Model Compression Challenge</a>
             </li>
           {% endif %}
       </ul>
