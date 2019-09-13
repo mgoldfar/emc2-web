@@ -69,7 +69,8 @@
     </div>
 
     <div id="tab_program" class="program-container">
-        {% for p in program.items %}
+        {% for p_group in program %}
+        {% for p in p_group.items %}
         <div class="ed-grid-container-program-item" id="{{ p.id }}">
             {% case p.type %}
                 {% when 'grand_keynote' %}
@@ -157,6 +158,7 @@
                 {% endif %}
             </div>
         </div>
+        {% endfor %}
         {% endfor %}
     </div>
 
