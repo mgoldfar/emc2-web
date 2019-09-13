@@ -1,5 +1,5 @@
 ---
-order: 2
+order: 3
 edition: neurips-19
 type: invited_talk
 time_start:
