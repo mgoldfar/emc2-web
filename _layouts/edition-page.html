@@ -69,7 +69,7 @@
     </div>
 
     <div id="tab_program" class="program-container">
-        {% for p in program %}
+        {% for p in program.items %}
         <div class="ed-grid-container-program-item" id="{{ p.id }}">
             {% case p.type %}
                 {% when 'grand_keynote' %}
