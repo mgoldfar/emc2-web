@@ -107,7 +107,7 @@
                 </h5>
             </div>
             <div class="ed-grid-item-program-item-avatar">
-                {% if p.type == "keynote" or p.type == "invited_talk" %}
+                {% if  p.type == "grand_keynote" or p.type == "keynote" or p.type == "invited_talk" %}
                     {% if p.speaker.avatar %}
                         <img src="assets/images/speakers/{{ p.edition }}/{{ p.speaker.avatar }}"
                         class="z-depth-1 valign-wrapper avatar-image" />
@@ -117,7 +117,7 @@
             <div class="ed-grid-item-program-item-content">
                 {% if p.type == "welcome" or p.type == "break" or p.type == "lunch" or p.type == "close" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
-                {% elsif p.type == "keynote" or p.type == "invited_talk" %}
+                {% elsif p.type == "grand_keynote" or p.type == "keynote" or p.type == "invited_talk" %}
                     {% if p.presentation %}
                     <a href="assets/docs/{{ p.edition }}/{{ p.presentation }}">
                         <span class="new badge blue" data-badge-caption="">Presentation</span>
