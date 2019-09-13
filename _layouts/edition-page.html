@@ -11,7 +11,7 @@
         {% assign event_session_header = "" %}
 {% endcase %}
 
-{% assign program = site.programs|where: "edition",page.edition|sort:"time_end" %}
+{% assign program = site.programs|where: "edition",page.edition|group_by:"order"|sort:"time_end" %}
 {% assign program_size = program|size %}
 {% assign paper_session_counter = 0 %}
 {% assign talk_class_header = "" %}
