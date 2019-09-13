@@ -11,7 +11,7 @@
         {% assign event_session_header = "" %}
 {% endcase %}
 
-{% assign program = site.programs|where: "edition",page.edition|group_by:"order"|sort:"time_end" %}
+{% assign program = site.programs|where: "edition",page.edition|group_by:"order"|sort:"order" %}
 {% assign program_size = program|size %}
 {% assign paper_session_counter = 0 %}
 {% assign talk_class_header = "" %}
@@ -70,7 +70,8 @@
 
     <div id="tab_program" class="program-container">
         {% for p_group in program %}
-        {% for p in p_group.items %}
+        {% assign p_group_items_sorted = p_group.items|sort:"time_end" %}
+        {% for p in p_group_items_sorted %}
         <div class="ed-grid-container-program-item" id="{{ p.id }}">
             {% case p.type %}
                 {% when 'grand_keynote' %}
