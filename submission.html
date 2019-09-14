@@ -67,7 +67,7 @@ show_note: False
                     {% for ed in upcoming_editions %}
                         <td>
                             {% if ed.has_emcc_submission %}
-                                {{ ed.emcc_submission_deadline|date: "%B %d, %Y" }}
+                                <strong>{{ ed.emcc_submission_deadline|date: "%B %d, %Y" }}  (23:59 PST)</strong>
                             {% else %}
                                 N/A
                             {% endif %}
