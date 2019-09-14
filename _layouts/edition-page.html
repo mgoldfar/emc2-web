@@ -124,7 +124,9 @@
                         <span class="new badge blue" data-badge-caption="">Presentation</span>
                     </a>
                     {% endif %}
+                    {% if p.title and p.title != "TBD" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
+                    {% endif %}
                     <h4 class="light-primary">
                         {% if p.speaker.url %}
                         <a href="{{ p.speaker.url }}" target="_blank">
