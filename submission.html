@@ -63,6 +63,18 @@ show_note: False
                     {% endfor %}
                 </tr>
                 <tr>
+                    <td>EMCC Model Submission</td>
+                    {% for ed in upcoming_editions %}
+                        <td>
+                            {% if ed.has_emcc_submission %}
+                                {{ ed.emcc_submission_deadline|date: "%B %d, %Y" }}
+                            {% else %}
+                                N/A
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                </tr>
+                <tr>
                     <td>Workshop</td>
                     {% for ed in upcoming_editions %}
                     <td>{{ ed.event_date|date: "%B %d, %Y" }}</td>
