@@ -4,7 +4,7 @@ edition: neurips-19
 type: invited_talk
 time_start:
 time_end:
-title: TBD
+title: Adaptive Multi-Task Neural Networks for Efficient Inference
 speaker:
     name: Rogerio Feris 
     affiliation: IBM Research
