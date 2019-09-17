@@ -41,6 +41,16 @@
             <h5 class="primary-text" style="margin: 0;">{{ event_session_header }}</h5>
         </div>
         <div class="ed-grid-item-header-note">
+            {% if page.submission_deadline_extended %}
+                {% if page.is_accepting_submission %}
+                <blockquote class="z-depth-1">
+                    <p style="padding: 1rem;">
+                        <strong>Important Update:</strong> The paper submission deadline has been extended to {{ page.submission_deadline_extended|date: "%B %d, %y" }}.
+                    </p>
+                </blockquote>
+                {%endif %}
+            {% endif %}
+
             {{ page.content }}
         </div>
     </div>
