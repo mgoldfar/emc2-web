@@ -138,6 +138,14 @@ show_note: False
                 href="{{ ed.submission_url }}" target="_blank">
                 Submit to EMC<sup>2</sup> ({{ ed.colocated_short}}) <i class="material-icons right">send</i>
             </a>
+
+            {% if ed.has_emcc_submission %}
+            <a class="waves-effect waves-light btn-large center-align"
+                href="/submission-emcc" target="_blank">
+                Submit to EMC<sup>2</sup> ({{ ed.colocated_short}}) Model Compression Challenge
+                <i class="material-icons right">send</i>
+            </a>
+            {% endif %}
             {% endfor %}
         </div>
         {% endif %}
