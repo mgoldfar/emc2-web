@@ -52,12 +52,14 @@ show_note: True
                 <tr>
                     <td>Acceptance and Rebuttals</td>
                     {% for ed in upcoming_editions %}
-                    {% if ed.submission_deadline_extended %}
-                    <strong style="color: red;">{{ ed.submission_acceptance_extended|date: "%B %d, %Y" }} (23:59 PST)</strong>
-                    <span style="text-decoration: line-through;">{{ ed.submission_acceptance|date: "%B %d, %Y" }} (23:59 PST)</span>
-                    {% else %}
-                    <strong>{{ ed.submission_deadline|date: "%B %d, %Y" }} (23:59 PST)</strong>
-                    {% endif %}
+                    <td>
+                        {% if ed.submission_deadline_extended %}
+                        <strong style="color: red;">{{ ed.submission_acceptance_extended|date: "%B %d, %Y" }} (23:59 PST)</strong>
+                        <span style="text-decoration: line-through;">{{ ed.submission_acceptance|date: "%B %d, %Y" }} (23:59 PST)</span>
+                        {% else %}
+                        <strong>{{ ed.submission_deadline|date: "%B %d, %Y" }} (23:59 PST)</strong>
+                        {% endif %}
+                    </td>
                     {% endfor %}
                 </tr>
                 <tr>
