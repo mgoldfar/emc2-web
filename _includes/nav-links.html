@@ -3,7 +3,7 @@
 
 {% assign sorted_editions = site.editions|sort:"event_date"|reverse %}
 
-{% for ed in sorted_editions limit: 2 %}
+{% for ed in sorted_editions limit: 1 %}
     <li><a href="{{ ed.url }}">{{ ed.colocated_short }}</a></li>
 {% endfor %}
 
