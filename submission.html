@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /submission
-show_note: False
+show_note: True
 ---
 {% assign accepting_editions = site.editions|where: "is_accepting_submission",true|sort:"event_date" %}
 {% assign upcoming_editions = site.editions|where: "show_on_submission_page",true|sort:"event_date" %}
@@ -13,9 +13,8 @@ show_note: False
     <div class="col s12">
         <blockquote class="z-depth-1">
             <p style="padding: 1rem;">
-                Due to the half-day schedule and overwhelming responses received, we are forced to skip short paper presentation track from
-                the <a href="cvpr-19">3rd edition</a> of EMC2. Please consider submitting your workshop paper to the <a href="isca-19">4th edition</a>
-                of EMC2 co-located with ISCA 2019.</p>
+                Due to the overwhelming number of papers received, we have extended the notification date for the <a href="neurips-19">NeuIPS'19</a>.
+            </p>
         </blockquote>
     </div>
 </div>
@@ -53,7 +52,12 @@ show_note: False
                 <tr>
                     <td>Acceptance and Rebuttals</td>
                     {% for ed in upcoming_editions %}
-                    <td>{{ ed.submission_acceptance|date: "%B %d, %Y" }}</td>
+                    {% if ed.submission_deadline_extended %}
+                    <strong style="color: red;">{{ ed.submission_acceptance_extended|date: "%B %d, %Y" }} (23:59 PST)</strong>
+                    <span style="text-decoration: line-through;">{{ ed.submission_acceptance|date: "%B %d, %Y" }} (23:59 PST)</span>
+                    {% else %}
+                    <strong>{{ ed.submission_deadline|date: "%B %d, %Y" }} (23:59 PST)</strong>
+                    {% endif %}
                     {% endfor %}
                 </tr>
                 <tr>
