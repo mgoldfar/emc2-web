@@ -8,7 +8,7 @@ papers:
     - title: Training Compact Models for Low Resource Entity Tagging using Pre-trained Language Models
       authors: Peter Izsak, Shira Guskin and Moshe Wasserblat
       affiliation: Intel AI Lab
-    - title: Algorithm-hardware Co-design for Deformabl eConvolution
+    - title: Algorithm-hardware Co-design for Deformable Convolution
       authors: Qijing Huang, Dequan Wang, Yizhao Gao, Yaohui Cai, Zhen Dong, Bichen Wu, Kurt Keutzer and John Wawrzynek
       affiliation: University of California, Berkeley and Peking University
     - title: Instant Quantization of Neural Networks using Monte Carlo Methods

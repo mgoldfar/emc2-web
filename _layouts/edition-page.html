@@ -102,6 +102,9 @@
                 {% when 'paper_session' %}
                     {% assign paper_session_counter = paper_session_counter|plus:1 %}
                     {% assign talk_class_header = "Paper Session #"|append:paper_session_counter %}
+                {% when 'poster_session' %}
+                    {% assign poster_session_counter = poster_session_counter|plus:1 %}
+                    {% assign talk_class_header = "Poster Session #"|append:poster_session_counter %}
                 {% when 'welcome' %}
                     {% assign talk_class_header = "Welcome" %}
                 {% when 'close' %}
@@ -157,7 +160,7 @@
                         {% endif %}
                     </h4>
                     {{ p.content | markdownify }}
-                {% elsif p.type == "paper_session" %}
+                {% elsif p.type == "paper_session" or p.type == "poster_session" %}
                     {% if p.papers.size == 0 %}
                         <p>Under review.</p>
                     {% endif %}
