@@ -1,48 +1,113 @@
 ---
 layout: default
 permalink: /program-committee
+reviewers:
+    - name: Marwane	Hariat
+      affiliation: Wave Computing
+    - name: Khalid Tahboub
+      affiliation: Qualcomm
+    - name: Smriti Ojha
+      affiliation: AMD
+    - name: Shuai Zhang
+      affiliation: Qualcomm
+    - name: Ali	Shafiee
+      affiliation: University of Utah
+    - name: Partha	Maji
+      affiliation: University of Cambridge
+    - name: Karl Taht
+      affiliation: University of Utah
+    - name: Urmish Thakker
+      affiliation: Arm
+    - name: Vinayak Gokhale
+      affiliation: Google
+    - name: Claudionor Coelho
+      affiliation: Google
+    - name: Aliasger Zaidy
+      affiliation: FWDNXT Inc.
+    - name: Zheng Wang
+      affiliation: Amazon
+    - name: Pradeep	Ramani
+      affiliation: NVIDIA
+    - name:  Amrit Panda
+      affiliation: Microsoft
+    - name: Tijmen Blankevoort
+      affiliation: Qualcomm
+    - name: Sikandar Mashayak
+      affiliation: Wave Computing Inc.
+    - name: Jain Karishma
+      affiliation: Intel
+    - name: He Xiao
+      affiliation: Cadence
+    - name: Wei	Wang
+      affiliation: Amazon
+    - name: Tushar Krishna
+      affiliation: Georgia Institute of Technology
+    - name: Nader Sehatbakhsh
+      affiliation: Georgia Institute of Technology
+    - name: Balajee	Vamanan
+      affiliation: University of Illinois at Chicago
+    - name: Xia	Lu
+      affiliation: Amazon
+    - name: Rahmani	Mariam
+      affiliation: Intel
+    - name:  Keshari Rishabh
+      affiliation: Intel
+    - name: Kushal	Datta
+      affiliation: Intel
+    - name:  Andre Xian	Ming Chang
+      affiliation: Purdue University
+    - name: Sylvain Flamant
+      affiliation: Wave computing
+    - name: Rosario	Cammarota
+      affiliation: Intel
+    - name: Chen Ding
+      affiliation: University of Rochester
+    - name: Andy Glew
+      affiliation: NVIDIA
+    - name: Sreepathi Pai
+      affiliation: University of Rochester
+    - name: Raj Jain
+      affiliation: Washington University
+    - name: Smruti Sarangi
+      affiliation: IIT Delhi
+    - name: Shaoshan Liu
+      affiliation: PerceptIn
+    - name: Ali Shafiee
+      affiliation: Samsung
+    - name: Danian Gong
+      affiliation: Cadence
 ---
-
 <h3 class="header">Committees</h3>
 <div class="row">
     <div class="col s12 m6">
         <h4 class="header">Program Committee</h4>
         <ul class="browser-default">
-            <li>Raj Parihar, Tensilica/Cadence</li>
-            <li>Michael Goldfarb, Qualcomm</li>
-            <li>Chen Ding, University of Rochester</li>
-            <li>Mahdi Bojnordi, University of Utah</li>
-            <li>Andy Glew, Nvidia</li>
-            <li>Sreepathi Pai, University of Rochester</li>
-            <li>Raj Jain, Washington University in St. Louis</li>
-            <li>Smruti R Sarangi, IIT Delhi</li>
-            <li>Shaoshan Liu, PerceptIn</li>
-            <li>Ali Shafiee, Samsung</li>
-            <li>Satyam Srivastava, Intel</li>
-            <li>Danian Gong, Cadence</li>
-            <li>Debu Pal, Cadence</li>
-            <li>Krishna Nagar, Intel</li>
-            <li>Tao Sheng, Amazon</li>
-            <li>Sushant Kondguli, Samsung</li>
-            <li>Sikandar Mashayak, Wave Computing</li>
+            {% for o in site.organizers %}
+                <li>{{ o.name }}, {{ o.affiliation }}</li>
+            {% endfor %}
         </ul>
     </div>
     <div class="col s12 m6">
-        <h4 class="header">Publicity and Outreach Chairs</h4>
-        <ul class="browser-default">
-            <li>Debu Pal, Cadence</li>
-            <li>Mahdi Bojnordi, University of Utah</li>
-            <li>Krishna Nagar, Intel​</li>
-        </ul>
-        <h4 class="header">Submission and Publication Chairs</h4>
-        <ul class="browser-default">
-            <li>Satyam Srivastava, Intel (satyam.srivastava@intel.com)</li>
-            <li>Tao Sheng, Amazon (tsheng@amazon.com)</li>
-        </ul>
         <h4 class="header">General Chairs</h4>
         <ul class="browser-default">
             <li>Raj Parihar, Tensilica/Cadence (parihar@cadence.com)</li>
             <li>Michael Goldfarb, Qualcomm (mgoldfar@qti.qualcomm.com)</li>
+        </ul>
+        <h4 class="header">Publicity and Outreach Chairs</h4>
+        <ul class="browser-default">
+            <li>Debu Pal, Cadence</li>
+            <li>Mahdi Bojnordi, University of Utah</li>
+            <li>Krishna Nagar, Intel</li>
+        </ul>
+        <h4 class="header">Submission Chairs</h4>
+        <ul class="browser-default">
+            <li>Tao Sheng, Amazon (tsheng@amazon.com)</li>
+            <li>Sikandar Mashayak, Wave Computing (smashayak@wavecomp.com)</li>
+        </ul>
+        <h4 class="header">Publication Chairs</h4>
+        <ul class="browser-default">
+            <li>Satyam Srivastava, Intel (satyam.srivastava@intel.com)</li>
+            <li>Sushant Kondguli, Samsung (s.kondguli@samsung.com)</li>
         </ul>
     </div>
 </div>
@@ -62,3 +127,14 @@ permalink: /program-committee
     </div>
 </div>
 {% endfor %}
+
+<h3 class="header">Review Committee</h3>
+<div class="row">
+    <div class="col s12">
+        <ul class="browser-default" >
+        {% for r in page.reviewers %}
+            <li style="display: inline-block">{{ r.name }}, {{ r.affiliation }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
