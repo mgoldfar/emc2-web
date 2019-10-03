@@ -131,3 +131,19 @@ img.avatar-image {
     height: 170px;
     margin: 20px;
 }
+
+.reviewers-list {
+    columns: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .reviewers-list {
+        columns: 2;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .reviewers-list {
+        columns: 3;
+    }
+}
