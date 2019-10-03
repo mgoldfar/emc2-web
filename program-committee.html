@@ -109,9 +109,9 @@ reviewers:
 <h3 class="header">Review Committee</h3>
 <div class="row">
     <div class="col s12">
-        <ul class="browser-default" >
+        <ul class="browser-default reviewers-list">
         {% for r in page.reviewers %}
-            <li style="float: left;">{{ r.name }}, {{ r.affiliation }}</li>
+            <li>{{ r.name }}, {{ r.affiliation }}</li>
         {% endfor %}
         </ul>
     </div>
