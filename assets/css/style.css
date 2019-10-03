@@ -136,14 +136,9 @@ img.avatar-image {
     columns: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
     .reviewers-list {
         columns: 2;
     }
 }
 
-@media screen and (min-width: 1080px) {
-    .reviewers-list {
-        columns: 3;
-    }
-}
