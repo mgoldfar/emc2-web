@@ -10,7 +10,7 @@ papers:
       affiliation: Intel AI Lab
     - title: Algorithm-hardware Co-design for Deformable Convolution
       authors: Qijing Huang, Dequan Wang, Yizhao Gao, Yaohui Cai, Zhen Dong, Bichen Wu, Kurt Keutzer and John Wawrzynek
-      affiliation: University of California, Berkeley and Peking University
+      affiliation: UC Berkeley, Peking University and University of Chinese Academy of Science
     - title: Instant Quantization of Neural Networks using Monte Carlo Methods
       authors: Gonçalo Mordido, Matthijs Van Keirsbilck and Alexander Keller
       affiliation: Hasso Plattner Institute and NVIDIA
