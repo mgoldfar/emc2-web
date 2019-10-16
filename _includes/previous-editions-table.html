@@ -1,11 +1,11 @@
+{% assign past_editions = site.editions|where: "is_upcoming",false|reverse %}
 {% if include.limit %}
     {% assign _limit=include.limit %}
 {% else %}
     {% assign _limit=1024 %}
 {% endif %}
 <ul class="collection">
-    {% assign editions_rev = site.editions | reverse %}
-    {% for ed in editions_rev limit:_limit %}
+    {% for ed in past_editions limit:_limit %}
       <li class="collection-item">
         {% assign edition_number = ed.title|split:" "|first %}
         <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> co-located with
