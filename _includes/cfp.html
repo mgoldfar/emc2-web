@@ -15,7 +15,11 @@
   </div>
 </div>
 <div class="row">
-  <div class="col s12 m6">
+  {% assign _col_size="s12 m6" %}
+  {% if include.hide_cfp %}
+    {% assign _col_size="s12" %}
+  {% else %}
+  <div class="col {{ _col_size }}">
     <h3 class="header"><i class="material-icons">chat</i> Call for Papers</h3>
     <p>
       A new wave of intelligent computing, driven by recent advances in machine learning and cognitive algorithms
@@ -30,7 +34,8 @@
       performance,energy, reliability, accuracy, and security that demand a holistic approach to designing the hardware,
       software, and intelligence algorithms to achieve the best power, performance, and area (PPA).</p>
   </div>
-  <div class="col s12 m6">
+  {% endif %}
+  <div class="col {{ _col_size }}">
     <h3 class="header"><i class="material-icons">format_list_bulleted</i> Topics for the Workshop</h3>
     <ul class="browser-default list">
       <li>Architectures for the edge: IoT, automotive, and mobile</li>
