@@ -4,7 +4,7 @@ edition: neurips-19
 type: invited_talk
 time_start:
 time_end:
-title: Kernel and Graph Optimization for Deep Learning Models
+title: Kernel and Graph Optimization for DL Model Execution
 speaker:
     name: Jinwon Lee
     affiliation: Qualcomm
