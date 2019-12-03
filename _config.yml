@@ -16,6 +16,8 @@ collections:
   editions:
     output: true
   programs:
+  guidelines:
+    output: true
 
 exclude: [doc]
 

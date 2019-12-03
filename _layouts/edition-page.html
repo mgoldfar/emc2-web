@@ -58,6 +58,14 @@
                 {% endif %}
             {% endif %}
 
+            {% assign guideline = site.guidelines|where: "edition",page.edition|first %}
+            {% if guideline %}
+            <blockquote class="z-depth-1" style="text-align: left;">
+                <p style="padding: 1rem;">
+                    <strong>Notice to Authors:</strong> Guidelines for oral and posters presentations are available <a href="{{ guideline.permalink }}">here</a>.
+                </p>
+            </blockquote>
+            {% endif %}
             {{ page.content }}
         </div>
     </div>
