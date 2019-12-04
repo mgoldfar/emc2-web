@@ -1,9 +1,8 @@
 ---
-order: 6
 edition: neurips-19
 type: poster_session
-time_start:
-time_end:
+time_start: 2019-12-13 15:45:00
+time_end: 2019-12-13 16:15:00
 papers:
     - title: Pushing the limits of RNN Compression
       authors: Urmish Thakker, Igor Fedorov, Jesse Beu, Dibakar Gope, Chu Zhou, Ganesh Dasika and Matthew Mattina

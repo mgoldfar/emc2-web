@@ -1,9 +1,8 @@
 ---
-order: 3
 edition: neurips-19
 type: invited_talk
-time_start:
-time_end:
+time_start: 2019-12-13 14:45:00
+time_end: 2019-12-13 15:15:00
 title: Advances and Prospects for In-memory Computing
 speaker:
     name: Naveen Verma

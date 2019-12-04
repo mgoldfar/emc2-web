@@ -1,9 +1,8 @@
 ---
-order: 3
 edition: neurips-19
 type: invited_talk
-time_start:
-time_end:
+time_start: 2019-12-13 10:30:00
+time_end: 2019-12-13 11:00:00
 title: 'Abandoning the Dark Arts: New Directions in Efficient DNN Design'
 speaker:
     name: Kurt Keutzer

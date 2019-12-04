@@ -1,9 +1,8 @@
 ---
-order: 5
 edition: neurips-19
 type: poster_session
-time_start:
-time_end:
+time_start: 2019-12-13 10:00:00
+time_end: 2019-12-13 10:30:00
 papers:
     - title: Bit Efficient Quantization for Deep Neural Networks
       authors: Prateeth Nayak, David Zhang and Sek Chai

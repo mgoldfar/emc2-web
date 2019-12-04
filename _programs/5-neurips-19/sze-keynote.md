@@ -1,9 +1,8 @@
 ---
-order: 2
 edition: neurips-19
 type: keynote
-time_start:
-time_end:
+time_start: 2019-12-13 8:45:00
+time_end: 2019-12-13 9:30:00
 title: Efficient Computing for AI and Robotics
 speaker:
     name: Vivienne Sze

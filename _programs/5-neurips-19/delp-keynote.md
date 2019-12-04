@@ -1,9 +1,8 @@
 ---
-order: 2
 edition: neurips-19
 type: keynote
-time_start:
-time_end:
+time_start: 2019-12-13 14:00:00
+time_end: 2019-12-13 14:45:00
 title: 'Cheap, Fast, and Low Power Deep Learning: I need it now!'
 speaker:
     name: Edward Delp

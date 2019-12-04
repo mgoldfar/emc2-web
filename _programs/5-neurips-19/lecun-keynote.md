@@ -1,9 +1,8 @@
 ---
-order: 1
 edition: neurips-19
 type: grand_keynote
-time_start:
-time_end:
+time_start: 2019-12-13 8:00:00
+time_end: 2019-12-13 8:45:00
 title: TBD
 speaker:
     name: Yann LeCun 

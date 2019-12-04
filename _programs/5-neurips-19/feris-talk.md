@@ -1,9 +1,8 @@
 ---
-order: 3
 edition: neurips-19
 type: invited_talk
-time_start:
-time_end:
+time_start: 2019-12-13 16:15:00
+time_end: 2019-12-13 16:45:00
 title: Adaptive Multi-Task Neural Networks for Efficient Inference
 speaker:
     name: Rogerio Feris 

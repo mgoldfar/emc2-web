@@ -1,9 +1,8 @@
 ---
-order: 6
 edition: neurips-19
 type: paper_session
-time_start:
-time_end:
+time_start: 2019-12-13 16:45:00
+time_end: 2019-12-13 17:45:00
 papers:
     - title: Training Compact Models for Low Resource Entity Tagging using Pre-trained Language Models
       authors: Peter Izsak, Shira Guskin and Moshe Wasserblat
