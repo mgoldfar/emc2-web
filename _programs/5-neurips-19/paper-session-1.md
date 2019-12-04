@@ -1,9 +1,8 @@
 ---
-order: 5
 edition: neurips-19
 type: paper_session
-time_start:
-time_end:
+time_start: 2019-12-13 11:30:00
+time_end: 2019-12-13 12:30:00
 papers:
     - title: 'AutoSlim: Towards One-Shot Architecture Search for Channel Numbers'
       authors: Jiahui Yu and Thomas Huang

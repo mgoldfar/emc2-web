@@ -1,9 +1,8 @@
 ---
-order: 4
 edition: neurips-19
 type: invited_talk
-time_start:
-time_end:
+time_start: 2019-12-13 18:15:00
+time_end: 2019-12-13 18:45:00
 title: 'Configurable Cloud-Scale DNN Processor for Real-Time AI'
 speaker:
     name: Bita Rouhani

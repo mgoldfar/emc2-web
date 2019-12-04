@@ -1,9 +1,8 @@
 ---
-order: 3
 edition: neurips-19
 type: invited_talk
-time_start:
-time_end:
+time_start: 2019-12-13 11:00:00
+time_end: 2019-12-13 11:30:00
 title: Efficient Algorithms to Accelerate Deep Learning on Edge Devices
 speaker:
     name: Song Han
