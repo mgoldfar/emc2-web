@@ -3,7 +3,7 @@ edition: neurips-19
 type: invited_talk
 time_start: 2019-12-13 11:00:00
 time_end: 2019-12-13 11:30:00
-title: Efficient Algorithms to Accelerate Deep Learning on Edge Devices
+title: 'Hardware-aware Neural Architecture Design for Small and Fast Models: from 2D to 3D'
 speaker:
     name: Song Han
     affiliation: MIT
