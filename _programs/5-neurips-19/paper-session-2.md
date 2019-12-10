@@ -15,7 +15,7 @@ papers:
       affiliation: Hasso Plattner Institute and NVIDIA
     - title: Spoken Language Understanding on the Edge
       authors: Alaa Saade, Alice Coucke, Alexandre Caulier, Joseph Dureau, Adrien Ball, Théodore Bluche, David Leroy, Clément Doumouro, Thibault Gisselbrecht, Francesco Caltagirone, Thibaut Lavril and Maël Primet
-      affiliation: Snips
+      affiliation: Sonos
     - title: Discovering Low-Precision Networks Close to Full-Precision Networks for Efficient Inference
       authors: Jeffrey McKinstry, Steven Esser, Rathinakumar Appuswamy, Deepika Bablani, John Arthur, Izzet Yildiz and Dharmendra Modha
       affiliation: IBM Research
