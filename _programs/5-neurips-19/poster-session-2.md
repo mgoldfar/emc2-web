@@ -16,8 +16,6 @@ papers:
     - title: Regularized Binary Network Training
       authors: Sajad Darabi, Mouloud Belbahri, Matthieu Courbariaux and Vahid Partovi Nia
       affiliation: UCLA, Université de Montréal and Huawei
-    - title: 'Neuron ranking – an informed way to condense convolutional neural networks architecture'
-      authors: Kamil Adamczewski and Mijung Park
       affiliation: Max Planck Institute for Intelligent Systems
     - title: Fully Quantized Transformer for Improved Translation
       authors: Gabriele Prato, Ella Charlaix and Mehdi Rezagholizadeh

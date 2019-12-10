@@ -16,9 +16,9 @@ papers:
     - title: Spoken Language Understanding on the Edge
       authors: Alaa Saade, Alice Coucke, Alexandre Caulier, Joseph Dureau, Adrien Ball, Théodore Bluche, David Leroy, Clément Doumouro, Thibault Gisselbrecht, Francesco Caltagirone, Thibaut Lavril and Maël Primet
       affiliation: Snips
-    - title: 'DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter'
-      authors: Victor Sanh, Lysandre Debut, Julien Chaumond and Thomas Wolf
-      affiliation: Hugging Face
+    - title: Discovering Low-Precision Networks Close to Full-Precision Networks for Efficient Inference
+      authors: Jeffrey McKinstry, Steven Esser, Rathinakumar Appuswamy, Deepika Bablani, John Arthur, Izzet Yildiz and Dharmendra Modha
+      affiliation: IBM Research
     - title: Energy-Aware Neural Architecture Optimization With Splitting Steepest Descent
       authors: Dilin Wang, Lemeng Wu, Meng Li, Vikas Chandra and Qiang Liu
       affiliation: UT Austin and Facebook
