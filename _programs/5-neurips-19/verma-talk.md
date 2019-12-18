@@ -9,6 +9,7 @@ speaker:
     affiliation: Princeton University
     avatar: verma.jpg
     url: http://ee.princeton.edu/people/faculty/naveen-verma
+presentation: emc2-neurips19-verma-talk.pdf
 ---
 Edge AI applications retain the need for high-performing inference models, while driving platforms beyond their limits of energy efficiency and throughput. Digital hardware acceleration, enabling 10-100x gains over general-purpose architectures, is already widely deployed, but is ultimately restricted by data-movement and memory accessing that dominates deep-learning computations. In-memory computing, based on both SRAM and emerging memory, offers fundamentally new tradeoffs for overcoming these barriers, with the potential for 10x higher energy efficiency and area-normalized throughput demonstrated in recent designs. But, those tradeoffs instate new challenges, especially affecting scaling to the level of computations required, integration in practical heterogeneous architectures, and mapping of diverse software. This talk examines those tradeoffs to characterize the challenges. It then explores recent research that provides promising paths forward, making in-memory computing more of a practical reality than ever before.
 
