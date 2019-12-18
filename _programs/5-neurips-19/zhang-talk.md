@@ -9,6 +9,7 @@ speaker:
     affiliation: Cornell University
     avatar: zhang.jpg
     url: https://zhang.ece.cornell.edu
+presentation: emc2-neurips19-zhang-talk.pdf
 ---
 In recent years, machine learning (ML) with deep neural networks (DNNs) has been widely deployed in diverse application domains. However, the growing complexity of DNN models, the slowdown of technology scaling, and the proliferation of edge devices are driving a demand for higher DNN performance and energy efficiency. ML applications have shifted from general-purpose processors to dedicated hardware accelerators in both academic and commercial settings. In line with this trend, there has been an active body of research on both algorithms and hardware architectures for neural network specialization.
 

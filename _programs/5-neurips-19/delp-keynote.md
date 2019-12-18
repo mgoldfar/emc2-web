@@ -9,6 +9,7 @@ speaker:
     affiliation: Purdue University
     avatar: delp.jpg
     url: https://engineering.purdue.edu/~ace/
+presentation: emc2-neurips19-delp-keynote.pdf
 ---
 In this talk I will describe the need for low power machine learning systems. I will motivate this by describing several current projects at Purdue University that have a need for energy efficient deep learning and in some cases the real deployment of these methods will not be possible without lower power solutions. The applications include precision farming, health care monitoring, and edge-based surveillance.
 

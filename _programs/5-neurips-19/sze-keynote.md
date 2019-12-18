@@ -9,6 +9,7 @@ speaker:
     affiliation: MIT
     avatar: sze.jpg
     url: http://www.rle.mit.edu/people/directory/vivienne-sze/
+presentation: emc2-neurips19-sze-keynote.pdf
 ---
 Computing near the sensor is preferred over the cloud due to privacy and/or latency concerns for a wide range of applications including robotics/drones, self-driving cars, smart Internet of Things, and portable/wearable electronics.  However, at the sensor there are often stringent constraints on energy consumption and cost in addition to the throughput and accuracy requirements of the application. In this talk, we will describe how joint algorithm and hardware design can be used to reduce energy consumption while delivering real-time and robust performance for applications including deep learning, computer vision, autonomous navigation/exploration and video/image processing.  We will show how energy-efficient techniques that exploit correlation and sparsity to reduce compute, data movement and storage costs can be applied to various tasks including image classification, depth estimation, super-resolution, localization and mapping.  
 
