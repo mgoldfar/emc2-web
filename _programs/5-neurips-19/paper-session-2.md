@@ -8,29 +8,36 @@ papers:
       authors: Peter Izsak, Shira Guskin and Moshe Wasserblat
       affiliation: Intel AI Lab
       paper: emc2-paper-25.pdf
+      presentation: emc2-izsak-presentation.pdf
     - title: 'Doubly Sparse: Sparse Mixture of Sparse Experts for Efficient Softmax Inference'
       authors: Shun Liao, Ting Chen, Tian Lin, Denny Zhou and Chong Wang
       affiliation: University of Toronto, Google and ByteDance
       paper: emc2-paper-9.pdf
+      presentation: emc2-liao-presentation.pdf
     - title: Algorithm-hardware Co-design for Deformable Convolution
       authors: Qijing Huang, Dequan Wang, Yizhao Gao, Yaohui Cai, Zhen Dong, Bichen Wu, Kurt Keutzer and John Wawrzynek
       affiliation: UC Berkeley, Peking University and University of Chinese Academy of Science
       paper: emc2-paper-10.pdf
+      presentation: emc2-huang-presentation.pdf
     - title: Discovering Low-Precision Networks Close to Full-Precision Networks for Efficient Inference
       authors: Jeffrey McKinstry, Steven Esser, Rathinakumar Appuswamy, Deepika Bablani, John Arthur, Izzet Yildiz and Dharmendra Modha
       affiliation: IBM Research
       paper: emc2-paper-11.pdf
+      presentation: emc2-mckinstry-presentation.pdf
     - title: Instant Quantization of Neural Networks using Monte Carlo Methods
       authors: Gonçalo Mordido, Matthijs Van Keirsbilck and Alexander Keller
       affiliation: Hasso Plattner Institute and NVIDIA
       paper: emc2-paper-17.pdf
+      presentation: emc2-mordido-presentation.pdf
     - title: Spoken Language Understanding on the Edge
       authors: Alaa Saade, Alice Coucke, Alexandre Caulier, Joseph Dureau, Adrien Ball, Théodore Bluche, David Leroy, Clément Doumouro, Thibault Gisselbrecht, Francesco Caltagirone, Thibaut Lavril and Maël Primet
       affiliation: Sonos
       paper: emc2-paper-19.pdf
+      presentation: emc2-saade-presentation.pdf
     - title: Energy-Aware Neural Architecture Optimization With Splitting Steepest Descent
       authors: Dilin Wang, Lemeng Wu, Meng Li, Vikas Chandra and Qiang Liu
       affiliation: UT Austin and Facebook
       paper: emc2-paper-39.pdf
+      presentation: emc2-wang-presentation.pdf
 
 ---
