@@ -185,6 +185,11 @@
                         <a href="assets/docs/{{ p.edition }}/{{ paper.presentation }}">
                             <span class="new badge blue" data-badge-caption="">Presentation</span>
                         </a>
+                        {% endif %}
+                        {% if paper.poster %}
+                        <a href="assets/docs/{{ p.edition }}/{{ paper.poster }}">
+                            <span class="new badge blue" data-badge-caption="">Poster</span>
+                        </a>
                         {% endif %} 
                         <h4 class="dark-primary">{{ paper.title }}</h4>
                         <h5 class="secondary-text">{{ paper.authors }}</h5>
