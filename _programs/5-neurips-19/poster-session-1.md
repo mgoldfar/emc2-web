@@ -13,7 +13,7 @@ papers:
       authors: Shamma Nasrin, Srikanth Ramakrishna, Theja Tulabandhula and Amit Trivedi
       affiliation: University of Illinois at Chicago
       paper: emc2-neurips19-paper-22.pdf
-       poster: emc2-neurips19-narsin-poster.pdf
+      poster: emc2-neurips19-narsin-poster.pdf
     - title: 'Dynamic Channel Execution: on-device Learning Method for Finding Compact Networks'
       authors: Simeon Spasov and Pietro Lio
       affiliation: University of Cambridge
@@ -33,5 +33,5 @@ papers:
       authors: Sven Peter, Nasim Rahaman, Ferran Diego and Fred Hamprecht
       affiliation: Heidelberg University and Telefonica Research
       paper: emc2-neurips19-paper-18.pdf
-       poster: emc2-neurips19-peter-poster.pdf
+      poster: emc2-neurips19-peter-poster.pdf
 ---
