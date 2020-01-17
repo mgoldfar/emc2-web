@@ -9,6 +9,7 @@ speaker:
     affiliation: Microsoft
     avatar: rouhani.jpg
     url: https://www.microsoft.com/en-us/research/people/birouhan/
+presentation: emc2-neurips19-rouhani-talk.pdf
 ---
 Growing computational demands from deep neural networks (DNNs), coupled with diminishing returns from general-purpose architectures, have led to a proliferation of Neural Processing Units (NPUs). In this talk, we will discuss Project Brainwave, a production-scale system for real-time (low latency and high throughput) DNN inference. Brainwave NPU is reconfigurable and deployed in scale production. This reconfigurability, in turn, eliminates costly silicon updates to accommodate evolving state-of-the-art models while enabling orders of magnitude performance improvement compared to highly optimized software solutions.
 

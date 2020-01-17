@@ -9,6 +9,7 @@ speaker:
     affiliation: UC Berkeley
     avatar: keutzer.jpg
     url: https://people.eecs.berkeley.edu/~keutzer/
+presentation: emc2-neurips19-keutzer-talk.pdf
 ---
 Deep Neural Net models have provided the most accurate solutions to a very wide variety of problems in vision, language, and speech; however,  the design, training, and optimization of efficient DNNs typically requires resorting to the “dark arts” of ad hoc methods and extensive hyperparameter tuning. In this talk we present our progress on abandoning these dark arts by using Differential Neural Architecture Search to guide the design of efficient DNNs and by using Hessian-based methods to guide the processes of training and quantizing those DNNs.
 
