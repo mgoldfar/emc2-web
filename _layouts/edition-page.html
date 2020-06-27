@@ -84,11 +84,6 @@
             <a href="#tab_program"><i class="material-icons">description</i>  Program</a>
           {% endif %}
           </li>
-          {% if page.has_emcc_submission %}
-            <li class="tab col s3">
-                <a href="#tab_emcc"><i class="material-icons">public</i>  Model Compression Challenge</a>
-            </li>
-          {% endif %}
       </ul>
     </div>
 
@@ -203,12 +198,6 @@
         {% endfor %}
         {% endfor %}
     </div>
-
-    {% if page.has_emcc_submission %}
-    <div id="tab_emcc" class="program-container">
-        {% include emcc.html %}
-    </div>
-    {% endif %}
 
     <!-- Sponsors -->
     {% if page.sponsors %}
