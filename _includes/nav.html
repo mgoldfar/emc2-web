@@ -1,0 +1,19 @@
+
+<ul id="about-nav-dropdown" class="dropdown-content">
+  <li><a href="/program-committee">Committies</a></li>
+  <li><a href="/previous-editions">Previous Editions</a></li>
+  <li><a href="https://ieeexplore.ieee.org/xpl/conhome/1826546/all-proceedings">IEEE Proceedings</li>
+</ul>
+
+<ul class="right hide-on-med-and-down">
+    <li><a href="/">Home</a></li>
+
+    {% assign sorted_editions = site.editions|sort:"event_date"|reverse %}
+    {% for ed in sorted_editions limit: 1 %}
+        <li><a href="{{ ed.url }}">{{ ed.colocated_short }}</a></li>
+    {% endfor %}
+
+    <li><a href="/submission">Submission</a></li>
+    <li><a href="/feedback">Feedback</a></li>
+    <li><a class="dropdown-trigger" href="#!" data-target="about-nav-dropdown">About<i class="material-icons right">arrow_drop_down</i></a></li>
+</ul>
