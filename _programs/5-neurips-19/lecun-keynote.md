@@ -3,7 +3,7 @@ edition: neurips-19
 type: grand_keynote
 time_start: 2019-12-13 8:00:00
 time_end: 2019-12-13 8:45:00
-title: TBD
+title: 'What DL Hardware Will We Need?'
 speaker:
     name: Yann LeCun 
     affiliation: New York University and Facebook
