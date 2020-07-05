@@ -238,6 +238,7 @@
 
 .ed-grid-item-program-item-content p {
     line-height: 160%;
+    font-size: 0.85em;
 }
 
 @media screen and (min-width: 768px) {
@@ -263,6 +264,10 @@
         margin-right: 0;
         width: 130px;
         height: 130px;
+    }
+    .ed-grid-item-program-item-content p {
+        line-height: 160%;
+        font-size: 1.0em;
     }
 }
 
