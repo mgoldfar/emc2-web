@@ -1,83 +1,46 @@
 <div class="row">
   <div class="col s12">
-      <h3 class="header"><i class="material-icons">description</i> EMC2 Model Compression Challenge (EMCC)</h3>
-      <p>
-        Deep learning has recently pushed the state of the art boundaries in many computer vision tasks. However, existing deep learning models are both computationally and memory intensive, making their deployment difficult on devices with low compute and memory resources. To fit these emerging models on such devices, novel compression techniques are needed without significantly decreasing the model accuracy.
-      </p>
-      <p>The EMC2 Model Compression Challenge (EMCC) aims to identify the best technology in deep learning model compression. To win a prize in EMCC, the solution will be evaluated to meet the two metrics in two tracks below:</p>
-      <ul class="browser-default list">
-      <li>Achieve highest accuracy within the target model size. The submission will not be evaluated if the model size is outside of the target range.</li>
-      <li>Achieve smallest model size within the target accuracy. The submission will not be evaluated if the accuracy is outside of the target range.</li>
-      </ul>
-      <p>
-          A participant (or a team) can submit a single model in Tensorflow (https://www.tensorflow.org/) or PyTorch (https://pytorch.org/).  Final scores will be computed after submission closes.
-      </p>
-      <p>There are three tracks, each participant can submit to either or all tracks.</p>
-       <ul class="browser-default list">
-           <li><strong>ImageNet Classification:</strong> This category focuses image classification models. </li>
-           <li><strong>COCO Object Detection:</strong> This category focuses on object detection models.</li>
-           <li><strong>PASCAL Object Segmentation:</strong>  This category focuses on object segmentation models.</li>
-       </ul>
-  </div>
-</div>
-<div class="row">
-  <div class="col s12">
-      <h3 class="header">1. Data</h3>
-      <p>There are three tracks, each participant can submit to either or all tracks.</p>
-       <ul class="browser-default list">
-           <li><strong>ImageNet Classification:</strong> ILSVRC 2012 classification dataset at <a href="http://image-net.org/challenges/LSVRC/2012/index#data" target="_blank">http://image-net.org/challenges/LSVRC/2012/index#data</a> </li>
-           <li><strong>COCO Object Detection:</strong> COCO 2017 detection dataset at <a href="http://cocodataset.org" target="_blank">http://cocodataset.org</a></li>
-           <li><strong>PASCAL Object Segmentation:</strong> PASCAL 2012 object segmentation dataset at <a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html" target="_blank">http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html</a></li>
-       </ul>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12">
-      <h3 class="header">2. Evaluation</h3>
-      <p>Submissions are evaluated based on the following metrics:</p>
-       <ul class="browser-default list">
-           <li>Highest accuracy with target model size. The target size is based on the state-of-the-art DL model’s size with allowed 5% additional size budget below:
-               <ul class="browser-default list">
-                   <li>ImageNet 2012 Classification: Top-1 accuracy for image classification under a targeted model size (3.5M Bytes). 3.5M is estimated from 8-bit quantized MobilenetV2 model.</li>
-                   <li>COCO 2017 Object Detection: COCO metrics, and the target model size is 6.2M Bytes, which is estimated from 8-bit quantized MobileNetV2-SSD model.</li>
-                   <li>PASCAL 2012 Object Segmentation: mIOU, and the target model size is 2.1M Bytes, which is based on 8-bit quantized MobileNetV2-DeepLab model.</li>
-               </ul>
-           </li>
-
-           <li>Smallest model size with target accuracy. The target accuracy is based on the state-of-the-art DL model’s accuracy with allowed 5% additional accuracy budget below:
-             <ul class="browser-default list">
-                   <li>ImageNet 2012 Classification: Smallest mode size with target Top-1 accuracy (70%). 3.5M is estimated from 8-bit quantized MobilenetV2 model.</li>
-                   <li>COCO 2017 Object Detection: Smallest mode size with target mAP is 26% (COCO metrics), which is estimated from 8-bit quantized MobileNetV2-SSD model.</li>
-                   <li>PASCAL 2012 Object Segmentation: Smallest model size with target mIOU 70%, which is based on 8-bit quantized MobileNetV2-DeepLab model.</li>
-               </ul>
-           </li>
-       </ul>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col s12">
-      <h3 class="header">3. Benchmark Environment and Input</h3>
-      <p>The submissions will be interpreted using the Tensorflow 1.14.0 or PyTorch 1.1.0. The input is ImageNet/COCO/PASCAL images.</p>
+    <h3 class="header"><i class="material-icons">description</i> EMC2 Model Compression Challenge (EMCC)</h3>
+    <p>
+      Deep learning has recently pushed the state of the art boundaries in many computer vision tasks. However, existing
+      deep learning models are both computationally and memory intensive, making their deployment difficult on devices
+      with low compute and memory resources. To fit these emerging models on such devices, novel compression techniques
+      are needed without significantly decreasing the model accuracy.
+    </p>
+    <p>The EMC2 Model Compression Challenge (EMCC) aims to identify the best technology in deep learning model
+      compression. To win a prize in EMCC, the solution will be evaluated to meet the two metrics in two tracks below:
+    </p>
+    <ul class="browser-default list">
+      <li>Achieve highest accuracy within the target model size. The submission will not be evaluated if the model size
+        is outside of the target range.</li>
+      <li>Achieve smallest model size within the target accuracy. The submission will not be evaluated if the accuracy
+        is outside of the target range.</li>
+    </ul>
+    <p>
+      A participant (or a team) can submit a single model in Tensorflow
+      (<a href="https://www.tensorflow.org/" target="_blank">https://www.tensorflow.org/</a> or PyTorch
+      (<a href="https://pytorch.org/" target="_blank">https://pytorch.org/</a>).
+      Final scores will be computed after submission closes.
+    </p>
+    <p>There are two categories, computer vision and NLP. Computer vision has three tracks, each participant can submit
+      to either or all tracks.</p>
+    <p>Computer Vision Category:</p>
+    <ul class="browser-default list">
+      <li><strong>ImageNet Classification:</strong> This category focuses image classification models. </li>
+      <li><strong>COCO Object Detection:</strong> This category focuses on object detection models.</li>
+      <li><strong>PASCAL Object Segmentation:</strong> This category focuses on object segmentation models.</li>
+    </ul>
+    <p>NLP Category:</p>
+    <ul class="browser-default list">
+      <li><strong>NLP Transformer:</strong> including but not limited to models such as BERT, GPT, XLNET, etc.</li>
+    </ul>
   </div>
 </div>
 
 <div class="row">
   <div class="col s12">
-      <h3 class="header">4. Output and Model Conversion</h3>
-      <ul class="browser-default list">
-           <li><strong>ImageNet Classification:</strong> The output must be a tensor encoding probabilities of the 1000 classes. (Labels are avaialble <a href="http://www.image-net.org/challenges/LSVRC/2012/nnoupb/ILSVRC2012_devkit_t12.tar.gz" target="_blank">here</a>.</li>
-           <li><strong>COCO Object Detection:</strong> The output must be the bounding box and probabilities of the 80 classes.</li>
-           <li><strong>PASCAL Object Segmentation:</strong>The output must be the segmentation mask.</li>
-       </ul>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col s12">
-      <h3 class="header">5. Timeline and Submission</h3>
-        <p>Please see the <a href="/submission">submision page</a> for dates and details.</p>
+    <h3 class="header">Timeline and Submission</h3>
+    <p>Please see the <a href="https://emc2challenge.com/" target="_blank">https://emc2challenge.com/</a> for dates and
+      additional details.</p>
   </div>
 </div>
