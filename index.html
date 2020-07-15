@@ -11,24 +11,37 @@ permalink: /index
   </div>
 </div>
 
+<div class="row">
+  <h3 class="header"><i class="material-icons">announcement</i> Important Announcements</h3>
+  <blockquote class="z-depth-1">
+    <p style="padding: 1rem;">
+      <strong><a href="/emcc">EMC2 Model Compression Challenge</a>:</strong> We are pleased to announce the first
+      EMC<sup>2</sup> Model Compression Challenge (EMCC) which aims to identify the best ideas and approaches for deep
+      learning model compression. Check <a href="/emcc">this page</a> for more details.
+    </p>
+  </blockquote>
+</div>
+
 {% if upcoming_editions.size > 0 %}
 <div class="row">
   <h3 class="header"><i class="material-icons">memory</i> Upcoming Workshops</h3>
   <div class="col s12">
     <ul class="collection">
-        {% for ed in upcoming_editions %}
-          <li class="collection-item">
-            {% assign edition_number = ed.title|split:" "|first %}
-            <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> on {{ ed.event_date|date: "%B %d, %Y" }} in {{ ed.event_location }} co-located with
-            <a href="{{ ed.colocated_url }}" target="_blank"><span style="white-space: nowrap;">{{ ed.colocated_short }}</span></a>
-            {% if ed.is_accepting_submission %}
-            <a href="/submission">
-                <span class="new badge" data-badge-caption="">Accepting Submissions!</span>
-            </a>
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+      {% for ed in upcoming_editions %}
+      <li class="collection-item">
+        {% assign edition_number = ed.title|split:" "|first %}
+        <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> on
+        {{ ed.event_date|date: "%B %d, %Y" }} in {{ ed.event_location }} co-located with
+        <a href="{{ ed.colocated_url }}" target="_blank"><span
+            style="white-space: nowrap;">{{ ed.colocated_short }}</span></a>
+        {% if ed.is_accepting_submission %}
+        <a href="/submission">
+          <span class="new badge" data-badge-caption="">Accepting Submissions!</span>
+        </a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 
@@ -38,11 +51,13 @@ permalink: /index
 {% assign next_upcoming_program = site.programs|where: "edition",next_upcoming_edition.edition|sort:"time_end" %}
 {% assign next_upcoming_edition_number = next_upcoming_edition.title|split:" "|first %}
 <div class="row">
-  <h3 class="header"><i class="material-icons">schedule</i> Program for EMC<sup>2</sup> at {{ next_upcoming_edition.colocated_short }}</h3>
+  <h3 class="header"><i class="material-icons">schedule</i> Program for EMC<sup>2</sup> at
+    {{ next_upcoming_edition.colocated_short }}</h3>
   {% include program-summary.html edition=next_upcoming_edition program=next_upcoming_program %}
   <div class="center-align">
     View the complete program for the
-    <a href="{{ next_upcoming_edition.url }}">{% include ordinal.html number=next_upcoming_edition_number %} Edition</a> of EMC<sup>2</sup>
+    <a href="{{ next_upcoming_edition.url }}">{% include ordinal.html number=next_upcoming_edition_number %} Edition</a>
+    of EMC<sup>2</sup>
     <a href="{{ next_upcoming_edition.url }}">here</a>.
   </div>
 </div>
@@ -51,8 +66,6 @@ permalink: /index
 {% endif %}
 
 {% include cfp.html hide_cfp=true %}
-
-{% include emcc.html %}
 
 <div class="row">
   <h3 class="header">Recent Editions</h3>
