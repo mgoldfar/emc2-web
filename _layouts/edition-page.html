@@ -25,8 +25,13 @@
             <h1>The {% include ordinal.html number=edition_number %} {{ site.title }}</h1>
         </div>
         <div class="ed-grid-item-header-sub-title">
+			{% if page.is_online == False %}
             <h2>Co-located with the {{ page.colocated_long }} <a href="{{ page.colocated_url }}"
                 target="_blank"><span style="white-space: nowrap;">{{ page.colocated_short }}</span></a></h2>
+			{% else %}
+            <h2>{{ page.colocated_long }} <a href="{{ page.colocated_url }}"
+                target="_blank"><span style="white-space: nowrap;">{{ page.colocated_short }}</span></a></h2>
+			{% endif %}
         </div>
     </div>
 
