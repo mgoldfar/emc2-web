@@ -1,0 +1,14 @@
+---
+layout: default
+permalink: /sponsors
+show_note: True
+---
+{% assign accepting_editions = site.editions|where: "is_accepting_submission",true|sort:"event_date" %}
+{% assign upcoming_editions = site.editions|where: "show_on_submission_page",true|sort:"event_date" %}
+
+<h3 class="header">Sponsors for 6th Edition EMCC</h3>
+
+{% if page.show_note %}
+    {% include submission-notes.html %}
+{% endif %}
+
