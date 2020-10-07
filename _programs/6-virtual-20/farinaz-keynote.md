@@ -6,7 +6,7 @@ time_end: 2020-12-05 10:00:00
 title: "Energy Efficient Machine Learning on Encrypted Data: Hardware to the Rescue"
 speaker:
     name: Farinaz Koushanfar 
-    affiliation: University of San Diego
+    affiliation: University of California, San Diego
     avatar: farinaz.jpg
     url: https://jacobsschool.ucsd.edu/faculty/profile?id=407
 presentation: 

@@ -6,7 +6,7 @@ time_end: 2020-12-05 12:00:00
 title: Efficient Machine Learning via Data Summarization
 speaker:
     name: Baharan Mirzasoleiman 
-    affiliation: Computer Science, University of California Los Angeles
+    affiliation: Computer Science, University of California, Los Angeles
     avatar: baharan.jpg
     url: http://web.cs.ucla.edu/~baharan/
 presentation: 
