@@ -45,7 +45,7 @@ show_note: True
                     <td>Acceptance and Rebuttals</td>
                     {% for ed in upcoming_editions %}
                     <td>
-                        {% if ed.submission_deadline_extended %}
+                        {% if ed.submission_acceptancw_extended %}
                         <strong style="color: red;">{{ ed.submission_acceptance_extended|date: "%B %d, %Y" }} (23:59 PST)</strong>
                         <span style="text-decoration: line-through;">{{ ed.submission_acceptance|date: "%B %d, %Y" }} (23:59 PST)</span>
                         {% else %}
