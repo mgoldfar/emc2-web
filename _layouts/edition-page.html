@@ -63,6 +63,16 @@
                 {% endif %}
             {% endif %}
 
+            {% if page.is_registering %}
+		<blockquote class="z-depth-1" style="text-align: left;">
+		    <p style="padding: 1rem;">
+		        <strong>Workshop Registration:</strong> Click <a href="/registration">here</a> to register.
+		    </p>
+		</blockquote>
+
+            {% endif %}
+
+
             {% if page.is_upcoming %}
             {% assign guideline = site.guidelines|where: "edition",page.edition|first %}
             {% if guideline %}
