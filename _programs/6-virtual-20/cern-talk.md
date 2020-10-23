@@ -1,16 +1,25 @@
 ---
 edition: virtual-20
 type: invited_talk
-time_start: 2020-12-05 12:00:00
-time_end: 2020-12-05 13:00:00
-title: "Modular Neural Networks for Low-Power Image Classification on Embedded Devices"
+time_start: 2020-12-05 15:00:00
+time_end: 2020-12-05 16:00:00
+title: "Designing Nanosecond Inference Engines for the Particle Collider"
 speaker:
-    name: Yung-Hsiang Lu 
-    affiliation: Purdue University
-    avatar: yunglu.jpg 
-    url: https://engineering.purdue.edu/HELPS/Faculty/yunglu.html
+    name: Clauidonor N. Coelho Jr, (Palo Alto Networks)
+          Thea Aarrestad (CERN)
+          Vladimir Loncar (CERN)
+          Maurizio Pierini (CERN)
+          Adrian Alan Pol (CERN) 
+          Sioni Summers (CERN) 
+    affiliation: CERN
+    avatar: coelhoc.jpg
+    url: 
 presentation: 
 ---
-Embedded devices are generally small, battery-powered computers  with limited hardware resources. It is difficult to run Deep Neural Networks (DNNs) on these devices, because DNNs perform millions of operations, and consume significant amounts of energy. Prior research has shown that a considerable number of a DNN's memory accesses and computation is redundant when performing tasks like image classification. To reduce this redundancy and thereby reduce the energy consumption of DNNs, we introduce the Modular Neural Network-Tree (MNN-Tree) architecture. Instead of using one large DNN for the classifier, this architecture uses multiple smaller DNNs (called modules) to progressively classify images into groups of categories based on a novel visual similarity metric. Once a group of categories is selected by a module, another module then continues to distinguish among the similar categories within the selected group. This process is repeated over multiple modules until we are left with a single category. The computation needed to distinguish dissimilar groups is avoided, thus reducing redundant operations, memory accesses, and energy. Experimental results using several image datasets reveal the effectiveness of our proposed solution to reduce memory requirements by 50%-99%, inference time by 55%-95%, energy consumption by 52%-94%, and the number of operations by 15%-99% when compared with existing DNN architectures, running on two different embedded systems: Raspberry Pi 3 and Raspberry Pi Zero.  
+While the quest for more accurate solutions is pushing deep learning research towards larger and more complex algorithms, edge devices with hard real-time constraints demand very efficient inference engines, e.g. with the reduction in model size, speed and energy consumption.  In this talk, we introduce a novel method for designing heterogeneously quantized versions of deep neural network models for minimum-energy, high-accuracy, nanosecond inference and fully automated deployment on chip. 
+ 
+Our technique combines AutoML and QKeras (which is called AutoQKeras), combining layer hyperparameter selection and quantization optimization.  Users can select among several optimization strategies, such as global optimization of network hyperparameters and quantizers, or splitting the optimization problems into smaller search problems to cope with search complexity.
+ 
+We have applied this design technique for the event selection procedure in proton-proton collisions at the CERN Large Hadron Collider, where resources are strictly limited and latency of O(1) us is required. Nanosecond inference and a resource consumption reduced by a factor of 50 when implemented on FPGA hardware are achieved.  
 
 **Dr. Yung-Hsiang Lu** is a professor at the School of Electrical and Computer Engineering at Purdue University, West Lafayette, Indiana, USA. He is the inaugural director of Purdue's John Martinson Entrepreneurship Center. He is a Distinguished Scientist of the ACM. He received the PhD. from Stanford University and BS from the National Taiwan University. Computing Reviews said, "If you land on a desert island that has a Linux computer, this is the one book to have with you." about his book "Intermediate C Programming" (CRC Press). 
