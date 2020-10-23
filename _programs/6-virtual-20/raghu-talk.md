@@ -2,7 +2,7 @@
 edition: virtual-20
 type: invited_talk
 time_start: 2020-12-05 13:00:00
-time_end: 2020-12-05 14:00:00
+time_end: 2020-12-05 13:40:00
 title: "Techniques for Efficient Inference with Deep Networks"
 speaker:
     name: Raghu Krishnamoorthi 
