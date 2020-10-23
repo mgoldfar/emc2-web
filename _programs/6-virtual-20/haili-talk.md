@@ -1,7 +1,7 @@
 ---
 edition: virtual-20
 type: invited_talk
-time_start: 2020-12-05 14:00:00
+time_start: 2020-12-05 14:20:00
 time_end: 2020-12-05 15:00:00
 title: "Efficient Deep Learning At Scale"
 speaker:
