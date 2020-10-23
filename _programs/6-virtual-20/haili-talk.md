@@ -8,7 +8,7 @@ speaker:
     name: Hai Li 
     affiliation: Duke Univesity
     avatar: haili.jpg 
-    url: https://engineering.purdue.edu/HELPS/Faculty/yunglu.html
+    url: https://cei.pratt.duke.edu/people/hai-li
 presentation: 
 ---
 Though the research on hardware acceleration for neural networks has been extensively studied, the progress of hardware development still falls far behind the upscaling of DNN models at the software level. The efficient deployment of DNN models emerges as a major challenge. For example, the massive number of parameters and high computation demand make it challenging to deploy state-of-the-art DNNs onto resource-constrained devices. Compared to inference, training a DNN is much more complicated and has more significant computation and communication intensity. A common practice is distributing the training on multiple nodes or heterogeneous accelerators, while the balance between the data processing and exchange remains critical. We envision that software/hardware co-design for efficient deep learning is necessary. This talk will present our latest explorations on DNN model compression, architecture search, distributed learning, and corresponding optimization at the hardware level.  
