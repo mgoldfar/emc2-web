@@ -7,7 +7,7 @@ title: "Modular Neural Networks for Low-Power Image Classification on Embedded D
 speaker:
     name: Yung-Hsiang Lu 
     affiliation: Purdue University
-    avatar: 
+    avatar: yunglu.jpg 
     url: https://engineering.purdue.edu/HELPS/Faculty/yunglu.html
 presentation: 
 ---
