@@ -2,7 +2,7 @@
 edition: virtual-20
 type: invited_talk
 time_start: 2020-12-05 10:00:00
-time_end: 2020-12-05 11:00:00
+time_end: 2020-12-05 10:40:00
 title: "DeepCABAC: A Universal Compression Algorithm for Deep Neural Networks"
 speaker:
     name: Wojciech Samek 

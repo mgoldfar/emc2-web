@@ -1,13 +1,13 @@
 ---
 edition: virtual-20
 type: invited_talk
-time_start: 2020-12-05 12:00:00
-time_end: 2020-12-05 13:00:00
+time_start: 2020-12-05 11:20:00
+time_end: 2020-12-05 12:00:00
 title: "Modular Neural Networks for Low-Power Image Classification on Embedded Devices"
 speaker:
     name: Yung-Hsiang Lu 
     affiliation: Purdue University
-    avatar: 
+    avatar: yunglu.jpg 
     url: https://engineering.purdue.edu/HELPS/Faculty/yunglu.html
 presentation: 
 ---
