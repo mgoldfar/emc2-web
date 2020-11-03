@@ -7,7 +7,7 @@ title: "Techniques for Efficient Inference with Deep Networks"
 speaker:
     name: Raghu Krishnamoorthi 
     affiliation: Facebook
-    avatar: 
+    avatar: krishnamoorthi.jpg
     url: 
 presentation: 
 ---
