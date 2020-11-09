@@ -42,10 +42,10 @@ show_note: True
                     {% endfor %}
                 </tr>
                 <tr>
-                    <td>Acceptance and Rebuttals</td>
+                    <td>Acceptance and Author Notification</td>
                     {% for ed in upcoming_editions %}
                     <td>
-                        {% if ed.submission_acceptancw_extended %}
+                        {% if ed.submission_acceptance_extended %}
                         <strong style="color: red;">{{ ed.submission_acceptance_extended|date: "%B %d, %Y" }} (23:59 PST)</strong>
                         <span style="text-decoration: line-through;">{{ ed.submission_acceptance|date: "%B %d, %Y" }} (23:59 PST)</span>
                         {% else %}
