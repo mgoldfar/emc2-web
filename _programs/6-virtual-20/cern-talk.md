@@ -5,13 +5,14 @@ time_start: 2020-12-05 13:40:00
 time_end: 2020-12-05 14:20:00
 title: "Designing Nanosecond Inference Engines for the Particle Collider"
 speaker:
-    name: Clauidonor N. Coelho Jr, (Palo Alto Networks)
-          Thea Aarrestad (CERN)
-          Vladimir Loncar (CERN)
-          Maurizio Pierini (CERN)
-          Adrian Alan Pol (CERN) 
-          Sioni Summers (CERN) 
-    affiliation: Palo Alto Networks, CERN
+    name: Clauidonor N. Coelho Jr (Palo Alto Networks),
+          Thea Aarrestad (CERN),
+          Vladimir Loncar (CERN),
+          Maurizio Pierini (CERN),
+          Adrian Alan Pol (CERN),
+          Sioni Summers (CERN),
+          Jennifer Ngadiuba 
+    affiliation: (Caltech)
     avatar: coelhoc.jpg
     url: 
 presentation: 
