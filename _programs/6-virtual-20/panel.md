@@ -7,7 +7,7 @@ title: "Towards Million-fold Efficiency in AI"
 moderator:
     name: Satyam Srivastava
     affiliation: Intel Corporation
-speakers:
+speakers: Vikram Saletore
  
 ---
   
