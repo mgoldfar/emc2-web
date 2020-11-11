@@ -210,6 +210,12 @@
                         <h6 class="secondary-text">{{ paper.affiliation }}</h6>
                         <br/>
                     {% endfor %}
+                {% elsif p.type == "panel" %}
+                    <h3 class="dark-primary">{{ p.title }}</h3>
+                    {{ p.content | markdownify }}
+                    <h4 class="dark-primary">Moderator: {{ p.moderator.name }}</h4>
+                {% elsif p.type == "announce" %}
+                    <h3 class="dark-primary">{{ p.title }}</h3>
                 {% endif %}
             </div>
         </div>
