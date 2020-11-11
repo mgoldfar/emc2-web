@@ -126,6 +126,10 @@
                 {% when 'poster_session' %}
                     {% assign poster_session_counter = poster_session_counter|plus:1 %}
                     {% assign talk_class_header = "Poster Session #"|append:poster_session_counter %}
+                {% when 'panel' %}
+                    {% assign talk_class_header = "Panel" %}
+                {% when 'announce' %}
+                    {% assign talk_class_header = "Announcements" %}
                 {% when 'welcome' %}
                     {% assign talk_class_header = "Welcome" %}
                 {% when 'close' %}
@@ -206,6 +210,12 @@
                         <h6 class="secondary-text">{{ paper.affiliation }}</h6>
                         <br/>
                     {% endfor %}
+                {% elsif p.type == "panel" %}
+                    <h3 class="dark-primary">{{ p.title }}</h3>
+                    {{ p.content | markdownify }}
+                    <h4 class="dark-primary">Moderator: {{ p.moderator.name }}</h4>
+                {% elsif p.type == "announce" %}
+                    <h3 class="dark-primary">{{ p.title }}</h3>
                 {% endif %}
             </div>
         </div>

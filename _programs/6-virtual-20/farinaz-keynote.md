@@ -1,8 +1,8 @@
 ---
 edition: virtual-20
 type: keynote
-time_start: 2020-12-05 09:00:00
-time_end: 2020-12-05 10:00:00
+time_start: 2020-12-05 13:05:00
+time_end: 2020-12-05 13:55:00
 title: "Energy Efficient Machine Learning on Encrypted Data: Hardware to the Rescue"
 speaker:
     name: Farinaz Koushanfar 

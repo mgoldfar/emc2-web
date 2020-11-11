@@ -1,8 +1,8 @@
 ---
 edition: virtual-20
-type: invited_talk
-time_start: 2020-12-05 11:20:00
-time_end: 2020-12-05 12:00:00
+type: keynote
+time_start: 2020-12-05 08:40:00
+time_end: 2020-12-05 09:30:00
 title: "Achieving Low-latency Speech Synthesis at Scale"
 speaker:
     name: Sam Davis 

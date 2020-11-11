@@ -1,8 +1,8 @@
 ---
 edition: virtual-20
 type: invited_talk
-time_start: 2020-12-05 10:40:00
-time_end: 2020-12-05 11:20:00
+time_start: 2020-12-05 10:20:00
+time_end: 2020-12-05 11:00:00
 title: Efficient Machine Learning via Data Summarization
 speaker:
     name: Baharan Mirzasoleiman 
