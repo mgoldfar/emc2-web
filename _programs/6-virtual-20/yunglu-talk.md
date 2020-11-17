@@ -1,8 +1,8 @@
 ---
 edition: virtual-20
 type: invited_talk
-time_start: 2020-12-05 11:00:00
-time_end: 2020-12-05 11:40:00
+time_start: 2020-12-05 11:35:00
+time_end: 2020-12-05 12:10:00
 title: "Modular Neural Networks for Low-Power Image Classification on Embedded Devices"
 speaker:
     name: Yung-Hsiang Lu 

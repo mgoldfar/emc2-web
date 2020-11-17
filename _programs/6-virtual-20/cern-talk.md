@@ -1,8 +1,8 @@
 ---
 edition: virtual-20
 type: invited_talk
-time_start: 2020-12-05 14:35:00
-time_end: 2020-12-05 15:15:00
+time_start: 2020-12-05 14:45:00
+time_end: 2020-12-05 15:20:00
 title: "Designing Nanosecond Inference Engines for the Particle Collider"
 speaker:
     name: Clauidonor N. Coelho Jr (Palo Alto Networks),

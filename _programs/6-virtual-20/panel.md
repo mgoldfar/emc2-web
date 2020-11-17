@@ -1,8 +1,8 @@
 ---
 edition: virtual-20
 type: panel
-time_start: 2020-12-05 16:40:00
-time_end: 2020-12-05 17:40:00
+time_start: 2020-12-05 17:10:00
+time_end: 2020-12-05 17:55:00
 title: "Towards Million-fold Efficiency in AI"
 moderator:
     name: Satyam Srivastava

@@ -2,7 +2,7 @@
 edition: virtual-20
 type: invited_talk
 time_start: 2020-12-05 16:00:00
-time_end: 2020-12-05 16:40:00
+time_end: 2020-12-05 16:35:00
 title: "Convergence of Artificial Intelligence, High Performance Computing, and Data Analytics on HPC Supercomputers"
 speaker:
     name: Vikram Saletore 
