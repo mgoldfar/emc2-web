@@ -214,6 +214,15 @@
                     <h3 class="dark-primary">{{ p.title }}</h3>
                     {{ p.content | markdownify }}
                     <h4 class="dark-primary">Moderator: {{ p.moderator.name }}</h4>
+                    {% if p.speakers.size == 0 %}
+                        <p>Under review.</p>
+                    {% endif %}
+                    <p>
+                        {% for panelist in p.panelists %}
+                            <h4 class="dark-primary">{{ panelist.name }}, {{panelist.affiliation}}</h4>
+                        {% endfor %}
+                    </p>
+
                 {% elsif p.type == "announce" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                 {% endif %}
