@@ -64,18 +64,12 @@
             {% endif %}
 
             {% if page.is_registering %}
-		<blockquote class="z-depth-1" style="text-align: left;">
-		    <!--p style="padding: 1rem;">
-		        <strong>Workshop Registration:</strong> Click <a href="/registration">here</a> to register.
-		    </p-->
-            <p style="padding: 1rem;">
-                <strong><a href="/virtual-20">How To Attend Virtual EMC<sup>2</sup> 2020</a>:</strong> All sessions
-                will be streamed live on <strong><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fyoutu.be%2FGmxh9QgA9Hc&data=04%7C01%7Crapariha%40microsoft.com%7C5a3c1c0d749a459cf01608d896931124%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C1%7C637424905673305801%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=Ez1FBoWWpkWjr6c7cF3k%2FGgcSaeHp7ZwutNRqV4mB88%3D&reserved=0">YouTube</a></strong>
-            </p>
-		</blockquote>
-
+            <blockquote class="z-depth-1" style="text-align: left;">
+                <!--p style="padding: 1rem;">
+                    <strong>Workshop Registration:</strong> Click <a href="/registration">here</a> to register.
+                </p-->
+            </blockquote>
             {% endif %}
-
 
             {% if page.is_upcoming %}
             {% assign guideline = site.guidelines|where: "edition",page.edition|first %}
@@ -167,7 +161,7 @@
                 {% endif %}
             </div>
             <div class="ed-grid-item-program-item-content">
-                {% if p.type == "welcome" or p.type == "break" or p.type == "lunch" or p.type == "close" %}
+                {% if p.type == "break" or p.type == "lunch" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                 {% elsif p.type == "grand_keynote" or p.type == "keynote" or p.type == "invited_talk" %}
                     {% if p.presentation %}
@@ -229,6 +223,18 @@
 
                 {% elsif p.type == "announce" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
+                {% elseif p.type == "welcome" or p.type == "close" %}
+                    <h3 class="dark-primary">{{ p.title }}</h3>
+                    <h4 class="light-primary">
+                        {% if p.speaker.url %}
+                        <a href="{{ p.speaker.url }}" target="_blank">
+                        {% endif %}
+                            {{ p.speaker.name }}, {{ p.speaker.affiliation }}
+                        {% if p.speaker.url %}
+                            <i class="material-icons" style="vertical-align: middle;">link</i>
+                        </a>
+                        {% endif %}
+                    </h4>
                 {% endif %}
             </div>
         </div>
