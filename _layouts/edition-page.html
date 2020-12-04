@@ -225,6 +225,7 @@
                     <h3 class="dark-primary">{{ p.title }}</h3>
                 {% elseif p.type == "welcome" or p.type == "close" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
+                    {% if p.speaker %}
                     <h4 class="light-primary">
                         {% if p.speaker.url %}
                         <a href="{{ p.speaker.url }}" target="_blank">
@@ -235,6 +236,7 @@
                         </a>
                         {% endif %}
                     </h4>
+                    {% endif %}
                 {% endif %}
             </div>
         </div>
