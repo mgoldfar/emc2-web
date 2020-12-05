@@ -6,7 +6,7 @@ time_end: 2020-12-05 15:55:00
 title: "Efficient Deep Learning At Scale"
 speaker:
     name: Hai Li 
-    affiliation: Duke Univesity
+    affiliation: Duke University
     avatar: haili.jpg 
     url: https://cei.pratt.duke.edu/people/hai-li
 presentation: 

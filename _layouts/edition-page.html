@@ -74,9 +74,7 @@
                 and <strong><a href="https://nam06.safelinks.protection.outlook.com/?url=http%3A%2F%2Fbit.ly%2Femc2_6thEdition&data=04%7C01%7Crapariha%40microsoft.com%7Cb4a96bf9ff084a86285d08d898db787c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637427417243962980%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=WGFQxDATJnFfpPqv4bYgMD7RNi%2FiRPRA37uA3BRxYb8%3D&reserved=0">MS Teams</a></strong>
             </p>
 		</blockquote>
-
             {% endif %}
-
 
             {% if page.is_upcoming %}
             {% assign guideline = site.guidelines|where: "edition",page.edition|first %}
@@ -168,7 +166,7 @@
                 {% endif %}
             </div>
             <div class="ed-grid-item-program-item-content">
-                {% if p.type == "welcome" or p.type == "break" or p.type == "lunch" or p.type == "close" %}
+                {% if p.type == "break" or p.type == "lunch" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                 {% elsif p.type == "grand_keynote" or p.type == "keynote" or p.type == "invited_talk" %}
                     {% if p.presentation %}
@@ -230,6 +228,20 @@
 
                 {% elsif p.type == "announce" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
+                {% elsif p.type == "welcome" or p.type == "close" %}
+                    <h3 class="dark-primary">{{ p.title }}</h3>
+                    {% if p.speaker %}
+                    <h4 class="light-primary">
+                        {% if p.speaker.url %}
+                        <a href="{{ p.speaker.url }}" target="_blank">
+                        {% endif %}
+                            {{ p.speaker.name }}, {{ p.speaker.affiliation }}
+                        {% if p.speaker.url %}
+                            <i class="material-icons" style="vertical-align: middle;">link</i>
+                        </a>
+                        {% endif %}
+                    </h4>
+                    {% endif %}
                 {% endif %}
             </div>
         </div>
