@@ -43,17 +43,15 @@ permalink: /index
       {% for ed in upcoming_editions %}
       <li class="collection-item">
         {% assign edition_number = ed.title|split:" "|first %}
-		{% if ed.is_online == False %}
+
         <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> on
-        {{ ed.event_date|date: "%B %d, %Y" }} in {{ ed.event_location }} co-located with
-        <a href="{{ ed.colocated_url }}" target="_blank"><span
-            style="white-space: nowrap;">{{ ed.colocated_short }}</span></a>
-		{% else %}
-		<a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> on
         {{ ed.event_date|date: "%B %d, %Y" }} in {{ ed.event_location }}
+        {% if ed.colocated_self == False %}
+        co-located with
         <a href="{{ ed.colocated_url }}" target="_blank"><span
             style="white-space: nowrap;">{{ ed.colocated_short }}</span></a>
-		{% endif %}
+        {% endif %}
+
         {% if ed.is_accepting_submission %}
         <a href="/submission">
           <span class="new badge" data-badge-caption="">Accepting Submissions!</span>
