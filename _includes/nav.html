@@ -1,4 +1,6 @@
 
+{% assign upcoming_editions = site.editions|where: "is_upcoming",true|sort:"event_date" %}
+
 <ul id="about-nav-dropdown" class="dropdown-content">
   <li><a href="/program-committee">Committies</a></li>
   <li><a href="/previous-editions">Previous Editions</a></li>
@@ -16,7 +18,12 @@
 
     <li><a href="/emcc">EMCC</a></li>
     <li><a href="/submission">Submission</a></li>
+    {% if upcoming_editions.size > 0 %}
+    {% assign next_upcoming_edition = upcoming_editions|first %}
+    {% if next_upcoming_edition.is_registering %}
     <li><a href="/registration">Register</a></li>
+    {% endif %}
+    {% endif %}
     <li><a href="/sponsors">Sponsors</a></li>
     <li><a class="dropdown-trigger" href="#!" data-target="about-nav-dropdown">About<i class="material-icons right">arrow_drop_down</i></a></li>
 </ul>
