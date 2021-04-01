@@ -9,11 +9,18 @@
       <li class="collection-item">
         {% assign edition_number = ed.title|split:" "|first %}
 	  	{% if ed.is_online == False %}
-        <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> co-located with
-        <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a> in {{ ed.event_location }}
+        <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a>
+        {% if ed.colocated_self == False %}
+          co-located with
+          <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a>
+        {% endif %}
+        in {{ ed.event_location }}
 	  	{% else %}
         <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a>
-        <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a> in {{ ed.event_location }}
+        {% if ed.colocated_self == False %}
+          co-located with
+          <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a>
+        {% endif %} in {{ ed.event_location }}
 		{% endif %}
         <span style="float: right;">{{ ed.event_date|date: "%B %d, %Y"}}</span> 
       </li>
