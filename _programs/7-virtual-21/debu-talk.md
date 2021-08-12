@@ -1,6 +1,8 @@
 ---
 edition: virtual-21
 type: invited_talk
+time_start: 2021-08-28 14:30:00
+time_end: 2021-08-28 15:15:00
 title: "“On Device, always on AI, Challenges and Opportunities”"
 speaker:
     name: Debajyoti Pal 

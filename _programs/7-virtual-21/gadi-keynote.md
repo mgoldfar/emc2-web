@@ -1,6 +1,8 @@
 ---
 edition: virtual-21
-type: invited_talk
+time_start: 2021-08-28 9:00:00
+time_end: 2021-08-28 10:00:00
+type: keynote
 title: "Cognitive AI  - a blueprint for sustainability, efficiency and higher intelligence"
 speaker:
     name: Gadi Singer
