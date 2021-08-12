@@ -1,6 +1,8 @@
 ---
 edition: virtual-21
 type: invited_talk
+time_start: 2021-08-28 13:00:00
+time_end: 2021-08-28 13:45:00
 title: "Efficient Neural Architecture Search at Scale via Architecture Representation Learning "
 speaker:
     name: Mi Zhang 

@@ -1,6 +1,8 @@
 ---
 edition: virtual-21
 type: invited_talk
+time_start: 2021-08-28 13:45:00
+time_end: 2021-08-28 14:30:00
 title: "Towards Best Possible Deep Learning Acceleration on the Edge – A Compression-Compilation Co-Design Framework"
 speaker:
     name: Yanzhi Wang 
