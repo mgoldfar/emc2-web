@@ -1,6 +1,6 @@
 ---
 name: Michael Goldfarb
-affiliation: Qualcomm
+affiliation: Waymo
 avatar: michaelg.jpg
 profile_url: https://www.linkedin.com/in/migoldfarb/
 ---
