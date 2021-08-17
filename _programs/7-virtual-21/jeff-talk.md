@@ -3,7 +3,7 @@ edition: virtual-21
 type: invited_talk
 time_start: 2021-08-28 10:00:00
 time_end: 2021-08-28 10:45:00
-title: "Accelerating NLP: How Hugging Face Reaches 100x Speedup for Transformers Inference"
+title: "Accelerating Transformers: How Hugging Face Delivers 100x Speedup to Industrialize State of the Art Machine Learning"
 speaker:
     name: Jeff Boudier 
     affiliation: Hugging Face
@@ -12,7 +12,8 @@ speaker:
 
 presentation: 
 ---
-Learn how Hugging Face achieves 100x speedup when serving Transformer models on GPU for its accelerated inference API customers. Transformers has become the default library for data scientists all around the world to explore state-of-the-art NLP models and build new NLP features. While experimenting with models in Transformers is easy, deploying these large models into production with maximum performance, and managing them into an architecture that scales with usage, is hard for any machine learning engineer. Hugging Face will discuss how they achieve 100x performance gain, optimizing their own open source and leveraging the most advanced frameworks to optimize models for inference on specific hardware. In particular, Hugging Face will detail how the flexibility of Triton Inference Server can be combined with the optimized runtime environments of ORT and TensorRT to produce the last 10x speedup on GPU.
+
+From Research to Industrialization: learn how Hugging Face is putting Transformers to work! Transformers conquered NLP and are now eating away at all Machine Learning domains. These complex architectures and very large models are creating new engineering challenges for companies to apply them in efficient, scalable production settings. In this session, Jeff will detail how Hugging Face is developing new State of the Art efficiency techniques, and is collaborating with hardware and open source partners including ORT, Intel and NVIDIA, to deliver up to 100x speedups to its customers.
 
 Product + Growth @HuggingFace, creator of Transformers, to democratize state of the art Machine Learning.
 Previously Corporate and Business Development at GoPro, co-founder of Stupeflix (acquired by GoPro).
