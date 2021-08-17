@@ -1,6 +1,6 @@
 ---
 name: Raj Parihar
-affiliation: Microsoft
+affiliation: d-Matrix Corp.
 avatar: rajp.jpg
 profile_url: https://www.linkedin.com/in/raj-parihar/
 ---

@@ -1,6 +1,6 @@
 ---
 name: Satyam Srivastava
-affiliation: Intel
+affiliation: d-Matrix Corp.
 avatar: satyams.jpg
 profile_url: https://www.linkedin.com/in/satyam-srivastava-405a6931/
 ---
