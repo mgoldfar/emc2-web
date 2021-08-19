@@ -3,7 +3,7 @@ edition: virtual-21
 type: invited_talk
 time_start: 2021-08-28 8:15:00
 time_end: 2021-08-28 9:00:00
-title: "Chimera: Efficiently Training Large-Scale Neural Networks withBidirectional Pipelines"
+title: "Chimera: Efficiently Training Large-Scale Neural Networks with Bidirectional Pipelines"
 speaker:
     name: Shigang Li 
     affiliation: Department of Computer Sc, ETH Zurich
