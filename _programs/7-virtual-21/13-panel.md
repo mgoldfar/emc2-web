@@ -7,8 +7,14 @@ title: "Energy Efficiency at Cloud Scale"
 moderator:
     name: Satyam Srivastava
     affiliation: d-Matrix.ai
-panelists: 
-  
+panelists:
+- name: Debu Pal
+  affiliation: CTO, Ambient Scientific
+- name: Geeta Chauhan
+  affiliation: AI/PyTorch Partner Engineering Head, Facebook
+- name: Sumit Gupta
+  affiliation: Sr. Director ML Infrastructure, Google
+
  
 ---
  
