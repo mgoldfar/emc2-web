@@ -10,8 +10,11 @@ moderator:
 panelists:
 - name: Debu Pal
   affiliation: CTO, Ambient Scientific
+  bio: 
 - name: Geeta Chauhan
   affiliation: AI/PyTorch Partner Engineering Head, Facebook
+- name: Lizy John
+  affiliation: University of Texas, Austin
 - name: Sumit Gupta
   affiliation: Sr. Director ML Infrastructure, Google
 ---
