@@ -6,9 +6,22 @@ show_note: True
 {% assign accepting_editions = site.editions|where: "is_accepting_submission",true|sort:"event_date" %}
 {% assign upcoming_editions = site.editions|where: "show_on_submission_page",true|sort:"event_date" %}
 
-<h3 class="header">Sponsors for 6th Edition EMCC</h3>
-<li>For sponsorship queries, please contact rapariha@microsoft.com
+<h3 class="header">7th Edition EMCC is sponsored by</h3>
+<table>
+    <tr>
+        <td><i>d-Matrix</i> is building one of the most disruptive computing platforms for AI in cloud and edge pioneering in-memory computing in the data-center</td>
+        <td>
+            <img src="assets/images/sponsors/dmatrix.svg"
+                 class="z-depth-1 valign-wrapper" />
+        </td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+<li>For sponsorship queries, please contact Raj Parihar (<i>rparihar at d-matrix dot ai</i>) and/or Kushal Datta (<i>kushal dot datta at gmail dot com</i>)
 {% if page.show_note %}
     {% include submission-notes.html %}
 {% endif %}
-
+</li>
