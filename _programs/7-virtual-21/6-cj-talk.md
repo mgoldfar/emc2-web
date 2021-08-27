@@ -6,7 +6,7 @@ time_end: 2021-08-28 12:15:00
 title: "HPC and AI"
 speaker:
     name: CJ Newburn 
-    affiliation: Nvidia
+    affiliation: Nvidia Corporation
     avatar: cj.jpg  
     url: https://www.linkedin.com/in/chris-cj-newburn-17997712/
 
