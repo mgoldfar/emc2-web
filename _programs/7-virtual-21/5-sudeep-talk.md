@@ -1,6 +1,6 @@
 ---
 edition: virtual-21
-type: invited_talk
+type: sponsored_talk
 time_start: 2021-08-28 11:00:00
 time_end: 2021-08-28 11:30:00
 speaker:

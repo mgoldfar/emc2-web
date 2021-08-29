@@ -123,6 +123,8 @@
                     {% assign talk_class_header = "Keynote" %}
                 {% when 'invited_talk' %}
                     {% assign talk_class_header = "Invited Talk" %}
+                {% when 'sponsored_talk' %}
+                    {% assign talk_class_header = "Sponsored Talk" %}
                 {% when 'paper_session' %}
                     {% assign paper_session_counter = paper_session_counter|plus:1 %}
                     {% assign talk_class_header = "Paper Session #"|append:paper_session_counter %}
