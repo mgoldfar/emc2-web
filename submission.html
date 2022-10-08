@@ -60,6 +60,7 @@ show_note: True
                     <td>{{ ed.submission_camera_ready|date: "%B %d, %Y" }}</td>
                     {% endfor %}
                 </tr>
+<!--
                 <tr>
                     <td>EMCC Model Submission</td>
                     {% for ed in upcoming_editions %}
@@ -72,6 +73,7 @@ show_note: True
                         </td>
                     {% endfor %}
                 </tr>
+-->
                 <tr>
                     <td>Workshop</td>
                     {% for ed in upcoming_editions %}
@@ -92,16 +94,23 @@ show_note: True
     <div class="col s12">
         <h4 class="header">Submission Guidelines</h5>
         <ul class="browser-default">
+
+
+		<li><b>Short-papers</b>: Up to 6 pages excluding references. No supplementary material will be allowed. They can present work in progress, exploratory/preliminary research or already published work, or any relevant artificial intelligence applications for Latin America</li>
+		<li><b>Style</b>: Submissions must  follow the guidelines provided by the IEEE style. Submissions  should state the research problem, motivation, and technical contribution. All submissions must be in English. The submissions should be sent in a single PDF file.</li>
+		<li><b>Desk rejection</b>: Submissions that do not follow the length or style requirements above shall be automatically rejected without consideration of their merits.</li> 
+		<li><b>(Optional) Source code</b>: We encourage authors of accepted submissions to provide a link to their source code. To maintain a double-blind review process, you will be allowed to submit or link your code in the camera-ready stage.</li>
+		<li>If you have any issues, please email the publication and submission chairs Satyam Srivastava (<a href="mailto:ssrivastava@d-matrix.ai">ssrivastava@d-matrix.ai</a>) and Tao Sheng (<a href="mailto:tao.t.sheng@oracle.com">tao.t.sheng@oracle.com</a>)</li>
+
+
+<!--
+
+
                 <li>Papers can describe an early-stage research project, advocate an opinion about machine learning and
                     cognitive computing, reflect on trends in the community, or present anything interesting and worth
                     exploring as a direction.</li>
                 <li>Papers <em>MUST</em> be submitted in printable PDF format.</li>
                 <li>Papers <em>MUST</em> use the double column formatting guidelines and style file provided here: <a href="https://www.ieee.org/conferences/publishing/templates.html">IEEE Double Column Format</a></li>
-                    <!-- ul class="browser-default">
-                        <li><strong>ACM SIGPLAN</strong> <a href="http://www.sigplan.org/Resources/Author/">formatting guidelines</a></li>
-                        <li><strong>IEEE</strong> conference <a href="https://www.ieee.org/conferences/publishing/templates.html">formatting guidelines</a></li>
-                        <li><strong>NeurIPS</strong> conference <a href="https://nips.cc/Conferences/2019/CallForPapers">formatting guidelines</a></li>
-                    </ul-->
                 </li>
                 <li>Papers <em>MUST NOT</em> exceed 5 pages including references.</li>
                 <li>Text must be in no smaller than 10pt font size.</li>
@@ -112,6 +121,7 @@ show_note: True
                 <li>If you have any issues, please email the publication and submission chairs
                     Satyam Srivastava (<a href="mailto:satyam.srivastava@intel.com">satyam.srivastava@intel.com</a>) and
                     Tao Sheng (<a href="mailto:tsheng@amazon.com">tsheng@amazon.com</a>)</li>
+-->
             </ul>
         {% if accepting_editions.size > 0 %}
         <br /><br />
