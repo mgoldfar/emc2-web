@@ -1,3 +1,5 @@
+{% assign accepting_editions = site.editions|where: "is_accepting_submission",true|sort:"event_date" %}
+
 <div class="row">
   <div class="col s12">
       <h3 class="header"><i class="material-icons">description</i> Workshop Objective</h3>
@@ -42,4 +44,20 @@
 	    <li>Verification, validation, determinism, robustness, bias, safety, and privacy challenges in AI systems</li>
     </ul>
   </div>
+       <div class="center-align">
+            {% for ed in accepting_editions %}
+            <a class="waves-effect waves-light btn-large center-align"
+                href="/submission" target="_blank">
+                Submit to EMC<sup>2</sup> ({{ ed.colocated_short}}) <i class="material-icons right">send</i>
+            </a>
+
+            {% if ed.has_emcc_submission %}
+            <a class="waves-effect waves-light btn-large center-align"
+                href="/emcc" target="_blank">
+                Submit to EMC<sup>2</sup> ({{ ed.colocated_short}}) Model Compression Challenge
+                <i class="material-icons right">cloud_upload</i>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
 </div>
