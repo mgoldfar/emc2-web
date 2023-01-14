@@ -1,8 +1,8 @@
 ---
 edition: aaai-23
 type: lightning_session
-time_start: 2023-02-14 16:20:00
-time_end: 2023-02-14 16:40:00
+time_start: 2023-02-14 11:45:00
+time_end: 2023-02-14 12:05:00
 title: Lightning Sessions
 papers: 
     - title: "Pruning Compact ConvNets For Efficient Inference"

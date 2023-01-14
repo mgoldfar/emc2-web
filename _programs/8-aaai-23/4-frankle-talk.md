@@ -1,8 +1,8 @@
 ---
 edition: aaai-23
 type: invited_talk
-time_start: 2023-02-14 10:20:00
-time_end: 2023-02-14 10:55:00
+time_start: 2023-02-14 10:15:00
+time_end: 2023-02-14 10:45:00
 title: "Faster Neural Network Training, Algorithmically"
 speaker:
     name: Jonathan Frankle 
