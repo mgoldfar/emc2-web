@@ -10,7 +10,6 @@ moderator:
 panelists:
 - name: Jonathan Frankle
   affiliation: Chief Scientist, MosaicML
-  bio: 
 - name: Sudeep Bhoja
   affiliation: CTO, d-Matrix
 - name: Russel Hewitt
