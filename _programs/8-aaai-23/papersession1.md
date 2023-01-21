@@ -18,7 +18,7 @@ papers:
       affiliation:
       paper:
     - title: "Input-length-shortening and text generation via attention values"
-      authors: 	Neset Tan
+      authors: 	Michael Witbrock
       affiliation:
       paper:
     - title: "Block Format Error Bounds and Optimal Block Size Selection"
