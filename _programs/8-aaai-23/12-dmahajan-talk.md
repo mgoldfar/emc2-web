@@ -1,8 +1,8 @@
 ---
 edition: aaai-23
 type: invited_talk
-time_start: 2023-02-14 16:10:00
-time_end: 2023-02-14 16:40:00
+time_start: 2023-02-14 16:15:00
+time_end: 2023-02-14 16:45:00
 title: "Accelerating Recommender Model Training by Leveraging Popular Choices"
 speaker:
     name: Divya Mahajan 
