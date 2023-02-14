@@ -1,7 +1,7 @@
 ---
 edition: aaai-23
-time_start: 2023-02-14 14:00:00
-time_end: 2023-02-14 15:00:00
+time_start: 2023-02-14 15:15:00
+time_end: 2023-02-14 16:15:00
 type: keynote
 title: "On-Device Training under 256KB Memory"
 speaker:
