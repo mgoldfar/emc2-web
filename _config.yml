@@ -1,7 +1,7 @@
 encoding: utf-8
 
 # Site settings
-title: EMC2 - Energy Efficient Training and Inference of Transformer Based Models
+title: EMC2 - Energy Efficient Machine Learning and Cognitive Computing
 short_title: EMC2
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
