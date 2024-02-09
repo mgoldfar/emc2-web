@@ -1,0 +1,29 @@
+//Storing Bio for Backup if Needed//
+
+---
+name: Michael Goldfarb
+affiliation: Waymo
+avatar: michaelg.jpg
+profile_url: https://www.linkedin.com/in/migoldfarb/
+---
+Michael Goldfarb is a Staff Engineer at <a href="https://www.waymo.com">Waymo</a> working on HW/SW architecture for machine learning. Previously he was at Qualcomm Research where he contributed to many important features of the AI 100 accelerator. For a short time Michael was at NVIDIA on various projects in the Compute Architecture group for high performance training, specifically compilers, kernels and architecture for deep learning. Prior to that, he was at Qualcomm Research where he worked on optimizing AI/ML applications for Snapdragon powered devices and developed new accelerator architectures for low power on device inference. His research interests are in machine learning, compilers, parallel programming and accelerator architecture. Michael received his Masters and Bachelors degrees from Purdue University (West Lafayette, IN).
+---
+name: Tao (Terry) Sheng
+affiliation: Oracle 
+avatar: terrys.jpg
+profile_url: https://www.linkedin.com/in/tao-sheng-729b6443/
+---
+Dr. Tao Sheng is a Director of Machine Learning at Oracle Cloud. He has been working on multiple cutting-edge projects in the research areas of Computer Vision and Neutral Language Understanding for more than 12 years. Prior to Oracle, he worked with Amazon, Qualcomm and Intel. He has published more than ten US and International patents and ten research papers.
+---
+name: Kushal Datta
+affiliation: Nvidia
+avatar: kushald.jpg
+profile_url: https://www.linkedin.com/in/kushal-datta-8b6b0513/
+---
+Dr. Kushal Datta is Sr. Product Manager of communications and IO libraries for AI, data analytics and HPC at Nvidia. Previously, at Intel Data Center Group, he invented new techniques to expedite deep learning model training and inference on Xeon architecture. His interests include creating new tools and methods to improve overall wall clock time of complex AI and scientific applications on large scale systems. He has published over twenty academic papers, several white papers and blogs. He holds five granted U.S. patents. He received his Ph.D. in ECE from University of North Carolina at Charlotte and Bachelors in Computer Science from Jadavpur University, India.
+---
+name: Prerana Maslekar
+affiliation: Microsoft
+avatar: prerana.jpg
+---
+Prerana Maslekar is a Silicon Verification Engineer in Silicon Engineering Group at Microsoft. She works on ensuring design correctness for hardware deployed in Azure cloud. Prior to this, she worked on verification of sensors used in microsoft devices. Prerana has a masters from The University of Texas at Austin in the track of Architecture, Computer Systems and Embedded Systems. Her interests lie in Accelerator architecture, ML accelerator hardware, security attacks exploiting architecture flaws and data center architectures.
