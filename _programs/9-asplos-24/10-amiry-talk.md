@@ -2,7 +2,7 @@
 edition: asplos-24
 type: invited_talk
 time_start: 2024-04-27 16:00:00
-time_end: 
+time_end: 2024-04-27 16:45:00
 title: ""
 speaker:
     name: Amir Yazdanbakhsh 
