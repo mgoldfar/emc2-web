@@ -1,7 +1,7 @@
 ---
 edition: asplos-24
 type: panel
-time_start: 
+time_start: 2024-04-27 17:15:00
 time_end: 
 title: "The Path to AGI: Directions and Challenges"
 moderator:
