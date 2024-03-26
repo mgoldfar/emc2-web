@@ -7,7 +7,7 @@ title: ""
 speaker:
     name: Esha Choukse
     affiliation: Microsoft Research
-    avatar: esha.jpeg 
+    avatar: esha.jpg 
     url: https://www.microsoft.com/en-us/research/people/eschouks/
 
 presentation: 
