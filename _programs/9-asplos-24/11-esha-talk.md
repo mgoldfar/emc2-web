@@ -2,7 +2,7 @@
 edition: asplos-24
 time_start: 2024-04-27 11:45:00
 time_end: 
-type: keynote
+type: invited_talk
 title: ""
 speaker:
     name: Esha Choukse
