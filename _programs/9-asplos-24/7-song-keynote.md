@@ -1,7 +1,7 @@
 ---
 edition: asplos-24
 time_start: 2024-04-27 13:30:00
-time_end: 
+time_end: 2024-04-27 14:30:00
 type: keynote
 title: "Accelerating Large Language Model and Generative AI"
 speaker:
