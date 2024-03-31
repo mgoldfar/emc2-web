@@ -1,7 +1,7 @@
 ---
 edition: asplos-24
-time_start: 2024-04-27 11:45:00
-time_end: 2024-04-27 12:30:00
+time_start: 2024-04-27 11:15:00
+time_end: 2024-04-27 11:45:00
 type: invited_talk
 title: "Rapid LLM deployments: with great power comes great responsibility"
 speaker:
@@ -12,4 +12,4 @@ speaker:
 
 presentation: 
 ---
-
+Focused on power needs for the training and inference clusters.
