@@ -1,7 +1,7 @@
 ---
 edition: asplos-24
-time_start: 2024-04-27 15:15:00
-time_end: 2024-04-27 16:00:00
+time_start: 2024-04-27 17:15:00
+time_end: 2024-04-27 17:45:00
 type: invited_talk
 title: "CHAI: Clustered Head Attention for Efficient LLM Inference"
 speaker:
