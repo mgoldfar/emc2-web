@@ -1,8 +1,8 @@
 ---
 edition: asplos-24 
 type: invited_talk
-time_start: 2024-04-27 11:00:00
-time_end: 2024-04-27 11:45:00
+time_start: 2024-04-27 10:45:00
+time_end: 2024-04-27 11:15:00
 title: "Put LLMs on device? Challenges and new opportunities"
 speaker:
     name: Zechun Liu 
