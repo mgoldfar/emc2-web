@@ -1,8 +1,8 @@
 ---
 edition: asplos-24
 type: invited_talk
-time_start: 2024-04-27 14:30:00
-time_end: 2024-04-27 15:15:00
+time_start: 2024-04-27 16:15:00
+time_end: 2024-04-27 16:45:00
 title: "Efficient AI Programming with Mojo and Max"
 speaker:
     name: Tatiana Shpeisman 
