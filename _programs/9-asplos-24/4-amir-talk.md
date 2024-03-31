@@ -2,7 +2,7 @@
 edition: asplos-24
 type: invited_talk
 time_start: 2024-04-27 10:15:00
-time_end: 2024-04-27 11:00:00
+time_end: 2024-04-27 10:45:00
 title: "Dense-and-Sparse Quantization Methods for Efficient LLM Serving"
 speaker:
     name: Amir Gholami 
