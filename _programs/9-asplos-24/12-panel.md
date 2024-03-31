@@ -1,8 +1,8 @@
 ---
 edition: asplos-24
 type: panel
-time_start: 2024-04-27 17:15:00
-time_end: 2024-04-27 18:00:00
+time_start: 2024-04-27 15:00:00
+time_end: 2024-04-27 16:00:00
 title: "The Path to AGI: Directions and Challenges"
 moderator:
     name: Raj Parihar
