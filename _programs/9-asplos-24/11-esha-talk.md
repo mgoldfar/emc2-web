@@ -12,4 +12,4 @@ speaker:
 
 presentation: 
 ---
-Focused on power needs for the training and inference clusters.
+Focused on power needs for training and inference clusters.
