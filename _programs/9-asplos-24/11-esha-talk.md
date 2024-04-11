@@ -12,4 +12,4 @@ speaker:
 
 presentation: 
 ---
-Focused on power needs for training and inference clusters.
+With the ubiquitous use-cases of modern LLMs, the deployment scale of these models is unforeseen. This has led to a large-scale datacenter expansion with GPUs, currently running into an energy wall worldwide. This talk will focus on the properties of generative LLMs that can be used to make the deployment of these models more power-efficient. The talk will also introduce POLCA and Splitwise, two techniques to reduce the power consumption for the LLM serving.
