@@ -1,8 +1,8 @@
 ---
 edition: asplos-24
 type: invited_talk
-time_start: 2024-04-27 08:30:00
-time_end: 2024-04-27 09:00:00
+time_start: 2024-04-27 09:00:00
+time_end: 2024-04-27 09:30:00
 title: ""
 speaker:
     name: Tri Dao 
