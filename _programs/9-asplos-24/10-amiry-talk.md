@@ -6,7 +6,7 @@ time_end: 2024-04-27 10:45:00
 title: "Embracing Machine Learning for the Next Generation of Domain Specific Accelerators"
 speaker:
     name: Amir Yazdanbakhsh 
-    affiliation: Google
+    affiliation: Google Deepmind
     avatar: amiry.jpg  
     url: https://www.ayazdan.com
 
