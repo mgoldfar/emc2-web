@@ -11,7 +11,7 @@ speaker:
     url: https://zechunliu.com
 presentation:
 ---
-Large language models (LLMs) are permeating various facets of human life,
+<a href="">Slides</a> <a href="">Video</a><br>Large language models (LLMs) are permeating various facets of human life,
 influencing not only communication and work but also shaping everyday entertainment
 experiences. Due to limitations in memory size and computational cost, there is an
 increasing demand to deploy LLM on smartphones and mobile devices. To address
