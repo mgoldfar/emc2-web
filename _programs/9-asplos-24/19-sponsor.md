@@ -12,4 +12,4 @@ speaker:
 
 presentation: 
 ---
-
+<a href="">Slides</a> <a href="">Video</a><br>
