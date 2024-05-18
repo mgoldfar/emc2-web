@@ -12,4 +12,4 @@ speaker:
 
 presentation: 
 ---
-As AI grows in its capabilities and ubiquity, it becomes increasingly important to improve efficiency of AI applications. At the same time, developing and deploying new applications requires the ability to quickly iterate on the design and have flexibility to modify it as required by the deployment scenario. In this talk, we will describe how Mojo  and Modular MAX platform help to achieve this goal. We will give a brief overview of Mojo and MAX  and illustrate by example how AI programmers can benefit from Max and its extensibility via Mojo.
+<a href="">Slides</a> <a href="">Video</a><br>As AI grows in its capabilities and ubiquity, it becomes increasingly important to improve efficiency of AI applications. At the same time, developing and deploying new applications requires the ability to quickly iterate on the design and have flexibility to modify it as required by the deployment scenario. In this talk, we will describe how Mojo  and Modular MAX platform help to achieve this goal. We will give a brief overview of Mojo and MAX  and illustrate by example how AI programmers can benefit from Max and its extensibility via Mojo.
