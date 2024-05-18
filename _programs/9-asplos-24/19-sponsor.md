@@ -12,4 +12,4 @@ speaker:
 
 presentation: 
 ---
-<a href="">Slides</a> <a href="https://drive.google.com/file/d/1hPyeKSqAnaXwZLB7eLY-Gjp0jsWJt4Fh/view?usp=share_link">Video</a><br>
+<a href="https://docs.google.com/presentation/d/10EDu5hf4eTM3nOprecDyIk8LB7QR1f48/edit?usp=sharing&ouid=101722224518348784726&rtpof=true&sd=true">Slides</a> <a href="https://drive.google.com/file/d/1hPyeKSqAnaXwZLB7eLY-Gjp0jsWJt4Fh/view?usp=share_link">Video</a><br>
