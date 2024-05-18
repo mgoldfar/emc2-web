@@ -11,7 +11,7 @@ speaker:
     url: https://zechunliu.com
 presentation:
 ---
-<a href="">Slides</a> <a href="https://drive.google.com/file/d/16GIEctqtfXpIL5Lfg1TN51ExWbmv4N3_/view?usp=share_link">Video</a><br>Large language models (LLMs) are permeating various facets of human life,
+<a href="https://docs.google.com/presentation/d/10CC8lK9mkYouzifpbJ4Rp_8-JUydVA7i/edit?usp=sharing&ouid=101722224518348784726&rtpof=true&sd=true">Slides</a> <a href="https://drive.google.com/file/d/16GIEctqtfXpIL5Lfg1TN51ExWbmv4N3_/view?usp=share_link">Video</a><br>Large language models (LLMs) are permeating various facets of human life,
 influencing not only communication and work but also shaping everyday entertainment
 experiences. Due to limitations in memory size and computational cost, there is an
 increasing demand to deploy LLM on smartphones and mobile devices. To address
