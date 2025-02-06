@@ -3,7 +3,8 @@ edition: hpca-25
 type: keynote
 time_start: 2025-03-02 13:00:00
 time_end: 2025-03-02 13:45:00
-title: “Memory-Centric Computing- Enabling Fundamentally Efficient Computing Systems"
+title: "Memory-Centric Computing: Enabling Fundamentally Efficient Computing Systems"
+
 speaker:
     name: Onur Mutlu
     affiliation: ETH Zurich
