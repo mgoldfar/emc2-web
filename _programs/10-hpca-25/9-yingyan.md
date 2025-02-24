@@ -1,8 +1,8 @@
 ---
 edition: hpca-25
 type: invited_talk
-time_start: 2025-03-02 13:45:00
-time_end: 2025-03-02 14:15:00
+time_start: 2025-03-02 09:00:00
+time_end: 2025-03-02 09:30:00
 title: "Pushing the Frontiers of Language Model Efficiency: From Innovative Architecture to Any‐Shape LLMs and Multiplication‐Less Reparameterization"
 speaker:
     name: Yingyan(Celine) Lin 
