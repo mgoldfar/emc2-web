@@ -1,9 +1,9 @@
 ---
 edition: hpca-25
 type: invited_talk
-time_start: 2025-03-02 17:00:00
-time_end: 2025-03-02 17:30:00
-title: "Sponsor Talk / Fireside Chat"
-speaker: d-Matrix
+time_start: 2025-03-02 13:05:00
+time_end: 2025-03-02 13:15:00
+title: "Sponsor Talk"
+speaker: Keith Nellis
 presentation: 
 ---
