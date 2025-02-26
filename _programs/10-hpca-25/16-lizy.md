@@ -1,8 +1,8 @@
 ---
 edition: hpca-25
 type: invited_talk
-time_start: 2025-03-02 14:15:00
-time_end: 2025-03-02 14:45:00
+time_start: 2025-03-02 14:30:00
+time_end: 2025-03-02 15:00:00
 title: "nanoML: Pushing the Limits of Edge AI with Weightless Neural Networks"
 speaker:
     name: Lizy Kurian John 
