@@ -7,7 +7,7 @@ title: "Sponsor Talk"
 speaker:
     name: Keith Nellis 
     affiliation: d-Matrix
-
+    avatar: dmatrix.jpg  
+    url: https://www.d-matrix.ai
 presentation: 
 ---
-
