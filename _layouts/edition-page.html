@@ -147,6 +147,8 @@
                     {% assign talk_class_header = "Announcements" %}
                 {% when 'welcome' %}
                     {% assign talk_class_header = "Welcome" %}
+		{% when 'session' %}
+                    {% assign talk_class_header = "Session" %}
                 {% when 'close' %}
                     {% assign talk_class_header = "Close" %}
                 {% when 'break' %}
@@ -243,7 +245,7 @@
 
                 {% elsif p.type == "announce" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
-                {% elsif p.type == "welcome" or p.type == "close" %}
+                {% elsif p.type == "welcome" or p.type == "close" or p.type == "session" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                     {% if p.speaker %}
                     <h4 class="light-primary">
