@@ -1,8 +1,8 @@
 ---
 edition: hpca-25
 type: invited_talk
-time_start: 2025-03-02 17:00:00
-time_end: 2025-03-02 17:30:00
+time_start: 2025-03-02 16:30:00
+time_end: 2025-03-02 17:00:00
 title: "Overcoming Memory Limitations for On-Device AI and LLM in Wearable Augmented Reality Systems"
 speaker:
     name: Huichu Liu 
