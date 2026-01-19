@@ -1,7 +1,7 @@
 ---
 name: Raj Parihar
-affiliation: Meta 
+affiliation: Runara.ai 
 avatar: rajp.jpg
 profile_url: https://www.linkedin.com/in/raj-parihar/
 ---
-Dr. Raj Parihar is a Technical Lead Manager at Meta in the Infra Silicon ASIC group. Previously, he was the Chief AI Architect at d-Matrix and help defined the flagship product Corsair. Prior to that, Dr. Parihar was part of Microsoft Silicon Engineering and Solutions (SES) group and worked on future generation of Brainwave systems and at Cadence/Tensilica, he was involved in architectural exploration and performance analysis of neural network AI processor DNA 100. He also contributed to the microarchitectural enhancements (next generation branch predictors and cache prefetchers) of P-series Warrior cores at MIPS/ImgTech. His work on Cache rationing won the best paper award at ISMM’16. Dr. Parihar received his Doctorate and Masters from University of Rochester, NY and his Bachelors from Birla Institute of Technology & Science, Pilani, India.
+Dr. Raj Parihar is an AI infrastructure architect and deep-tech founder with 15+ years of experience across silicon architecture, large-scale AI systems, and data-center intelligence. He is Co-Founder and Chief Development Officer of Runara.ai, where he leads closed-loop telemetry and orchestration systems for optimizing AI inference efficiency, and Founder and CEO of AllyIn.ai, building a trusted intelligence layer for AI data centers and energy infrastructure. Previously, he was an ML ASIC Architect at Meta, leading performance modeling and telemetry for MTIA inference chips, and held senior architecture roles at d-Matrix, Microsoft, Cadence (Tensilica), and Imagination Technologies (MIPS). He is an ACM ISMM Best Paper Award recipient, author of 8+ top-tier architecture publications, Co-Founder of the EMC² Workshop Series, and holds a PhD and MS from the University of Rochester and a BE from BITS Pilani.
