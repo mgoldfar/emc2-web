@@ -63,23 +63,28 @@ permalink: /index
   </div>
 </div>
 
-{% assign next_upcoming_edition = upcoming_editions|first %}
-
-{% if next_upcoming_edition.show_program_summary %}
-{% assign next_upcoming_program = site.programs|where: "edition",next_upcoming_edition.edition|sort:"time_end" %}
-{% assign next_upcoming_edition_number = next_upcoming_edition.title|split:" "|first %}
-<div class="row">
-  <h3 class="header"><i class="material-icons">schedule</i> Program for EMC<sup>2</sup> at
-    {{ next_upcoming_edition.colocated_short }}</h3>
-  {% include program-summary.html edition=next_upcoming_edition program=next_upcoming_program %}
-  <div class="center-align">
-    View the complete program for the
-    <a href="{{ next_upcoming_edition.url }}">{% include ordinal.html number=next_upcoming_edition_number %} Edition</a>
-    of EMC<sup>2</sup>
-    <a href="{{ next_upcoming_edition.url }}">here</a>.
+{% for ed in upcoming_editions %}
+  {% assign speakers_item = site.programs | where: "edition", ed.edition | where: "type", "speakers" | first %}
+  {% if speakers_item and speakers_item.speakers.size > 0 %}
+  <div class="row">
+    <h3 class="header"><i class="material-icons">people</i> Speakers at {{ ed.colocated_short }}</h3>
+    {% assign sorted_speakers = speakers_item.speakers | sort: "order" %}
+    <table class="striped responsive-table">
+      <tbody>
+        {% for s in sorted_speakers %}
+        <tr>
+          <td>
+            {% if s.url %}<a href="{{ s.url }}" target="_blank">{{ s.name }}</a>
+            {% else %}{{ s.name }}{% endif %}
+          </td>
+          <td>{{ s.affiliation }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
-</div>
-{% endif %}
+  {% endif %}
+{% endfor %}
 
 {% endif %}
 
