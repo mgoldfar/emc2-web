@@ -32,5 +32,6 @@ speakers:
     affiliation: Stanford/Gimlet
     url: https://gimletlabs.ai/
     avatar: zain.jpg
+    avatar2: michelle.jpg
     order: 6
 ---

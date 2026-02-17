@@ -175,7 +175,14 @@
             </div>
             <div class="ed-grid-item-program-item-avatar">
                 {% if  p.type == "grand_keynote" or p.type == "keynote" or p.type == "invited_talk" or p.type == "sponsored_talk" %}
-                    {% if p.speaker.avatar %}
+                    {% if p.speaker.avatar2 %}
+                    <div class="program-avatar-duo">
+                        <img src="assets/images/speakers/{{ p.edition }}/{{ p.speaker.avatar }}"
+                        class="z-depth-1 valign-wrapper avatar-image program-avatar-duo-left" />
+                        <img src="assets/images/speakers/{{ p.edition }}/{{ p.speaker.avatar2 }}"
+                        class="z-depth-1 valign-wrapper avatar-image program-avatar-duo-right" />
+                    </div>
+                    {% elsif p.speaker.avatar %}
                         <img src="assets/images/speakers/{{ p.edition }}/{{ p.speaker.avatar }}"
                         class="z-depth-1 valign-wrapper avatar-image" />
                     {% endif %}

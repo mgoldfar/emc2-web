@@ -8,6 +8,7 @@ speaker:
     name: Zain Asgar/Michelle Nguyen
     affiliation: Stanford/Gimlet
     avatar: zain.jpg
+    avatar2: michelle.jpg
     url: https://gimletlabs.ai/
 abstract:
 presentation:
