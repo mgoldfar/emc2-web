@@ -76,7 +76,8 @@ permalink: /index
   {% assign speakers_item = site.programs | where: "edition", ed.edition | where: "type", "speakers" | first %}
   {% if speakers_item and speakers_item.speakers.size > 0 %}
   <div class="row">
-    <h3 class="header"><i class="material-icons">people</i> Speakers at {{ ed.colocated_short }}</h3>
+    {% assign ed_number = ed.title | split: " " | first %}
+    <h3 class="header"><i class="material-icons">people</i> Speakers at the {% include ordinal.html number=ed_number %} Edition - {{ ed.colocated_short }}</h3>
     {% assign sorted_speakers = speakers_item.speakers | sort: "order" %}
     <div class="speaker-cards">
       {% for s in sorted_speakers %}
