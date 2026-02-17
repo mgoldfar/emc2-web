@@ -24,13 +24,8 @@ permalink: /index
       </div>
       <div class="upcoming-card-info">
         {% assign edition_number = ed.title | split:" " | first %}
-        <h5 class="dark-primary" style="margin: 0 0 0.25em;">{% include ordinal.html number=edition_number %} Edition</h5>
-        <p style="margin: 0; color: #555;">
-          {{ ed.event_location }}
-          {% if ed.colocated_self == False %}
-          &middot; {{ ed.colocated_short }}
-          {% endif %}
-        </p>
+        <h5 class="dark-primary" style="margin: 0 0 0.25em;">{% include ordinal.html number=edition_number %} Edition - {{ ed.colocated_short }}</h5>
+        <p style="margin: 0; color: #555;">{{ ed.event_location }}</p>
         <div class="upcoming-card-links">
           <a href="{{ ed.url }}" class="upcoming-card-link">EMC2 Program <i class="material-icons">arrow_forward</i></a>
           {% if ed.colocated_url %}
