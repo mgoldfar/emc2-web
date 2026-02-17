@@ -273,11 +273,13 @@
     {% if page.sponsors %}
     <div class="program-container">
         <h3 class="header">Workshop Sponsors</h3>
-        {% for s in page.sponsors %}
-            <a href="{{ s.url }}" target="_blank">
-                <img src="assets/images/sponsors/{{ s.logo }}" alt="{{ s.name }}" />
-            </a>
-        {% endfor %}
+        <div class="sponsors-grid">
+            {% for s in page.sponsors %}
+                <a href="{{ s.url }}" target="_blank">
+                    <img src="assets/images/sponsors/{{ s.logo }}" alt="{{ s.name }}" />
+                </a>
+            {% endfor %}
+        </div>
     </div>
     {% endif %}
 </main>

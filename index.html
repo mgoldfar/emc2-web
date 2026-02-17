@@ -4,11 +4,17 @@ permalink: /index
 ---
 {% assign upcoming_editions = site.editions|where: "is_upcoming",true|sort:"event_date" %}
 
-<div class="row">
-  <div class="col s12 center-align">
+<div class="hero-banner">
+  <div class="hero-content">
     <h1 class="header">{{ site.title }}</h1>
-    <img src="assets/images/wordcloud.svg" class="responsive-img" style="max-height: 450px;" />
+    {% assign sorted_editions = site.editions | sort: "event_date" | reverse %}
+    {% assign latest = sorted_editions | first %}
+    {% assign latest_edition_number = latest.title | split: " " | first %}
+    <a class="waves-effect waves-light btn-large hero-cta" href="{{ latest.url }}">
+      View {% include ordinal.html number=latest_edition_number %} Edition at {{ latest.colocated_short }} <i class="material-icons right">arrow_forward</i>
+    </a>
   </div>
+  <img src="assets/images/wordcloud.svg" class="hero-wordcloud responsive-img" alt="EMC2 wordcloud" />
 </div>
 
 <!--
@@ -69,19 +75,24 @@ permalink: /index
   <div class="row">
     <h3 class="header"><i class="material-icons">people</i> Speakers at {{ ed.colocated_short }}</h3>
     {% assign sorted_speakers = speakers_item.speakers | sort: "order" %}
-    <table class="striped responsive-table">
-      <tbody>
-        {% for s in sorted_speakers %}
-        <tr>
-          <td>
-            {% if s.url %}<a href="{{ s.url }}" target="_blank">{{ s.name }}</a>
-            {% else %}{{ s.name }}{% endif %}
-          </td>
-          <td>{{ s.affiliation }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    <div class="speaker-cards">
+      {% for s in sorted_speakers %}
+      <div class="speaker-card">
+        {% if s.avatar %}
+        <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar }}" class="speaker-card-avatar-img" alt="{{ s.name }}" />
+        {% else %}
+        <div class="speaker-card-avatar">
+          {{ s.name | slice: 0 }}
+        </div>
+        {% endif %}
+        <div class="speaker-card-name">
+          {% if s.url %}<a href="{{ s.url }}" target="_blank">{{ s.name }}</a>
+          {% else %}{{ s.name }}{% endif %}
+        </div>
+        <div class="speaker-card-affiliation">{{ s.affiliation }}</div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
   {% endif %}
 {% endfor %}
