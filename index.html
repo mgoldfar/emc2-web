@@ -41,14 +41,6 @@ permalink: /index
     {% endfor %}
   </div>
 
-  {% assign sorted_editions = site.editions | sort: "event_date" | reverse %}
-  {% assign latest = sorted_editions | first %}
-  {% assign latest_edition_number = latest.title | split: " " | first %}
-  <div class="center-align" style="margin-top: 1.5em;">
-    <a class="waves-effect waves-light btn-large hero-cta" href="{{ latest.url }}">
-      View {% include ordinal.html number=latest_edition_number %} Edition at {{ latest.colocated_short }} <i class="material-icons right">arrow_forward</i>
-    </a>
-  </div>
 </div>
 
 <div class="section-block fade-in">
