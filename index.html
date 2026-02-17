@@ -7,12 +7,6 @@ permalink: /index
 <div class="hero-banner">
   <div class="hero-content">
     <h1 class="header">{{ site.title }}</h1>
-    {% assign sorted_editions = site.editions | sort: "event_date" | reverse %}
-    {% assign latest = sorted_editions | first %}
-    {% assign latest_edition_number = latest.title | split: " " | first %}
-    <a class="waves-effect waves-light btn-large hero-cta" href="{{ latest.url }}">
-      View {% include ordinal.html number=latest_edition_number %} Edition at {{ latest.colocated_short }} <i class="material-icons right">arrow_forward</i>
-    </a>
   </div>
   <img src="assets/images/wordcloud.svg" class="hero-wordcloud responsive-img" alt="EMC2 wordcloud" />
 </div>
@@ -69,6 +63,15 @@ permalink: /index
   </div>
 </div>
 
+{% assign sorted_editions = site.editions | sort: "event_date" | reverse %}
+{% assign latest = sorted_editions | first %}
+{% assign latest_edition_number = latest.title | split: " " | first %}
+<div class="row center-align" style="margin-top: 1.5em;">
+  <a class="waves-effect waves-light btn-large hero-cta" href="{{ latest.url }}">
+    View {% include ordinal.html number=latest_edition_number %} Edition at {{ latest.colocated_short }} <i class="material-icons right">arrow_forward</i>
+  </a>
+</div>
+
 {% for ed in upcoming_editions %}
   {% assign speakers_item = site.programs | where: "edition", ed.edition | where: "type", "speakers" | first %}
   {% if speakers_item and speakers_item.speakers.size > 0 %}
@@ -93,6 +96,7 @@ permalink: /index
       </div>
       {% endfor %}
     </div>
+    <p class="secondary-text" style="margin-top: 0.5em; font-style: italic;">* More speakers to be announced.</p>
   </div>
   {% endif %}
 {% endfor %}
