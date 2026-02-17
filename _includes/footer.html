@@ -6,6 +6,10 @@
     </div>
   </footer>
 
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+    <i class="material-icons">keyboard_arrow_up</i>
+  </button>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="assets/js/materialize.min.js"></script>
   <script type="text/javascript">
@@ -13,6 +17,18 @@
       $('.sidenav').sidenav();
       $('.tabs').tabs();
       $(".dropdown-trigger").dropdown({ hover: true, constrainWidth: false });
+
+      var $scrollBtn = $('#scrollToTop');
+      $(window).on('scroll', function(){
+        if ($(this).scrollTop() > 300) {
+          $scrollBtn.addClass('visible');
+        } else {
+          $scrollBtn.removeClass('visible');
+        }
+      });
+      $scrollBtn.on('click', function(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     });
   </script>
 </body>
