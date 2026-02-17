@@ -297,6 +297,46 @@
     grid-area: program-summary-item-title;
 }
 
+/* Dual speaker avatar (program page) */
+.program-avatar-duo {
+    display: flex;
+    justify-content: center;
+}
+
+.program-avatar-duo img.avatar-image {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+}
+
+.program-avatar-duo-left {
+    position: relative;
+    z-index: 1;
+    margin-right: -15px;
+}
+
+.program-avatar-duo-right {
+    position: relative;
+    z-index: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .program-avatar-duo {
+        justify-content: flex-end;
+    }
+
+    .program-avatar-duo img.avatar-image {
+        width: 100px;
+        height: 100px;
+        float: none;
+        margin: 1.5em 0 0 0;
+    }
+
+    .program-avatar-duo-left {
+        margin-right: -20px;
+    }
+}
+
 /* Sponsor Logo Grid */
 .sponsors-grid {
     display: flex;

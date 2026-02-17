@@ -59,7 +59,12 @@ permalink: /index
     <div class="speaker-cards">
       {% for s in sorted_speakers %}
       <div class="speaker-card">
-        {% if s.avatar %}
+        {% if s.avatar2 %}
+        <div class="speaker-card-duo">
+          <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar }}" class="speaker-card-avatar-img speaker-card-duo-left" alt="{{ s.name | split: '/' | first }}" />
+          <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar2 }}" class="speaker-card-avatar-img speaker-card-duo-right" alt="{{ s.name | split: '/' | last }}" />
+        </div>
+        {% elsif s.avatar %}
         <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar }}" class="speaker-card-avatar-img" alt="{{ s.name }}" />
         {% else %}
         <div class="speaker-card-avatar">

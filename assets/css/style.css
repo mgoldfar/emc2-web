@@ -249,6 +249,31 @@ img.avatar-image:hover {
     color: #757575;
 }
 
+/* Dual speaker avatar (two photos, one card) */
+.speaker-card-duo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+.speaker-card-duo .speaker-card-avatar-img {
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    border: 2px solid #fff;
+}
+
+.speaker-card-duo-left {
+    position: relative;
+    z-index: 1;
+    margin-right: -12px;
+}
+
+.speaker-card-duo-right {
+    position: relative;
+    z-index: 0;
+}
+
 /* Desktop: 3-column grid */
 @media screen and (min-width: 768px) {
     .speaker-cards {
@@ -279,6 +304,15 @@ img.avatar-image:hover {
 
     .speaker-card-affiliation {
         font-size: 0.82em;
+    }
+
+    .speaker-card-duo .speaker-card-avatar-img {
+        width: 76px;
+        height: 76px;
+    }
+
+    .speaker-card-duo-left {
+        margin-right: -16px;
     }
 }
 
