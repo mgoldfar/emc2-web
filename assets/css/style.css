@@ -416,3 +416,165 @@ img.avatar-image:hover {
     margin-bottom: 0;
 }
 
+/* ============================
+   Nav bar scroll shadow
+   ============================ */
+nav {
+    transition: box-shadow 0.3s ease;
+}
+
+nav.nav-scrolled {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* ============================
+   Section blocks with alternating backgrounds
+   ============================ */
+.section-block {
+    padding: 2em 0;
+}
+
+.section-block.section-alt {
+    background: #f8f9fa;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+}
+
+/* Prevent horizontal scrollbar from the full-width section trick */
+main {
+    overflow-x: hidden;
+}
+
+/* ============================
+   Section heading accent underline
+   ============================ */
+.section-heading {
+    padding-bottom: 0.4em;
+    border-bottom: 3px solid #ff5722;
+    display: inline-block;
+}
+
+/* ============================
+   Upcoming Workshop Cards
+   ============================ */
+.upcoming-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.upcoming-card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em 1.25em;
+    border-radius: 6px;
+    background: #fff;
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.upcoming-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+    opacity: 1 !important;
+}
+
+@media screen and (max-width: 480px) {
+    .upcoming-card {
+        padding: 0.75em 1em;
+        gap: 0.75em;
+    }
+
+    .upcoming-card-date {
+        min-width: 56px;
+    }
+
+    .upcoming-card-badge {
+        width: 100%;
+    }
+}
+
+.upcoming-card-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 0.5em;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #005E93, #1976D2);
+    color: #fff;
+    line-height: 1.2;
+}
+
+.upcoming-card-month {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.upcoming-card-day {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.upcoming-card-year {
+    font-size: 0.65em;
+    opacity: 0.85;
+}
+
+.upcoming-card-info {
+    flex: 1;
+}
+
+.upcoming-card-badge {
+    flex-shrink: 0;
+}
+
+/* ============================
+   Topics list two-column on desktop
+   ============================ */
+.list {
+    line-height: 1.7;
+}
+
+@media screen and (min-width: 768px) {
+    .list {
+        columns: 2;
+        column-gap: 2em;
+    }
+
+    .list > li {
+        break-inside: avoid;
+    }
+}
+
+/* ============================
+   Scroll-triggered fade-in animation
+   ============================ */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+

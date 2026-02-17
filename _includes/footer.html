@@ -19,16 +19,39 @@
       $(".dropdown-trigger").dropdown({ hover: true, constrainWidth: false });
 
       var $scrollBtn = $('#scrollToTop');
+      var $nav = $('nav');
       $(window).on('scroll', function(){
-        if ($(this).scrollTop() > 300) {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop > 300) {
           $scrollBtn.addClass('visible');
         } else {
           $scrollBtn.removeClass('visible');
+        }
+        if (scrollTop > 10) {
+          $nav.addClass('nav-scrolled');
+        } else {
+          $nav.removeClass('nav-scrolled');
         }
       });
       $scrollBtn.on('click', function(){
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
+
+      // Fade-in on scroll
+      var fadeEls = document.querySelectorAll('.fade-in');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        fadeEls.forEach(function(el) { observer.observe(el); });
+      } else {
+        fadeEls.forEach(function(el) { el.classList.add('visible'); });
+      }
     });
   </script>
 </body>
