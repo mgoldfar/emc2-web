@@ -1,29 +1,64 @@
 ---
 layout: default
 permalink: /sponsors
-show_note: False
 ---
-{% assign accepting_editions = site.editions|where: "is_accepting_submission",true|sort:"event_date" %}
-{% assign upcoming_editions = site.editions|where: "show_on_submission_page",true|sort:"event_date" %}
+{% assign upcoming_editions = site.editions | where: "is_upcoming", true | sort: "event_date" %}
 
+{% for ed in upcoming_editions %}
+  {% if ed.sponsors.size > 0 %}
+    {% assign edition_number = ed.title | split: " " | first %}
+    <h3 class="header">
+      <i class="material-icons">star</i>
+      {% include ordinal.html number=edition_number %} Edition Sponsors ({{ ed.colocated_short }})
+    </h3>
 
-<h3 class="header">11th Edition EMC2 Gold Sponsor:</h3>
-<table>
-    <tr>
-        <td><i>d-Matrix</i> is building one of the most disruptive computing platforms for AI in cloud and edge pioneering in-memory computing in the data-center</td>
-        <td>
-            <img src="assets/images/sponsors/dmatrix.png"
-                 class="z-depth-1 valign-wrapper" />
-        </td>
-    </tr>
-</table>
+    <div class="sponsor-list">
+      {% for s in ed.sponsors %}
+      <div class="sponsor-card z-depth-1">
+        <div class="sponsor-card-header">
+          {% if s.tier %}
+          <span class="sponsor-tier sponsor-tier-{{ s.tier | downcase }}">{{ s.tier }} Sponsor</span>
+          {% endif %}
+        </div>
+        <div class="sponsor-card-body">
+          <div class="sponsor-card-logo">
+            <a href="{{ s.url }}" target="_blank">
+              <img src="assets/images/sponsors/{{ s.logo }}" alt="{{ s.name }}" />
+            </a>
+          </div>
+          <div class="sponsor-card-info">
+            <h4 class="dark-primary">
+              <a href="{{ s.url }}" target="_blank">{{ s.name }}</a>
+            </h4>
+            {% if s.description %}
+            <p>{{ s.description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}
 
-<br>
-<br>
+{% assign has_any_sponsors = false %}
+{% for ed in upcoming_editions %}
+  {% if ed.sponsors.size > 0 %}
+    {% assign has_any_sponsors = true %}
+  {% endif %}
+{% endfor %}
 
+{% unless has_any_sponsors %}
+<h3 class="header"><i class="material-icons">star</i> Sponsors</h3>
+<p>Sponsor information for upcoming editions will be posted here soon.</p>
+{% endunless %}
 
-<li>For sponsorship queries, please contact Satyam Srivastava (<i>ssrivastava at d-matrix dot ai</i>) and/or Ananya Pareek(<i> ananya.iitk at gmail dot com</i>) 
-{% if page.show_note %}
-    {% include submission-notes.html %}
-{% endif %}
-</li>
+<div class="sponsor-contact">
+  <h4 class="header">Become a Sponsor</h4>
+  <p>
+    Interested in sponsoring EMC<sup>2</sup>? We offer various sponsorship tiers to support the workshop.
+    For sponsorship queries, please contact
+    Satyam Srivastava (<a href="mailto:ssrivastava@d-matrix.ai">ssrivastava@d-matrix.ai</a>)
+    and/or Ananya Pareek (<a href="mailto:ananya.iitk@gmail.com">ananya.iitk@gmail.com</a>).
+  </p>
+</div>

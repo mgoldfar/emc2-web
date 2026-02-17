@@ -45,7 +45,20 @@
     grid-auto-flow: column;
     grid-template-areas: "header-title" "header-sub-title" "header-meta-left" "header-meta-right" "header-note";
     color: #fff;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    position: relative;
+}
+
+.ed-grid-container-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.6) 100%);
+    z-index: 0;
+}
+
+.ed-grid-container-header > * {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -74,8 +87,14 @@
     grid-auto-flow: column;
     grid-template-areas: "program-item-time program-item-type" "program-item-avatar program-item-avatar" "program-item-content program-item-content";
     margin-bottom: 2em;
-    padding-bottom: 2em;
+    padding: 1.5em;
     border-bottom: #bdbdbd 1px solid;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.ed-grid-container-program-item:hover {
+    background-color: rgba(33, 150, 243, 0.04);
 }
 
 .ed-grid-container-program-item:last-child {
@@ -108,7 +127,6 @@
         grid-template-columns: auto;
         grid-template-rows: 50% 50%;
         grid-template-areas: "header-title" "header-sub-title";
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, -2px -2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000, 2px 2px 1px #000;
         min-height: 350px;
     }
     .ed-grid-container-header-meta {
@@ -277,4 +295,30 @@
 
 .ed-grid-program-summary-item-title {
     grid-area: program-summary-item-title;
+}
+
+/* Sponsor Logo Grid */
+.sponsors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 1em 0;
+}
+
+.sponsors-grid a {
+    display: inline-block;
+}
+
+.sponsors-grid img {
+    max-height: 60px;
+    width: auto;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.sponsors-grid img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
 }
