@@ -11,73 +11,52 @@ permalink: /index
   <img src="assets/images/wordcloud.svg" class="hero-wordcloud responsive-img" alt="EMC2 wordcloud" />
 </div>
 
-<!--
-<div class="row">
-  <h3 class="header"><i class="material-icons">announcement</i> Important Announcements</h3>
-  <blockquote class="z-depth-1">
-	  <p style="padding: 1rem;">
-      <strong><a href="/submission">Call for Proposal announced for EMC2 6th Edition</a>:</strong> To make the
-	  EMC<sup>2</sup> Workshop more accessible to the community, we are transitioning to a virtual format
-	  this year. 6th Edition will be an independent virtual event on <em>December 5, 2020</em>.
-	  For further details and logistics, please look out our Call for Proposal and keep checking our website
-    </p>
-    <p style="padding: 1rem;">
-      <strong><a href="/emcc">EMC2 Model Compression Challenge</a>:</strong> We are pleased to announce the first
-      EMC<sup>2</sup> Model Compression Challenge (EMCC) which aims to identify the best ideas and approaches for deep
-      learning model compression. Check <a href="/emcc">this page</a> for more details.
-    </p>
-    <p style="padding: 1rem;">
-      <strong><a href="/virtual-20">How To Attend Virtual EMC<sup>2</sup> 2020</a>:</strong> We will
-      be using Microsoft Teams to coordinate between keynote and invited speakers, panel and paper
-      presentations. All events will be streamed live on <strong><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fyoutu.be%2FGmxh9QgA9Hc&data=04%7C01%7Crapariha%40microsoft.com%7C5a3c1c0d749a459cf01608d896931124%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C1%7C637424905673305801%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=Ez1FBoWWpkWjr6c7cF3k%2FGgcSaeHp7ZwutNRqV4mB88%3D&reserved=0">YouTube</a></strong>
-    </p>
-  </blockquote>
-</div>
--->
-
 {% if upcoming_editions.size > 0 %}
-<div class="row">
-  <h3 class="header"><i class="material-icons">memory</i> Upcoming Workshops</h3>
-  <div class="col s12">
-    <ul class="collection">
-      {% for ed in upcoming_editions %}
-      <li class="collection-item">
-        {% assign edition_number = ed.title|split:" "|first %}
+<div class="section-block section-alt fade-in">
+  <h3 class="header "><i class="material-icons">memory</i> Upcoming Workshops</h3>
+  <div class="upcoming-cards">
+    {% for ed in upcoming_editions %}
+    <a href="{{ ed.url }}" class="upcoming-card z-depth-1">
+      <div class="upcoming-card-date">
+        <span class="upcoming-card-month">{{ ed.event_date | date: "%b" }}</span>
+        <span class="upcoming-card-day">{{ ed.event_date | date: "%d" }}</span>
+        <span class="upcoming-card-year">{{ ed.event_date | date: "%Y" }}</span>
+      </div>
+      <div class="upcoming-card-info">
+        {% assign edition_number = ed.title | split:" " | first %}
+        <h5 class="dark-primary" style="margin: 0 0 0.25em;">{% include ordinal.html number=edition_number %} Edition</h5>
+        <p style="margin: 0; color: #555;">
+          {{ ed.event_location }}
+          {% if ed.colocated_self == False %}
+          &middot; {{ ed.colocated_short }}
+          {% endif %}
+        </p>
+      </div>
+      {% if ed.is_accepting_submission %}
+      <div class="upcoming-card-badge">
+        <span class="new badge" data-badge-caption="">Accepting Submissions!</span>
+      </div>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </div>
 
-        <a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> on
-        {{ ed.event_date|date: "%B %d, %Y" }} in {{ ed.event_location }}
-        {% if ed.colocated_self == False %}
-        co-located with
-        <a href="{{ ed.colocated_url }}" target="_blank"><span
-            style="white-space: nowrap;">{{ ed.colocated_short }}</span></a>
-        {% endif %}
-
-        {% if ed.is_accepting_submission %}
-        <a href="/submission">
-          <span class="new badge" data-badge-caption="">Accepting Submissions!</span>
-        </a>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
+  {% assign sorted_editions = site.editions | sort: "event_date" | reverse %}
+  {% assign latest = sorted_editions | first %}
+  {% assign latest_edition_number = latest.title | split: " " | first %}
+  <div class="center-align" style="margin-top: 1.5em;">
+    <a class="waves-effect waves-light btn-large hero-cta" href="{{ latest.url }}">
+      View {% include ordinal.html number=latest_edition_number %} Edition at {{ latest.colocated_short }} <i class="material-icons right">arrow_forward</i>
+    </a>
   </div>
 </div>
 
-{% assign sorted_editions = site.editions | sort: "event_date" | reverse %}
-{% assign latest = sorted_editions | first %}
-{% assign latest_edition_number = latest.title | split: " " | first %}
-<div class="row center-align" style="margin-top: 1.5em;">
-  <a class="waves-effect waves-light btn-large hero-cta" href="{{ latest.url }}">
-    View {% include ordinal.html number=latest_edition_number %} Edition at {{ latest.colocated_short }} <i class="material-icons right">arrow_forward</i>
-  </a>
-</div>
-
-{% for ed in upcoming_editions %}
-  {% assign speakers_item = site.programs | where: "edition", ed.edition | where: "type", "speakers" | first %}
-  {% if speakers_item and speakers_item.speakers.size > 0 %}
-  <div class="row">
+<div class="section-block fade-in">
+  {% for ed in upcoming_editions %}
+    {% assign speakers_item = site.programs | where: "edition", ed.edition | where: "type", "speakers" | first %}
+    {% if speakers_item and speakers_item.speakers.size > 0 %}
     {% assign ed_number = ed.title | split: " " | first %}
-    <h3 class="header"><i class="material-icons">people</i> Speakers at the {% include ordinal.html number=ed_number %} Edition - {{ ed.colocated_short }}</h3>
+    <h3 class="header "><i class="material-icons">people</i> Speakers at the {% include ordinal.html number=ed_number %} Edition - {{ ed.colocated_short }}</h3>
     {% assign sorted_speakers = speakers_item.speakers | sort: "order" %}
     <div class="speaker-cards">
       {% for s in sorted_speakers %}
@@ -98,16 +77,18 @@ permalink: /index
       {% endfor %}
     </div>
     <p class="secondary-text" style="margin-top: 0.5em; font-style: italic;">* More speakers to be announced.</p>
-  </div>
-  {% endif %}
-{% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>
 
 {% endif %}
 
-{% include cfp.html hide_cfp=true %}
+<div class="section-block section-alt fade-in">
+  {% include cfp.html hide_cfp=true %}
+</div>
 
-<div class="row">
-  <h3 class="header">Recent Editions</h3>
+<div class="section-block fade-in">
+  <h3 class="header ">Recent Editions</h3>
   {% include previous-editions-table.html limit=5 %}
   View the complete list of <a href="/previous-editions">previous editions</a>.
 </div>
