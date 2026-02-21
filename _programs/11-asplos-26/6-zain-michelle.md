@@ -3,12 +3,11 @@ edition: asplos-26
 type: invited_talk
 time_start:
 time_end:
-title: TBD
+title: "Efficient and Scalable Agentic AI With Heterogeneous Systems"
 speaker:
-    name: Zain Asgar/Michelle Nguyen
+    name: Zain Asgar
     affiliation: Stanford/Gimlet
     avatar: zain.jpg
-    avatar2: michelle.jpg
     url: https://gimletlabs.ai/
 abstract:
 presentation:
