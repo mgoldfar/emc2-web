@@ -29,7 +29,7 @@ speakers:
     avatar: charith.jpg
     order: 5
   - name: Zain Asgar
-    affiliation: Stanford/Gimlet
+    affiliation: Gimlet AI
     url: https://gimletlabs.ai/
     avatar: zain.jpg
     order: 6
