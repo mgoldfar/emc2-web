@@ -6,7 +6,7 @@ time_end:
 title: "Efficient and Scalable Agentic AI With Heterogeneous Systems"
 speaker:
     name: Zain Asgar
-    affiliation: Stanford/Gimlet
+    affiliation: Gimlet AI
     avatar: zain.jpg
     url: https://gimletlabs.ai/
 abstract:
