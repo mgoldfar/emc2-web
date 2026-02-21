@@ -28,10 +28,9 @@ speakers:
     url: https://charithmendis.com/
     avatar: charith.jpg
     order: 5
-  - name: Zain Asgar/Michelle Nguyen
+  - name: Zain Asgar
     affiliation: Stanford/Gimlet
     url: https://gimletlabs.ai/
     avatar: zain.jpg
-    avatar2: michelle.jpg
     order: 6
 ---
