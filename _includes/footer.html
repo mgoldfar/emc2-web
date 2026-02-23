@@ -15,7 +15,26 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.sidenav').sidenav();
-      $('.tabs').tabs();
+      var $tabs = $('.tabs');
+      $tabs.tabs();
+
+      // Activate tab from URL hash (e.g. #tab_competition)
+      function selectTabFromHash() {
+        var hash = window.location.hash;
+        if (hash && $(hash).length) {
+          $tabs.tabs('select', hash.substring(1));
+        }
+      }
+      selectTabFromHash();
+      $(window).on('hashchange', selectTabFromHash);
+      $('.competition-tab-link').on('click', function(e) {
+        e.preventDefault();
+        $tabs.tabs('select', 'tab_competition');
+        var tabContainer = document.querySelector('.program-tab-container');
+        if (tabContainer) {
+          tabContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
       $(".dropdown-trigger").dropdown({ hover: true, constrainWidth: false });
 
       var $scrollBtn = $('#scrollToTop');

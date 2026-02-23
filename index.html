@@ -44,7 +44,24 @@ permalink: /index
 
 </div>
 
+{% assign competition_editions = site.editions | where: "has_competition", true | where: "is_upcoming", true | sort: "event_date" %}
+{% if competition_editions.size > 0 %}
 <div class="section-block fade-in">
+  <h3 class="header"><i class="material-icons">emoji_events</i> EMC² Competition: AI Infrastructure Demos</h3>
+  <p>
+    The EMC² Competition invites researchers, practitioners, and students to present production-ready AI infrastructure systems demonstrating measurable improvements in efficiency, observability, and operational robustness.
+  </p>
+  {% for ed in competition_editions %}
+  <div class="center-align" style="margin-top: 1em;">
+    <a class="waves-effect waves-light btn-large" href="{{ ed.url }}#tab_competition">
+      Competition Details ({{ ed.colocated_short }}) <i class="material-icons right">arrow_forward</i>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="section-block section-alt fade-in">
   {% for ed in upcoming_editions %}
     {% assign speakers_item = site.programs | where: "edition", ed.edition | where: "type", "speakers" | first %}
     {% if speakers_item and speakers_item.speakers.size > 0 %}
@@ -81,7 +98,7 @@ permalink: /index
 
 {% endif %}
 
-<div class="section-block section-alt fade-in">
+<div class="section-block fade-in">
   {% include cfp.html hide_cfp=true %}
 </div>
 
