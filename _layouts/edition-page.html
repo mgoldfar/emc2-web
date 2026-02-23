@@ -51,6 +51,15 @@
         </div>
         <div class="ed-grid-item-header-note">
                 
+            {% if page.has_competition %}
+            <blockquote class="z-depth-1" style="text-align: left;">
+                <p style="padding: 1rem;">
+                    <strong><i class="material-icons" style="vertical-align: middle; font-size: 1.2em;">emoji_events</i> EMC² Competition:</strong> AI Infrastructure Demos — Submit by <strong>March 15</strong>.
+                    <a href="#tab_competition" class="competition-tab-link" style="margin-left: 0.5em;">Learn more &rarr;</a>
+                </p>
+            </blockquote>
+            {% endif %}
+
             {% if page.is_accepting_submission %}
                 {% if page.submission_acceptance_extended %}
                 <blockquote class="z-depth-1" style="text-align: left;">
@@ -109,12 +118,21 @@
             <a href="#tab_program"><i class="material-icons">description</i>  Program</a>
           {% endif %}
           </li>
+          {% if page.has_competition %}
+          <li class="tab col s3"><a href="#tab_competition"><i class="material-icons">emoji_events</i> Competition</a></li>
+          {% endif %}
       </ul>
     </div>
 
     <div id="tab_cfp" class="program-container">
         {% include cfp.html %}
     </div>
+
+    {% if page.has_competition %}
+    <div id="tab_competition" class="program-container">
+        {% include competition.html %}
+    </div>
+    {% endif %}
 
     <div id="tab_program" class="program-container">
         {% for p_group in program %}
@@ -276,19 +294,6 @@
         {% endfor %}
     </div>
 
-    <!-- Sponsors -->
-    {% if page.sponsors %}
-    <div class="program-container">
-        <h3 class="header">Workshop Sponsors</h3>
-        <div class="sponsors-grid">
-            {% for s in page.sponsors %}
-                <a href="{{ s.url }}" target="_blank">
-                    <img src="assets/images/sponsors/{{ s.logo }}" alt="{{ s.name }}" />
-                </a>
-            {% endfor %}
-        </div>
-    </div>
-    {% endif %}
 </main>
 
 {% include footer.html %}
