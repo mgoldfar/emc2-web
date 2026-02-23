@@ -41,6 +41,38 @@ permalink: /sponsors
   {% endif %}
 {% endfor %}
 
+{% for ed in upcoming_editions %}
+  {% if ed.competition_sponsors.size > 0 %}
+    {% assign edition_number = ed.title | split: " " | first %}
+    <h3 class="header">
+      <i class="material-icons">emoji_events</i>
+      {% include ordinal.html number=edition_number %} Edition Competition Sponsors ({{ ed.colocated_short }})
+    </h3>
+
+    <div class="sponsor-list">
+      {% for s in ed.competition_sponsors %}
+      <div class="sponsor-card z-depth-1">
+        <div class="sponsor-card-body">
+          <div class="sponsor-card-logo">
+            <a href="{{ s.url }}" target="_blank">
+              <img src="assets/images/sponsors/{{ s.logo }}" alt="{{ s.name }}" />
+            </a>
+          </div>
+          <div class="sponsor-card-info">
+            <h4 class="dark-primary">
+              <a href="{{ s.url }}" target="_blank">{{ s.name }}</a>
+            </h4>
+            {% if s.description %}
+            <p>{{ s.description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}
+
 {% assign has_any_sponsors = false %}
 {% for ed in upcoming_editions %}
   {% if ed.sponsors.size > 0 %}
