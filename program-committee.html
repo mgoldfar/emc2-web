@@ -18,58 +18,36 @@ reviewers:
       affiliation: Micron Technology
 
 ---
-<!--
-<h3 class="header">Program Committee</h3>
-<div class="row">
-    <div class="col s12 m6">
-        <h4 class="header">General Chairs</h4>
-        <ul class="browser-default">
-            <li>Raj Parihar, Microsoft (rapariha@microsoft.com)</li>
-            <li>Michael Goldfarb, Qualcomm (mgoldfar@qti.qualcomm.com)</li>
-        </ul>
-        <h4 class="header">Publicity and Outreach</h4>
-        <ul class="browser-default">
-            <li>All</li>
-        </ul>
-    </div>
-    <div class="col s12 m6">
-        <h4 class="header">Submission</h4>
-        <ul class="browser-default">
-            <li>Tao Sheng, Amazon (tsheng@amazon.com)</li>
-            <li>Sikandar Mashayak, Wave Computing (smashayak@wavecomp.com)</li>
-        </ul>
-        <h4 class="header">Publication</h4>
-        <ul class="browser-default">
-            <li>Satyam Srivastava, Intel (satyam.srivastava@intel.com)</li>
-            <li>Kushal Datta, NVIDIA (kdatta@nvidia.com)</li>
-        </ul>
-    </div>
-</div>
--->
 
-<h3 class="header">Review Committee</h3>
-<div class="row">
-    <div class="col s12">
-        <ul class="browser-default reviewers-list">
-        {% for r in page.reviewers %}
-            <li>{{ r.name }}, {{ r.affiliation }}</li>
-        {% endfor %}
-        </ul>
+<div class="section-block fade-in">
+    <h3 class="header section-heading">Organizing Committee</h3>
+    <div class="committee-cards">
+    {% for o in site.organizers %}
+        <div class="committee-card">
+            <a href="{{ o.profile_url }}" target="_blank">
+                <img src="assets/images/organizers/{{ o.avatar }}" alt="{{ o.name }}" class="committee-card-avatar z-depth-1" />
+            </a>
+            <div class="committee-card-body">
+                <h4 class="committee-card-name">
+                    <a href="{{ o.profile_url }}" target="_blank">{{ o.name }} <i class="material-icons">open_in_new</i></a>
+                </h4>
+                <div class="committee-card-affiliation">{{ o.affiliation }}</div>
+                <div class="committee-card-bio">{{ o.content | markdownify }}</div>
+                <button class="committee-card-toggle" onclick="toggleBio(this)">Read more</button>
+            </div>
+        </div>
+    {% endfor %}
     </div>
 </div>
 
-<h3 class="header">Organizing Committee</h3>
-{% for o in site.organizers %}
-<div class="row">
-    <div class="col s12">
-        <h4 class="header" style="margin: 0;">
-            <a href="{{ o.profile_url }}" target="_blank">{{ o.name }} <i class="material-icons" style="vertical-align: middle;">link</i></a>
-        </h4>
-        <h5 class="header" style="margin: 0;">{{ o.affiliation }}</h5>
-        <a href="{{ o.profile_url }}" target="_blank">
-            <img src="assets/images/organizers/{{ o.avatar }}" class="z-depth-1 responsive-img valign-wrapper avatar-image valign-wrapper" style="float: right;" />
-        </a>
-        <p>{{ o.content | markdownify }}</p>
+<div class="section-block section-alt fade-in">
+    <h3 class="header section-heading">Review Committee</h3>
+    <div class="reviewer-grid">
+    {% for r in page.reviewers %}
+        <div class="reviewer-item">
+            <span class="reviewer-name">{{ r.name }}</span>
+            <span class="reviewer-affiliation">{{ r.affiliation }}</span>
+        </div>
+    {% endfor %}
     </div>
 </div>
-{% endfor %}

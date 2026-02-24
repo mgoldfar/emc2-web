@@ -723,3 +723,167 @@ main {
     }
 }
 
+/* ============================
+   Committee Page — Organizing Committee Cards
+   ============================ */
+.committee-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.committee-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.75em 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.committee-card:last-child {
+    border-bottom: none;
+}
+
+.committee-card-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-bottom: 0.75em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.committee-card-avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.committee-card-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.committee-card-name {
+    margin: 0 0 0.15em;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #005E93;
+}
+
+.committee-card-name a {
+    color: #005E93;
+    text-decoration: none;
+}
+
+.committee-card-name a:hover {
+    text-decoration: underline;
+}
+
+.committee-card-name i {
+    font-size: 0.85em;
+    vertical-align: middle;
+    opacity: 0.6;
+}
+
+.committee-card-affiliation {
+    color: #757575;
+    font-size: 0.88em;
+    margin-bottom: 0.5em;
+}
+
+.committee-card-bio {
+    line-height: 1.55;
+    color: #444;
+    font-size: 0.9em;
+    max-height: 3.1em;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.35s ease;
+}
+
+.committee-card-bio.expanded {
+    max-height: 60em;
+}
+
+.committee-card-bio p {
+    margin: 0;
+}
+
+.committee-card-toggle {
+    display: inline-block;
+    margin-top: 0.3em;
+    font-size: 0.84em;
+    font-weight: 600;
+    color: #1976D2;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.committee-card-toggle:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+    .committee-cards {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2.5em;
+    }
+
+    .committee-card {
+        padding: 1.5em 0;
+    }
+
+    .committee-card-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* With 2 columns, borders should appear on all but the last row */
+    .committee-card:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+}
+
+/* ============================
+   Committee Page — Reviewer Grid
+   ============================ */
+.reviewer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.reviewer-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35em;
+    padding: 0.75em 0;
+    border-bottom: 1px solid #eee;
+}
+
+.reviewer-item:last-child {
+    border-bottom: none;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.reviewer-affiliation {
+    color: #757575;
+    font-size: 0.9em;
+}
+
+@media screen and (min-width: 768px) {
+    .reviewer-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2em;
+    }
+}
+
