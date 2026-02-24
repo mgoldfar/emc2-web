@@ -177,13 +177,13 @@ img.avatar-image:hover {
 }
 
 .hero-wordcloud {
-    max-height: 350px;
+    max-height: 250px;
     margin-top: 1em;
 }
 
 @media screen and (min-width: 768px) {
     .hero-wordcloud {
-        max-height: 450px;
+        max-height: 320px;
     }
 }
 
@@ -491,116 +491,195 @@ main {
 }
 
 /* ============================
-   Upcoming Workshop Cards
+   Featured Event Banner
    ============================ */
-.upcoming-cards {
+.featured-event {
+    position: relative;
+    min-height: 260px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.upcoming-card {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1em;
-    padding: 1em 1.25em;
-    border-radius: 6px;
-    background: #fff;
-}
-
-@media screen and (max-width: 480px) {
-    .upcoming-card {
-        padding: 0.75em 1em;
-        gap: 0.75em;
-    }
-
-    .upcoming-card-date {
-        min-width: 56px;
-    }
-
-    .upcoming-card-badge {
-        width: 100%;
-    }
-}
-
-.upcoming-card-date {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 64px;
-    padding: 0.5em;
-    border-radius: 6px;
-    background: linear-gradient(135deg, #005E93, #1976D2);
+    margin-top: 2em;
+    margin-bottom: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.featured-event + .featured-event {
+    margin-top: 1.5em;
+}
+
+.featured-event-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,30,50,0.82) 0%, rgba(0,55,90,0.7) 50%, rgba(0,70,115,0.6) 100%);
+}
+
+.featured-event-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    width: 100%;
+    padding: 2.5em 1.5em;
     color: #fff;
+    text-align: center;
+}
+
+.featured-event-label {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.35em 1em;
+    border: 1.5px solid rgba(255,255,255,0.5);
+    border-radius: 3px;
+    margin-bottom: 1em;
+    color: rgba(255,255,255,0.9);
+}
+
+.featured-event-title {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 0 0 0.3em;
+    color: #fff !important;
     line-height: 1.2;
 }
 
-.upcoming-card-month {
-    font-size: 0.7em;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-weight: 600;
-}
-
-.upcoming-card-day {
-    font-size: 1.5em;
-    font-weight: 700;
-}
-
-.upcoming-card-year {
-    font-size: 0.65em;
-    opacity: 0.85;
-}
-
-.upcoming-card-info {
-    flex: 1;
-}
-
-.upcoming-card-badge {
-    flex-shrink: 0;
-}
-
-.upcoming-card-links {
-    display: flex;
-    gap: 0.75em;
-    margin-top: 0.5em;
-    flex-wrap: wrap;
-}
-
-.upcoming-card-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25em;
-    font-size: 0.85em;
-    font-weight: 600;
-    padding: 0.3em 0.75em;
-    border-radius: 4px;
-    background: #005E93;
+.featured-event-title a {
     color: #fff !important;
-    text-decoration: none !important;
-    transition: background 0.2s ease;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    transition: border-color 0.2s ease;
 }
 
-.upcoming-card-link:hover {
-    background: #1976D2;
+.featured-event-title a:hover {
+    border-color: #fff;
     opacity: 1 !important;
 }
 
-.upcoming-card-link-ext {
-    background: transparent;
-    color: #005E93 !important;
-    border: 1px solid #005E93;
+.featured-event-colocated {
+    font-size: 0.95em;
+    margin: 0 0 1.2em;
+    color: rgba(255,255,255,0.75);
 }
 
-.upcoming-card-link-ext:hover {
-    background: #005E93;
+.featured-event-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1.5em;
+    font-size: 0.95em;
+    color: rgba(255,255,255,0.92);
+}
+
+.featured-event-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+}
+
+.featured-event-meta-item i {
+    font-size: 1.15em;
+    opacity: 0.85;
+}
+
+.featured-event-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.featured-event-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    padding: 0.65em 1.75em;
+    border-radius: 4px;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: background 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+}
+
+.featured-event-cta:hover {
+    transform: translateY(-1px);
+    opacity: 1 !important;
+}
+
+.featured-event-cta-primary {
+    background: #ff5722;
     color: #fff !important;
 }
 
-.upcoming-card-link i.material-icons {
-    font-size: 0.95em;
+.featured-event-cta-primary:hover {
+    background: #e64a19;
+}
+
+.featured-event-cta-secondary {
+    background: transparent;
+    color: #fff !important;
+    border: 2px solid rgba(255,255,255,0.7);
+}
+
+.featured-event-cta-secondary:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: #fff;
+}
+
+.featured-event-badge {
+    display: inline-block;
+    padding: 0.4em 1.2em;
+    border-radius: 50px;
+    background: #ff5722;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,87,34,0.5); }
+    50% { box-shadow: 0 0 0 8px rgba(255,87,34,0); }
+}
+
+@media screen and (min-width: 768px) {
+    .featured-event {
+        min-height: 300px;
+    }
+
+    .featured-event-content {
+        padding: 2.5em 2em;
+    }
+
+    .featured-event-title {
+        font-size: 2.2em;
+    }
+
+    .featured-event-meta {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .featured-event {
+        min-height: 340px;
+    }
+
+    .featured-event-title {
+        font-size: 2.4em;
+    }
 }
 
 /* ============================

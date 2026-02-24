@@ -12,37 +12,40 @@ permalink: /index
 </div>
 
 {% if upcoming_editions.size > 0 %}
-<div class="section-block section-alt fade-in">
-  <h3 class="header "><i class="material-icons">memory</i> Upcoming Workshops</h3>
-  <div class="upcoming-cards">
-    {% for ed in upcoming_editions %}
-    <div class="upcoming-card z-depth-1">
-      <div class="upcoming-card-date">
-        <span class="upcoming-card-month">{{ ed.event_date | date: "%b" }}</span>
-        <span class="upcoming-card-day">{{ ed.event_date | date: "%d" }}</span>
-        <span class="upcoming-card-year">{{ ed.event_date | date: "%Y" }}</span>
-      </div>
-      <div class="upcoming-card-info">
-        {% assign edition_number = ed.title | split:" " | first %}
-        <h5 class="dark-primary" style="margin: 0 0 0.25em;">{% include ordinal.html number=edition_number %} Edition - {{ ed.colocated_short }}</h5>
-        <p style="margin: 0; color: #555;">{{ ed.event_location }}</p>
-        <div class="upcoming-card-links">
-          <a href="{{ ed.url }}" class="upcoming-card-link">EMC2 Program <i class="material-icons">arrow_forward</i></a>
-          {% if ed.colocated_url %}
-          <a href="{{ ed.colocated_url }}" target="_blank" class="upcoming-card-link upcoming-card-link-ext">{{ ed.colocated_short }} <i class="material-icons">open_in_new</i></a>
-          {% endif %}
-        </div>
-      </div>
-      {% if ed.is_accepting_submission %}
-      <div class="upcoming-card-badge">
-        <span class="new badge" data-badge-caption="">Accepting Submissions!</span>
-      </div>
+{% for ed in upcoming_editions %}
+{% assign edition_number = ed.title | split:" " | first %}
+<div class="featured-event fade-in" style="background-image: url('assets/images/editions/{{ ed.slug }}.jpg');">
+  <div class="featured-event-overlay"></div>
+  <div class="featured-event-content">
+    <span class="featured-event-label">Upcoming Workshop</span>
+    <h2 class="featured-event-title">{% include ordinal.html number=edition_number %} Edition · <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a></h2>
+    <p class="featured-event-colocated">
+      {{ ed.colocated_long }}
+    </p>
+    <div class="featured-event-meta">
+      <span class="featured-event-meta-item">
+        <i class="material-icons">event</i> {{ ed.event_date | date: "%B %d, %Y" }}
+      </span>
+      <span class="featured-event-meta-item">
+        <i class="material-icons">place</i> {{ ed.event_location }}
+      </span>
+    </div>
+    <div class="featured-event-actions">
+      <a href="{{ ed.url }}" class="featured-event-cta featured-event-cta-primary">
+        View Program <i class="material-icons" style="font-size:1em;">arrow_forward</i>
+      </a>
+      {% if ed.colocated_url %}
+      <a href="{{ ed.colocated_url }}" target="_blank" class="featured-event-cta featured-event-cta-secondary">
+        {{ ed.colocated_short }} <i class="material-icons" style="font-size:1em;">open_in_new</i>
+      </a>
       {% endif %}
     </div>
-    {% endfor %}
+    {% if ed.is_accepting_submission %}
+    <span class="featured-event-badge">Accepting Submissions!</span>
+    {% endif %}
   </div>
-
 </div>
+{% endfor %}
 
 {% assign competition_editions = site.editions | where: "has_competition", true | where: "is_upcoming", true | sort: "event_date" %}
 {% if competition_editions.size > 0 %}
