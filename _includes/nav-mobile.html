@@ -9,7 +9,13 @@
     <!--<li><a href="/emcc">EMCC</a></li>-->
     <li><a href="/submission">Submission</a></li>
     <li><a href="/asplos-26#tab_competition">Competition</a></li>
+    {% assign upcoming_editions = site.editions|where: "is_upcoming",true|sort:"event_date" %}
+    {% if upcoming_editions.size > 0 %}
+    {% assign next_upcoming_edition = upcoming_editions|first %}
+    {% if next_upcoming_edition.is_registering %}
     <li><a href="/registration">Register</a></li>
+    {% endif %}
+    {% endif %}
     <li><a href="/sponsors">Sponsors</a></li>
     <li><a href="/program-committee">Committees</a></li>
     <li><a href="/previous-editions">Previous Editions</a></li>
