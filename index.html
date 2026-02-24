@@ -71,28 +71,30 @@ permalink: /index
     {% assign ed_number = ed.title | split: " " | first %}
     <h3 class="header "><i class="material-icons">people</i> Speakers at the {% include ordinal.html number=ed_number %} Edition - {{ ed.colocated_short }}</h3>
     {% assign sorted_speakers = speakers_item.speakers | sort: "order" %}
-    <div class="speaker-cards">
-      {% for s in sorted_speakers %}
-      <div class="speaker-card">
-        {% if s.avatar2 %}
-        <div class="speaker-card-duo">
-          <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar }}" class="speaker-card-avatar-img speaker-card-duo-left" alt="{{ s.name | split: '/' | first }}" />
-          <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar2 }}" class="speaker-card-avatar-img speaker-card-duo-right" alt="{{ s.name | split: '/' | last }}" />
+    <div class="speaker-cards-wrap">
+      <div class="speaker-cards">
+        {% for s in sorted_speakers %}
+        <div class="speaker-card">
+          {% if s.avatar2 %}
+          <div class="speaker-card-duo">
+            <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar }}" class="speaker-card-avatar-img speaker-card-duo-left" alt="{{ s.name | split: '/' | first }}" />
+            <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar2 }}" class="speaker-card-avatar-img speaker-card-duo-right" alt="{{ s.name | split: '/' | last }}" />
+          </div>
+          {% elsif s.avatar %}
+          <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar }}" class="speaker-card-avatar-img" alt="{{ s.name }}" />
+          {% else %}
+          <div class="speaker-card-avatar">
+            {{ s.name | slice: 0 }}
+          </div>
+          {% endif %}
+          <div class="speaker-card-name">
+            {% if s.url %}<a href="{{ s.url }}" target="_blank">{{ s.name }}</a>
+            {% else %}{{ s.name }}{% endif %}
+          </div>
+          <div class="speaker-card-affiliation">{{ s.affiliation }}</div>
         </div>
-        {% elsif s.avatar %}
-        <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar }}" class="speaker-card-avatar-img" alt="{{ s.name }}" />
-        {% else %}
-        <div class="speaker-card-avatar">
-          {{ s.name | slice: 0 }}
-        </div>
-        {% endif %}
-        <div class="speaker-card-name">
-          {% if s.url %}<a href="{{ s.url }}" target="_blank">{{ s.name }}</a>
-          {% else %}{{ s.name }}{% endif %}
-        </div>
-        <div class="speaker-card-affiliation">{{ s.affiliation }}</div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
     <p class="secondary-text" style="margin-top: 0.5em; font-style: italic;">* More speakers to be announced.</p>
     {% endif %}

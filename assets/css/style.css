@@ -188,6 +188,28 @@ img.avatar-image:hover {
 }
 
 /* Speaker Cards */
+/* Mobile: scroll-hint wrapper with fade edges */
+.speaker-cards-wrap {
+    position: relative;
+}
+
+.speaker-cards-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40px;
+    background: linear-gradient(to right, transparent, #fff);
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.speaker-cards-wrap.scrolled-end::after {
+    opacity: 0;
+}
+
 /* Mobile: horizontal scroll strip */
 .speaker-cards {
     display: flex;
@@ -276,6 +298,10 @@ img.avatar-image:hover {
 
 /* Desktop: 3-column grid */
 @media screen and (min-width: 768px) {
+    .speaker-cards-wrap::after {
+        display: none;
+    }
+
     .speaker-cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

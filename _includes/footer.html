@@ -56,6 +56,17 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
+      // Speaker cards scroll-hint fade
+      document.querySelectorAll('.speaker-cards-wrap').forEach(function(wrap) {
+        var strip = wrap.querySelector('.speaker-cards');
+        if (strip) {
+          strip.addEventListener('scroll', function() {
+            var atEnd = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 5;
+            wrap.classList.toggle('scrolled-end', atEnd);
+          });
+        }
+      });
+
       // Committee bio toggle
       window.toggleBio = function(btn) {
         var bio = btn.previousElementSibling;
