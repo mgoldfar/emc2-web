@@ -56,6 +56,13 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
+      // Committee bio toggle
+      window.toggleBio = function(btn) {
+        var bio = btn.previousElementSibling;
+        bio.classList.toggle('expanded');
+        btn.textContent = bio.classList.contains('expanded') ? 'Read less' : 'Read more';
+      };
+
       // Fade-in on scroll
       var fadeEls = document.querySelectorAll('.fade-in');
       if ('IntersectionObserver' in window) {
