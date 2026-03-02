@@ -110,7 +110,6 @@
     <!-- Program -->
     <div class="program-tab-container">
       <ul class="tabs">
-        <li class="tab col s3"><a href="#tab_cfp"><i class="material-icons">chat</i> CFP</a></li>
           <li class="tab col s3">
           {% if program_size > 0 %}
             <a class="active" href="#tab_program"><i class="material-icons">description</i>  Program</a></li>
@@ -121,11 +120,11 @@
           {% if page.has_competition %}
           <li class="tab col s3"><a href="#tab_competition"><i class="material-icons">emoji_events</i> Competition</a></li>
           {% endif %}
+          {% if page.has_accepted_papers %}
+          <li class="tab col s3"><a href="#tab_papers"><i class="material-icons">description</i> Accepted Papers</a></li>
+          {% endif %}
+          <li class="tab col s3"><a href="#tab_cfp"><i class="material-icons">chat</i> CFP</a></li>
       </ul>
-    </div>
-
-    <div id="tab_cfp" class="program-container">
-        {% include cfp.html %}
     </div>
 
     {% if page.has_competition %}
@@ -133,6 +132,16 @@
         {% include competition.html %}
     </div>
     {% endif %}
+
+    {% if page.has_accepted_papers %}
+    <div id="tab_papers" class="program-container">
+        {% include accepted-papers.html %}
+    </div>
+    {% endif %}
+
+    <div id="tab_cfp" class="program-container">
+        {% include cfp.html %}
+    </div>
 
     <div id="tab_program" class="program-container">
         {% for p_group in program %}
