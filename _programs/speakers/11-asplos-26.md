@@ -33,14 +33,14 @@ speakers:
     url: https://gimletlabs.ai/
     avatar: zain.jpg
     order: 6
-  - name: Nishil Talati
-    affiliation: UIUC
-    url: https://sites.google.com/site/nishiltalatipersonal/
-    avatar: nishil.jpg
-    order: 7
   - name: Sihang Liu
     affiliation: University of Waterloo
     url: https://www.sihangliu.com/
     avatar: sihang.jpg
+    order: 7
+  - name: Urmish Thakker
+    affiliation: SambaNova Systems
+    url: https://urmish.github.io/
+    avatar: urmish.jpg
     order: 8
 ---

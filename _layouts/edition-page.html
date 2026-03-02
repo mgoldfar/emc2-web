@@ -257,18 +257,24 @@
                 {% elsif p.type == "panel" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                     {{ p.content | markdownify }}
-                    <h4 class="dark-primary">Moderator: {{ p.moderator.name }}</h4>
-                    {% if p.speakers.size == 0 %}
-                        <p>Under review.</p>
+                    {% if p.moderator.name %}
+                    <h4 class="light-primary" style="margin-bottom: 0.5em;">Moderator: {{ p.moderator.name }}, {{ p.moderator.affiliation }}</h4>
                     {% endif %}
-                    <p>
+                    {% if p.panelists.size == 0 %}
+                        <p>Panelists to be announced.</p>
+                    {% else %}
+                    <h5 class="dark-primary" style="margin-top: 0.75em; margin-bottom: 0.25em;">Panelists:</h5>
+                    <ul>
                         {% for panelist in p.panelists %}
-                            <h4 class="dark-primary">{{ panelist.name }}, {{panelist.affiliation}}</h4>
-                            {% if p.bio %}
-                                {{ p.bio }}
+                        <li>
+                            <strong>{{ panelist.name }}</strong>, {{ panelist.affiliation }}
+                            {% if panelist.bio %}
+                            <br/>{{ panelist.bio }}
                             {% endif %}
+                        </li>
                         {% endfor %}
-                    </p>
+                    </ul>
+                    {% endif %}
 
                 {% elsif p.type == "announce" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
