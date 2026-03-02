@@ -101,6 +101,59 @@ permalink: /index
   {% endfor %}
 </div>
 
+<div class="section-block fade-in">
+  {% for ed in upcoming_editions %}
+    {% assign panels = site.programs | where: "edition", ed.edition | where: "type", "panel" %}
+    {% for panel in panels %}
+    {% if panel.panelists.size > 0 %}
+    {% assign ed_number = ed.title | split: " " | first %}
+    <h3 class="header"><i class="material-icons">forum</i> Panel Discussion - {{ ed.colocated_short }}</h3>
+    {% if panel.title and panel.title != "TBD" and panel.title != "Panel Discussion" %}
+    <p class="secondary-text" style="font-style: italic; font-size: 1.1em;">"{{ panel.title }}"</p>
+    {% endif %}
+    <div class="speaker-cards-wrap">
+      <div class="speaker-cards">
+        {% if panel.moderator.name %}
+        <div class="speaker-card">
+          {% if panel.moderator.avatar %}
+          <img src="assets/images/speakers/{{ ed.edition }}/{{ panel.moderator.avatar }}" class="speaker-card-avatar-img" alt="{{ panel.moderator.name }}" />
+          {% else %}
+          <div class="speaker-card-avatar">
+            {{ panel.moderator.name | slice: 0 }}
+          </div>
+          {% endif %}
+          <div class="speaker-card-name">
+            {% if panel.moderator.url %}<a href="{{ panel.moderator.url }}" target="_blank">{{ panel.moderator.name }}</a>
+            {% else %}{{ panel.moderator.name }}{% endif %}
+          </div>
+          <div class="speaker-card-affiliation">{{ panel.moderator.affiliation }}</div>
+          <div class="speaker-card-affiliation" style="font-weight: 500; color: #1565c0;">Moderator</div>
+        </div>
+        {% endif %}
+        {% for panelist in panel.panelists %}
+        <div class="speaker-card">
+          {% if panelist.avatar %}
+          <img src="assets/images/speakers/{{ ed.edition }}/{{ panelist.avatar }}" class="speaker-card-avatar-img" alt="{{ panelist.name }}" />
+          {% else %}
+          <div class="speaker-card-avatar">
+            {{ panelist.name | slice: 0 }}
+          </div>
+          {% endif %}
+          <div class="speaker-card-name">
+            {% if panelist.url %}<a href="{{ panelist.url }}" target="_blank">{{ panelist.name }}</a>
+            {% else %}{{ panelist.name }}{% endif %}
+          </div>
+          <div class="speaker-card-affiliation">{{ panelist.affiliation }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <p class="secondary-text" style="margin-top: 0.5em; font-style: italic;">* More panelists to be announced.</p>
+    {% endif %}
+    {% endfor %}
+  {% endfor %}
+</div>
+
 {% endif %}
 
 <div class="section-block fade-in">
