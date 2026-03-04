@@ -43,4 +43,9 @@ speakers:
     url: https://urmish.github.io/
     avatar: urmish.jpg
     order: 8
+  - name: Gennady Pekhimenko
+    affiliation: University of Toronto
+    url: http://www.cs.toronto.edu/~pekhimenko/
+    avatar: gennady.jpg
+    order: 9
 ---
