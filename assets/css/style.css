@@ -210,9 +210,12 @@ img.avatar-image:hover {
     opacity: 0;
 }
 
-/* Mobile: horizontal scroll strip */
+/* Mobile: two-row horizontal scroll grid */
 .speaker-cards {
-    display: flex;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column;
+    grid-auto-columns: 120px;
     gap: 1.25em;
     padding: 1.5em 0;
     overflow-x: auto;
@@ -227,7 +230,6 @@ img.avatar-image:hover {
 
 .speaker-card {
     text-align: center;
-    flex: 0 0 140px;
     scroll-snap-align: start;
 }
 
@@ -303,14 +305,12 @@ img.avatar-image:hover {
     }
 
     .speaker-cards {
-        display: grid;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+        grid-auto-columns: auto;
         grid-template-columns: repeat(3, 1fr);
         gap: 2em 1.5em;
         overflow-x: visible;
-    }
-
-    .speaker-card {
-        flex: none;
     }
 
     .speaker-card-avatar-img {
