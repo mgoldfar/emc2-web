@@ -188,49 +188,25 @@ img.avatar-image:hover {
 }
 
 /* Speaker Cards */
-/* Mobile: scroll-hint wrapper with fade edges */
 .speaker-cards-wrap {
     position: relative;
 }
 
+/* Mobile: hide scroll-hint fade (no horizontal scroll) */
 .speaker-cards-wrap::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 40px;
-    background: linear-gradient(to right, transparent, #fff);
-    pointer-events: none;
-    z-index: 1;
-    transition: opacity 0.3s ease;
+    display: none;
 }
 
-.speaker-cards-wrap.scrolled-end::after {
-    opacity: 0;
-}
-
-/* Mobile: two-row horizontal scroll grid */
+/* Mobile: 2-column vertical grid */
 .speaker-cards {
     display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-auto-flow: column;
-    grid-auto-columns: 120px;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25em;
     padding: 1.5em 0;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-}
-
-.speaker-cards::-webkit-scrollbar {
-    display: none;
 }
 
 .speaker-card {
     text-align: center;
-    scroll-snap-align: start;
 }
 
 .speaker-card-avatar-img {
@@ -300,17 +276,9 @@ img.avatar-image:hover {
 
 /* Desktop: 3-column grid */
 @media screen and (min-width: 768px) {
-    .speaker-cards-wrap::after {
-        display: none;
-    }
-
     .speaker-cards {
-        grid-template-rows: none;
-        grid-auto-flow: row;
-        grid-auto-columns: auto;
         grid-template-columns: repeat(3, 1fr);
         gap: 2em 1.5em;
-        overflow-x: visible;
     }
 
     .speaker-card-avatar-img {
