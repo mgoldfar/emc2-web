@@ -6,6 +6,6 @@ time_end: 2026-03-22 13:45:00
 title: "Sponsor Talk"
 speaker:
     name: TBD
-    affiliation: TBD
+    affiliation: d-Matrix
 presentation:
 ---
