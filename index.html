@@ -96,22 +96,6 @@ permalink: /index
         </div>
         {% endfor %}
         {% for panel in panels %}
-          {% if panel.moderator.name %}
-          <div class="speaker-card">
-            {% if panel.moderator.avatar %}
-            <img src="assets/images/speakers/{{ ed.edition }}/{{ panel.moderator.avatar }}" class="speaker-card-avatar-img" alt="{{ panel.moderator.name }}" />
-            {% else %}
-            <div class="speaker-card-avatar">
-              {{ panel.moderator.name | slice: 0 }}
-            </div>
-            {% endif %}
-            <div class="speaker-card-name">
-              {% if panel.moderator.url %}<a href="{{ panel.moderator.url }}" target="_blank">{{ panel.moderator.name }}</a>
-              {% else %}{{ panel.moderator.name }}{% endif %}
-            </div>
-            <div class="speaker-card-affiliation">{{ panel.moderator.affiliation }}</div>
-          </div>
-          {% endif %}
           {% for panelist in panel.panelists %}
           <div class="speaker-card">
             {% if panelist.avatar %}
