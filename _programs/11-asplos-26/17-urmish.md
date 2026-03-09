@@ -6,7 +6,7 @@ time_end: 2026-03-22 18:00:00
 title: TBD
 speaker:
     name: Urmish Thakker
-    affiliation: SambaNova Systems
+    affiliation: Ex-SambaNova Systems
     avatar: urmish.jpg
     url: https://urmish.github.io/
 presentation:

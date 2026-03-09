@@ -39,7 +39,7 @@ speakers:
     avatar: sihang.jpg
     order: 7
   - name: Urmish Thakker
-    affiliation: SambaNova Systems
+    affiliation: Ex-SambaNova Systems
     url: https://urmish.github.io/
     avatar: urmish.jpg
     order: 8
