@@ -7,6 +7,8 @@ title: "Architecting an energy-first stack for the AI age"
 moderator:
     name: Satyam Srivastava
     affiliation: d-Matrix
+    avatar: satyams.jpg
+    url: https://www.linkedin.com/in/satyam-srivastava-405a6931/
 panelists:
 - name: Nishil Talati
   affiliation: UIUC

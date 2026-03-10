@@ -1,0 +1,97 @@
+{% assign panels = site.programs | where: "edition", page.edition | where: "type", "panel" %}
+{% for panel in panels %}
+
+<!-- Time & Location Bar -->
+<div class="row">
+  <div class="col s12">
+    <div class="card-panel blue-grey lighten-5" style="display: flex; align-items: center; gap: 1.5em; flex-wrap: wrap; padding: 0.75em 1.25em;">
+      <span style="display: inline-flex; align-items: center; gap: 0.3em;">
+        <i class="material-icons" style="font-size: 1.2em; color: #005E93;">schedule</i>
+        <strong>{{ panel.time_start | date: "%H:%M" }} - {{ panel.time_end | date: "%H:%M" }}</strong>
+      </span>
+      <span style="display: inline-flex; align-items: center; gap: 0.3em;">
+        <i class="material-icons" style="font-size: 1.2em; color: #005E93;">event</i>
+        {{ panel.time_start | date: "%A, %B %d, %Y" }}
+      </span>
+      {% if page.event_room %}
+      <span style="display: inline-flex; align-items: center; gap: 0.3em;">
+        <i class="material-icons" style="font-size: 1.2em; color: #005E93;">room</i>
+        {{ page.event_room }}
+      </span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- Title -->
+<div class="row">
+  <div class="col s12">
+    <h3 class="header"><i class="material-icons">forum</i> {{ panel.title }}</h3>
+  </div>
+</div>
+
+<!-- Topic Description Card -->
+<div class="row">
+  <div class="col s12">
+    <blockquote style="border-left: 4px solid #005E93; background: #f5f8fa; padding: 1.25em 1.5em; margin: 0 0 1.5em 0; font-size: 1.05em; line-height: 1.6;">
+      {{ panel.content | markdownify }}
+    </blockquote>
+  </div>
+</div>
+
+<!-- Moderator -->
+{% if panel.moderator.name %}
+<div class="row">
+  <div class="col s12">
+    <h4 class="header">Moderator</h4>
+  </div>
+  <div class="col s12" style="display: flex; align-items: center; gap: 1.25em; padding: 0.75em 0; margin-left: 0.75em;">
+    {% if panel.moderator.avatar %}
+    <img src="assets/images/speakers/{{ panel.edition }}/{{ panel.moderator.avatar }}"
+         style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #005E93;"
+         alt="{{ panel.moderator.name }}" />
+    {% else %}
+    <div style="width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2em; color: #fff; background: linear-gradient(135deg, #005E93, #1976D2); border: 3px solid #005E93;">
+      {{ panel.moderator.name | slice: 0 }}
+    </div>
+    {% endif %}
+    <div>
+      <div style="font-weight: 600; font-size: 1.1em;">
+        {% if panel.moderator.url %}<a href="{{ panel.moderator.url }}" target="_blank">{{ panel.moderator.name }} <i class="material-icons" style="vertical-align: middle; font-size: 1em;">link</i></a>{% else %}{{ panel.moderator.name }}{% endif %}
+      </div>
+      <div class="secondary-text">{{ panel.moderator.affiliation }}</div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- Panelists -->
+{% if panel.panelists.size > 0 %}
+<div class="row">
+  <div class="col s12">
+    <h4 class="header">Panelists</h4>
+  </div>
+  {% for panelist in panel.panelists %}
+  <div class="col s6 m4 l3" style="text-align: center; margin-bottom: 1.5em;">
+    {% if panelist.avatar %}
+    <img src="assets/images/speakers/{{ panel.edition }}/{{ panelist.avatar }}"
+         style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 0.5em;"
+         alt="{{ panelist.name }}" />
+    {% else %}
+    <div style="width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.75em; color: #fff; background: linear-gradient(135deg, #005E93, #1976D2); margin: 0 auto 0.5em;">
+      {{ panelist.name | slice: 0 }}
+    </div>
+    {% endif %}
+    <div style="font-weight: 600; font-size: 0.95em;">
+      {% if panelist.url %}<a href="{{ panelist.url }}" target="_blank">{{ panelist.name }} <i class="material-icons" style="vertical-align: middle; font-size: 0.9em;">link</i></a>{% else %}{{ panelist.name }}{% endif %}
+    </div>
+    <div class="secondary-text" style="font-size: 0.82em;">{{ panelist.affiliation }}</div>
+  </div>
+  {% endfor %}
+  <div class="col s12">
+    <p class="secondary-text" style="font-style: italic;">* More panelists to be announced.</p>
+  </div>
+</div>
+{% endif %}
+
+{% endfor %}

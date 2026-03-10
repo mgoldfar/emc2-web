@@ -120,6 +120,10 @@
           {% if page.has_competition %}
           <li class="tab col s3"><a href="#tab_competition"><i class="material-icons">emoji_events</i> Competition</a></li>
           {% endif %}
+          {% assign panels = site.programs | where: "edition", page.edition | where: "type", "panel" %}
+          {% if panels.size > 0 %}
+          <li class="tab col s3"><a href="#tab_panel"><i class="material-icons">forum</i> Panel</a></li>
+          {% endif %}
           {% if page.has_accepted_papers %}
           <li class="tab col s3"><a href="#tab_papers"><i class="material-icons">description</i> Accepted Papers</a></li>
           {% endif %}
@@ -130,6 +134,13 @@
     {% if page.has_competition %}
     <div id="tab_competition" class="program-container">
         {% include competition.html %}
+    </div>
+    {% endif %}
+
+    {% assign panels = site.programs | where: "edition", page.edition | where: "type", "panel" %}
+    {% if panels.size > 0 %}
+    <div id="tab_panel" class="program-container">
+        {% include panel.html %}
     </div>
     {% endif %}
 
