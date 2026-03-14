@@ -63,7 +63,7 @@
             {% if page.has_competition %}
             <blockquote class="z-depth-1" style="text-align: left;">
                 <p style="padding: 1rem;">
-                    <strong><i class="material-icons" style="vertical-align: middle; font-size: 1.2em;">emoji_events</i> EMC² Competition:</strong> AI Infrastructure Demos, sponsored by <a href="https://runara.ai" target="_blank">Runara.ai</a> — Submit by <strong>March 15</strong>.
+                    <strong><i class="material-icons" style="vertical-align: middle; font-size: 1.2em;">emoji_events</i> EMC2 Competition:</strong> AI Infrastructure Demos, sponsored by <a href="https://runara.ai" target="_blank">Runara.ai</a> — Submit by <strong>March 15</strong>.
                     <a href="#tab_competition" class="competition-tab-link" style="margin-left: 0.5em;">Learn more &rarr;</a>
                 </p>
             </blockquote>
@@ -126,15 +126,18 @@
             <a href="#tab_program"><i class="material-icons">description</i>  Program</a>
           {% endif %}
           </li>
-          {% if page.has_competition %}
-          <li class="tab col s3"><a href="#tab_competition"><i class="material-icons">emoji_events</i> Competition</a></li>
-          {% endif %}
           {% assign panels = site.programs | where: "edition", page.edition | where: "type", "panel" %}
           {% if panels.size > 0 %}
           <li class="tab col s3"><a href="#tab_panel"><i class="material-icons">forum</i> Panel</a></li>
           {% endif %}
           {% if page.has_accepted_papers %}
           <li class="tab col s3"><a href="#tab_papers"><i class="material-icons">description</i> Accepted Papers</a></li>
+          {% endif %}
+          {% if page.has_competition %}
+          <li class="tab col s3"><a href="#tab_competition"><i class="material-icons">emoji_events</i> Competition</a></li>
+          {% endif %}
+          {% if page.has_social_hour %}
+          <li class="tab col s3"><a href="#tab_social_hour"><i class="material-icons">local_bar</i> EMC2 Social Hour</a></li>
           {% endif %}
           <li class="tab col s3"><a href="#tab_cfp"><i class="material-icons">chat</i> CFP</a></li>
       </ul>
@@ -156,6 +159,12 @@
     {% if page.has_accepted_papers %}
     <div id="tab_papers" class="program-container">
         {% include accepted-papers.html %}
+    </div>
+    {% endif %}
+
+    {% if page.has_social_hour %}
+    <div id="tab_social_hour" class="program-container">
+        {% include social-hour.html %}
     </div>
     {% endif %}
 

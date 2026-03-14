@@ -48,19 +48,24 @@ permalink: /index
 {% endfor %}
 
 {% assign competition_editions = site.editions | where: "has_competition", true | where: "is_upcoming", true | sort: "event_date" %}
-{% if competition_editions.size > 0 %}
+{% assign social_hour_editions = site.editions | where: "has_social_hour", true | where: "is_upcoming", true | sort: "event_date" %}
+{% if social_hour_editions.size > 0 %}
+{% assign sh_ed = social_hour_editions | first %}
 <div class="section-block fade-in">
-  <h3 class="header"><i class="material-icons">emoji_events</i> EMC² Competition: AI Infrastructure Demos</h3>
+  <h3 class="header"><a href="{{ sh_ed.url }}#tab_social_hour"><i class="material-icons">local_bar</i> EMC2 Social Hour <i class="material-icons" style="font-size:1em; vertical-align:middle;">arrow_forward</i></a></h3>
   <p>
-    The EMC² Competition, sponsored by <a href="https://runara.ai" target="_blank">Runara.ai</a>, invites researchers, practitioners, and students to present production-ready AI infrastructure systems demonstrating measurable improvements in efficiency, observability, and operational robustness.
+    Join us after the workshop for an informal social hour to connect with fellow researchers, speakers, and organizers. Venue and time details will be provided soon.
   </p>
-  {% for ed in competition_editions %}
-  <div class="center-align" style="margin-top: 1em;">
-    <a class="waves-effect waves-light btn-large" href="{{ ed.url }}#tab_competition">
-      Competition Details ({{ ed.colocated_short }}) <i class="material-icons right">arrow_forward</i>
-    </a>
-  </div>
-  {% endfor %}
+</div>
+{% endif %}
+
+{% if competition_editions.size > 0 %}
+{% assign comp_ed = competition_editions | first %}
+<div class="section-block fade-in">
+  <h3 class="header"><a href="{{ comp_ed.url }}#tab_competition"><i class="material-icons">emoji_events</i> EMC2 Competition: AI Infrastructure Demos <i class="material-icons" style="font-size:1em; vertical-align:middle;">arrow_forward</i></a></h3>
+  <p>
+    The EMC2 Competition, sponsored by <a href="https://runara.ai" target="_blank">Runara.ai</a>, invites researchers, practitioners, and students to present production-ready AI infrastructure systems demonstrating measurable improvements in efficiency, observability, and operational robustness.
+  </p>
 </div>
 {% endif %}
 

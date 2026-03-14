@@ -458,6 +458,13 @@ nav.nav-scrolled {
 /* ============================
    Section blocks with alternating backgrounds
    ============================ */
+.section-block h3.header a {
+    text-decoration: none;
+}
+.section-block h3.header a:hover {
+    text-decoration: underline;
+}
+
 .section-block {
     padding: 2em 0;
 }
