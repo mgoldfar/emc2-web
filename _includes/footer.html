@@ -6,6 +6,16 @@
     </div>
   </footer>
 
+  <div class="speaker-bottom-sheet" id="speakerBottomSheet">
+    <div class="speaker-bottom-sheet-handle"></div>
+    <div class="speaker-bottom-sheet-content">
+      <div class="speaker-bottom-sheet-name" id="sheetName"></div>
+      <div class="speaker-bottom-sheet-affiliation" id="sheetAffiliation"></div>
+      <div class="speaker-bottom-sheet-talk" id="sheetTalk"></div>
+    </div>
+  </div>
+  <div class="speaker-bottom-sheet-overlay" id="speakerSheetOverlay"></div>
+
   <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
     <i class="material-icons">keyboard_arrow_up</i>
   </button>
@@ -66,6 +76,29 @@
           });
         }
       });
+
+      // Speaker bottom sheet (mobile)
+      if (window.innerWidth < 993) {
+        var $sheet = $('#speakerBottomSheet');
+        var $overlay = $('#speakerSheetOverlay');
+        function closeSheet() {
+          $sheet.removeClass('active');
+          $overlay.removeClass('active');
+        }
+        $(document).on('click', '.speaker-card[data-talk-title]', function() {
+          if (window.innerWidth >= 993) return;
+          var $card = $(this);
+          $('#sheetName').text($card.find('.speaker-card-name').text().trim());
+          $('#sheetAffiliation').text($card.find('.speaker-card-affiliation').text().trim());
+          $('#sheetTalk').text($card.attr('data-talk-title'));
+          $sheet.addClass('active');
+          $overlay.addClass('active');
+        });
+        $overlay.on('click', closeSheet);
+        $sheet.on('click', function(e) {
+          if ($(e.target).hasClass('speaker-bottom-sheet-handle')) closeSheet();
+        });
+      }
 
       // Committee bio toggle
       window.toggleBio = function(btn) {

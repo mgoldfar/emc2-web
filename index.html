@@ -77,10 +77,17 @@ permalink: /index
     {% if speakers_item and speakers_item.speakers.size > 0 %}
     <h3 class="header"><i class="material-icons">people</i> Speakers & Panelists - {{ ed.colocated_short }}</h3>
     {% assign sorted_speakers = speakers_item.speakers | sort: "order" %}
+    {% assign talks = site.programs | where: "edition", ed.edition %}
     <div class="speaker-cards-wrap">
       <div class="speaker-cards">
         {% for s in sorted_speakers %}
-        <div class="speaker-card">
+        {% assign talk_title = "" %}
+        {% for t in talks %}
+          {% if t.speaker.name == s.name and t.title != "TBD" %}
+            {% assign talk_title = t.title %}
+          {% endif %}
+        {% endfor %}
+        <div class="speaker-card" {% if talk_title != "" %}data-talk-title="{{ talk_title }}"{% endif %}>
           {% if s.avatar2 %}
           <div class="speaker-card-duo">
             <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar }}" class="speaker-card-avatar-img speaker-card-duo-left" alt="{{ s.name | split: '/' | first }}" />
@@ -102,7 +109,20 @@ permalink: /index
         {% endfor %}
         {% for panel in panels %}
           {% for panelist in panel.panelists %}
-          <div class="speaker-card">
+          {% assign already_listed = false %}
+          {% for s in sorted_speakers %}
+            {% if s.name == panelist.name %}
+              {% assign already_listed = true %}
+            {% endif %}
+          {% endfor %}
+          {% if already_listed %}{% continue %}{% endif %}
+          {% assign panelist_talk_title = "" %}
+          {% for t in talks %}
+            {% if t.speaker.name == panelist.name and t.title != "TBD" %}
+              {% assign panelist_talk_title = t.title %}
+            {% endif %}
+          {% endfor %}
+          <div class="speaker-card" data-talk-title="{% if panelist_talk_title != "" %}{{ panelist_talk_title }}{% else %}Panelist: {{ panel.title }}{% endif %}">
             {% if panelist.avatar %}
             <img src="assets/images/speakers/{{ ed.edition }}/{{ panelist.avatar }}" class="speaker-card-avatar-img" alt="{{ panelist.name }}" />
             {% else %}
