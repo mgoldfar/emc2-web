@@ -123,10 +123,10 @@
 
 .ed-info-bar {
     background: #fff;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #d0d0d0;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 0.85em 1.5em;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    padding: 1em 2em;
     margin: -1.5em auto 1em;
     max-width: 600px;
     display: flex;
@@ -141,6 +141,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.35em;
+    font-size: 1.1em;
+    font-weight: 600;
     font-size: 0.95em;
     color: #424242;
     font-weight: 500;
@@ -315,6 +317,18 @@
 .ed-grid-item-header-note {
     grid-area: header-note;
     text-align: center;
+}
+
+.ed-subtle-note {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0.75em 1.25em;
+    font-size: 0.9em;
+    color: #444;
+    margin-top: 0.75em;
+    display: inline-block;
 }
 
 .ed-grid-item-program-item-time {

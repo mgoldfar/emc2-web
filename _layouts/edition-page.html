@@ -61,12 +61,19 @@
         <div class="ed-grid-item-header-note">
                 
             {% if page.has_competition %}
-            <blockquote class="z-depth-1" style="text-align: left;">
-                <p style="padding: 1rem;">
-                    <strong><i class="material-icons" style="vertical-align: middle; font-size: 1.2em;">emoji_events</i> EMC2 Competition:</strong> AI Infrastructure Demos, sponsored by <a href="https://runara.ai" target="_blank">Runara.ai</a> — Submit by <strong>March 15</strong>.
-                    <a href="#tab_competition" class="competition-tab-link" style="margin-left: 0.5em;">Learn more &rarr;</a>
-                </p>
-            </blockquote>
+            <p class="ed-subtle-note">
+                <i class="material-icons" style="vertical-align: middle; font-size: 1em;">emoji_events</i>
+                <strong>EMC2 Competition:</strong> AI Infrastructure Demos, sponsored by <a href="https://runara.ai" target="_blank">Runara.ai</a> —
+                <a href="#tab_competition" class="competition-tab-link">Learn more &rarr;</a>
+            </p>
+            {% endif %}
+
+            {% if page.has_social_hour %}
+            <p class="ed-subtle-note">
+                <i class="material-icons" style="vertical-align: middle; font-size: 1em;">local_bar</i>
+                <strong>EMC2 Social Hour:</strong> Join us after the workshop — venue and time details coming soon.
+                <a href="#tab_social_hour">Learn more &rarr;</a>
+            </p>
             {% endif %}
 
             {% if page.is_accepting_submission %}
