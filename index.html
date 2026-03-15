@@ -87,7 +87,7 @@ permalink: /index
             {% assign talk_title = t.title %}
           {% endif %}
         {% endfor %}
-        <div class="speaker-card" {% if talk_title != "" %}data-talk-title="{{ talk_title }}"{% endif %}>
+        <div class="speaker-card" data-talk-title="{% if talk_title != "" %}{{ talk_title }}{% else %}Talk title to be announced{% endif %}">
           {% if s.avatar2 %}
           <div class="speaker-card-duo">
             <img src="assets/images/speakers/{{ ed.edition }}/{{ s.avatar }}" class="speaker-card-avatar-img speaker-card-duo-left" alt="{{ s.name | split: '/' | first }}" />
