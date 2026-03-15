@@ -48,6 +48,15 @@
     background-color: #e3f2fd;
 }
 
+.program-tab-container .tabs .tab.tab-expired a,
+.program-tab-container .tabs .tab.tab-expired a:hover {
+    color: #bdbdbd;
+    border-color: #e8e8e8;
+    background-color: #fafafa;
+    pointer-events: none;
+    cursor: default;
+}
+
 .program-tab-container .tabs .tab a.active {
     color: #fff;
     font-weight: 600;

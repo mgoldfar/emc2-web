@@ -28,6 +28,33 @@
       var $tabs = $('.tabs');
       $tabs.tabs();
 
+      // Deadline-based visibility
+      (function() {
+        var now = new Date();
+        var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+        document.querySelectorAll('[data-show-until]').forEach(function(el) {
+          var deadline = new Date(el.getAttribute('data-show-until') + 'T23:59:59');
+          if (today > deadline) {
+            if (el.tagName === 'LI' && el.classList.contains('tab')) {
+              el.classList.add('tab-expired');
+              var anchor = el.querySelector('a');
+              if (anchor) anchor.removeAttribute('href');
+            }
+            if (el.classList.contains('program-container')) {
+              el.style.display = 'none';
+            }
+          }
+        });
+
+        document.querySelectorAll('[data-hide-after]').forEach(function(el) {
+          var deadline = new Date(el.getAttribute('data-hide-after') + 'T23:59:59');
+          if (today > deadline) {
+            el.style.display = 'none';
+          }
+        });
+      })();
+
       // Activate tab from URL hash (e.g. #tab_competition)
       function selectTabFromHash() {
         var hash = window.location.hash;

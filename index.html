@@ -47,11 +47,14 @@ permalink: /index
 </div>
 {% endfor %}
 
-{% assign competition_editions = site.editions | where: "has_competition", true | where: "is_upcoming", true | sort: "event_date" %}
-{% assign social_hour_editions = site.editions | where: "has_social_hour", true | where: "is_upcoming", true | sort: "event_date" %}
-{% if social_hour_editions.size > 0 %}
-{% assign sh_ed = social_hour_editions | first %}
-<div class="section-block fade-in">
+{% for ed_check in upcoming_editions %}
+  {% if ed_check.social_hour_deadline %}
+    {% assign sh_ed = ed_check %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% if sh_ed %}
+<div class="section-block fade-in" data-hide-after="{{ sh_ed.social_hour_deadline | date: '%Y-%m-%d' }}">
   <h3 class="header"><a href="{{ sh_ed.url }}#tab_social_hour"><i class="material-icons">local_bar</i> EMC2 Social Hour <i class="material-icons" style="font-size:1em; vertical-align:middle;">arrow_forward</i></a></h3>
   <p>
     Join us after the workshop for an informal social hour to connect with fellow researchers, speakers, and organizers. Venue and time details will be provided soon.
@@ -59,9 +62,14 @@ permalink: /index
 </div>
 {% endif %}
 
-{% if competition_editions.size > 0 %}
-{% assign comp_ed = competition_editions | first %}
-<div class="section-block fade-in">
+{% for ed_check in upcoming_editions %}
+  {% if ed_check.competition_deadline %}
+    {% assign comp_ed = ed_check %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+{% if comp_ed %}
+<div class="section-block fade-in" data-hide-after="{{ comp_ed.competition_deadline | date: '%Y-%m-%d' }}">
   <h3 class="header"><a href="{{ comp_ed.url }}#tab_competition"><i class="material-icons">emoji_events</i> EMC2 Competition: AI Infrastructure Demos <i class="material-icons" style="font-size:1em; vertical-align:middle;">arrow_forward</i></a></h3>
   <p>
     The EMC2 Competition, sponsored by <a href="https://runara.ai" target="_blank">Runara.ai</a>, invites researchers, practitioners, and students to present production-ready AI infrastructure systems demonstrating measurable improvements in efficiency, observability, and operational robustness.

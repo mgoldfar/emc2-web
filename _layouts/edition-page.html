@@ -60,16 +60,16 @@
     <div class="ed-grid-container-header-meta">
         <div class="ed-grid-item-header-note">
                 
-            {% if page.has_competition %}
-            <p class="ed-subtle-note">
+            {% if page.competition_deadline %}
+            <p class="ed-subtle-note" data-hide-after="{{ page.competition_deadline | date: '%Y-%m-%d' }}">
                 <i class="material-icons" style="vertical-align: middle; font-size: 1em;">emoji_events</i>
                 <strong>EMC2 Competition:</strong> AI Infrastructure Demos, sponsored by <a href="https://runara.ai" target="_blank">Runara.ai</a> —
                 <a href="#tab_competition" class="competition-tab-link">Learn more &rarr;</a>
             </p>
             {% endif %}
 
-            {% if page.has_social_hour %}
-            <p class="ed-subtle-note">
+            {% if page.social_hour_deadline %}
+            <p class="ed-subtle-note" data-hide-after="{{ page.social_hour_deadline | date: '%Y-%m-%d' }}">
                 <i class="material-icons" style="vertical-align: middle; font-size: 1em;">local_bar</i>
                 <strong>EMC2 Social Hour:</strong> Join us after the workshop — venue and time details coming soon.
                 <a href="#tab_social_hour">Learn more &rarr;</a>
@@ -140,18 +140,18 @@
           {% if page.has_accepted_papers %}
           <li class="tab col s3"><a href="#tab_papers"><i class="material-icons">description</i> Accepted Papers</a></li>
           {% endif %}
-          {% if page.has_competition %}
-          <li class="tab col s3"><a href="#tab_competition"><i class="material-icons">emoji_events</i> Competition</a></li>
+          {% if page.competition_deadline %}
+          <li class="tab col s3" data-show-until="{{ page.competition_deadline | date: '%Y-%m-%d' }}"><a href="#tab_competition"><i class="material-icons">emoji_events</i> Competition</a></li>
           {% endif %}
-          {% if page.has_social_hour %}
-          <li class="tab col s3"><a href="#tab_social_hour"><i class="material-icons">local_bar</i> EMC2 Social Hour</a></li>
+          {% if page.social_hour_deadline %}
+          <li class="tab col s3" data-show-until="{{ page.social_hour_deadline | date: '%Y-%m-%d' }}"><a href="#tab_social_hour"><i class="material-icons">local_bar</i> EMC2 Social Hour</a></li>
           {% endif %}
           <li class="tab col s3"><a href="#tab_cfp"><i class="material-icons">chat</i> CFP</a></li>
       </ul>
     </div>
 
-    {% if page.has_competition %}
-    <div id="tab_competition" class="program-container">
+    {% if page.competition_deadline %}
+    <div id="tab_competition" class="program-container" data-show-until="{{ page.competition_deadline | date: '%Y-%m-%d' }}">
         {% include competition.html %}
     </div>
     {% endif %}
@@ -169,8 +169,8 @@
     </div>
     {% endif %}
 
-    {% if page.has_social_hour %}
-    <div id="tab_social_hour" class="program-container">
+    {% if page.social_hour_deadline %}
+    <div id="tab_social_hour" class="program-container" data-show-until="{{ page.social_hour_deadline | date: '%Y-%m-%d' }}">
         {% include social-hour.html %}
     </div>
     {% endif %}
