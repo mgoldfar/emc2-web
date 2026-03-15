@@ -55,7 +55,8 @@ permalink: /index
 {% endfor %}
 {% if sh_ed %}
 <div class="section-block fade-in" data-hide-after="{{ sh_ed.social_hour_deadline | date: '%Y-%m-%d' }}">
-  <h3 class="header"><a href="{{ sh_ed.url }}#tab_social_hour"><i class="material-icons">local_bar</i> EMC2 Social Hour <i class="material-icons" style="font-size:1em; vertical-align:middle;">arrow_forward</i></a></h3>
+  {% assign sh_edition_number = sh_ed.title | split: " " | first %}
+  <h3 class="header"><a href="{{ sh_ed.url }}#tab_social_hour"><i class="material-icons">local_bar</i> EMC2 Social Hour — {% include ordinal.html number=sh_edition_number %} Edition ({{ sh_ed.colocated_short }}) <i class="material-icons" style="font-size:1em; vertical-align:middle;">arrow_forward</i></a></h3>
   <p>
     Join us after the workshop for an informal social hour to connect with fellow researchers, speakers, and organizers. Venue and time details will be provided soon.
   </p>
