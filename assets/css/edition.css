@@ -163,6 +163,35 @@
     color: #1976D2;
 }
 
+/* Social Details Strip */
+
+.social-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0.6em 1em;
+    margin-top: 0.5em;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background: #fafafa;
+}
+
+.social-detail-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #555;
+    white-space: nowrap;
+}
+
+.social-detail-item i {
+    font-size: 1.1em;
+    color: #1976D2;
+}
+
 @media screen and (max-width: 600px) {
     .ed-info-bar {
         flex-direction: column;
