@@ -13,39 +13,39 @@ speakers:
     url: https://www.parthasarathys.com/
     avatar: partha.png
     order: 2
+  - name: Onur Mutlu
+    affiliation: ETH Zurich
+    url: https://people.inf.ethz.ch/omutlu/
+    avatar: onur.jpg
+    order: 3
   - name: Brandon Reagen
     affiliation: NYU
     url: https://brandonreagen.com/
     avatar: reagen.jpg
-    order: 3
+    order: 4
   - name: Esha Choukse
     affiliation: Microsoft
     url: https://www.microsoft.com/en-us/research/people/eschouks/
     avatar: esha.png
-    order: 4
+    order: 5
   - name: Charith Mendis
     affiliation: UIUC
     url: https://charithmendis.com/
     avatar: charith.jpg
-    order: 5
+    order: 6
   - name: Zain Asgar
     affiliation: Gimlet AI
     url: https://gimletlabs.ai/
     avatar: zain.jpg
-    order: 6
+    order: 7
   - name: Sihang Liu
     affiliation: University of Waterloo
     url: https://www.sihangliu.com/
     avatar: sihang.jpg
-    order: 7
+    order: 8
   - name: Urmish Thakker
     affiliation: Ex-SambaNova Systems
     url: https://urmish.github.io/
     avatar: urmish.jpg
-    order: 8
-  - name: Gennady Pekhimenko
-    affiliation: University of Toronto
-    url: http://www.cs.toronto.edu/~pekhimenko/
-    avatar: gennady.jpg
     order: 9
 ---
