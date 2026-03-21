@@ -1,7 +1,8 @@
 ---
 edition: asplos-26
-type: break
-time_start: 2026-03-22 18:30:00
+type: social
+time_start: 2026-03-22 18:15:00
 time_end: 2026-03-22 20:30:00
 title: Social
+location: Drum Bar, Rivers Casino
 ---

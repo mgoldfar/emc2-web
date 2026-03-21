@@ -1,17 +1,20 @@
+{% assign social_event = site.programs | where: "edition", page.edition | where: "type", "social" | first %}
 <div class="row">
   <div class="col s12">
     <h3 class="header"><i class="material-icons">local_bar</i> EMC2 Social</h3>
     <p class="secondary-text" style="margin-top: -0.5em;">Sponsored by <a href="https://www.d-matrix.ai" target="_blank">d-Matrix</a></p>
+    {% if social_event %}
     <div class="social-details">
       <span class="social-detail-item">
         <i class="material-icons">schedule</i>
-        6:30 – 8:30 PM
+        {{ social_event.time_start | date: "%-I:%M" }} – {{ social_event.time_end | date: "%-I:%M %p" }}
       </span>
       <span class="social-detail-item">
         <i class="material-icons">place</i>
-        Drum Bar, Rivers Casino
+        {{ social_event.location }}
       </span>
     </div>
+    {% endif %}
   </div>
 </div>
 

@@ -56,17 +56,20 @@ permalink: /index
 {% if sh_ed %}
 <div class="section-block fade-in" data-hide-after="{{ sh_ed.social_hour_deadline | date: '%Y-%m-%d' }}">
   {% assign sh_edition_number = sh_ed.title | split: " " | first %}
+  {% assign social_event = site.programs | where: "edition", sh_ed.edition | where: "type", "social" | first %}
   <h3 class="header"><a href="{{ sh_ed.url }}#tab_social_hour"><i class="material-icons">local_bar</i> EMC2 Social <i class="material-icons" style="font-size:1em; vertical-align:middle;">arrow_forward</i></a></h3>
+  {% if social_event %}
   <div class="social-details">
     <span class="social-detail-item">
       <i class="material-icons">schedule</i>
-      6:30 – 8:30 PM
+      {{ social_event.time_start | date: "%-I:%M" }} – {{ social_event.time_end | date: "%-I:%M %p" }}
     </span>
     <span class="social-detail-item">
       <i class="material-icons">place</i>
-      Drum Bar, Rivers Casino
+      {{ social_event.location }}
     </span>
   </div>
+  {% endif %}
   <p>
     Join us after the workshop for an informal social to connect with fellow researchers, speakers, and organizers.
   </p>

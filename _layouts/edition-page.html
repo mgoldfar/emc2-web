@@ -69,11 +69,14 @@
             {% endif %}
 
             {% if page.social_hour_deadline %}
+            {% assign social_event = site.programs | where: "edition", page.edition | where: "type", "social" | first %}
+            {% if social_event %}
             <p class="ed-subtle-note" data-hide-after="{{ page.social_hour_deadline | date: '%Y-%m-%d' }}">
                 <i class="material-icons" style="vertical-align: middle; font-size: 1em;">local_bar</i>
-                <strong>EMC2 Social:</strong> Join us after the workshop! 6:30 – 8:30 PM at Drum Bar, Rivers Casino.
+                <strong>EMC2 Social:</strong> Join us after the workshop! {{ social_event.time_start | date: "%-I:%M" }} – {{ social_event.time_end | date: "%-I:%M %p" }} at {{ social_event.location }}.
                 <a href="#tab_social_hour">Learn more &rarr;</a>
             </p>
+            {% endif %}
             {% endif %}
 
             {% if page.is_accepting_submission %}
@@ -218,6 +221,8 @@
                     {% assign talk_class_header = "Close" %}
                 {% when 'break' %}
                     {% assign talk_class_header = "Break" %}
+                {% when 'social' %}
+                    {% assign talk_class_header = "Social" %}
                 {% when 'lunch' %}
                     {% assign talk_class_header = "Lunch Break" %}
                 {% else %}
@@ -252,7 +257,7 @@
                 {% endif %}
             </div>
             <div class="ed-grid-item-program-item-content">
-                {% if p.type == "break" or p.type == "lunch" %}
+                {% if p.type == "break" or p.type == "lunch" or p.type == "social" %}
                     <h3 class="dark-primary">{{ p.title }}</h3>
                 {% elsif p.type == "grand_keynote" or p.type == "keynote" or p.type == "invited_talk" or p.type == "sponsored_talk" %}
                     {% if p.presentation %}
