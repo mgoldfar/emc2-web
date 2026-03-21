@@ -1,45 +1,25 @@
+{% assign paper_sessions = site.programs | where: "edition", page.edition | where: "type", "paper_session" | sort: "time_start" %}
+
 <div class="row">
   <div class="col s12">
     <h3 class="header"><i class="material-icons">description</i> Accepted Papers</h3>
   </div>
 </div>
 
+{% assign ps_counter = 0 %}
+{% for session in paper_sessions %}
+{% assign ps_counter = ps_counter | plus: 1 %}
 <div class="row">
   <div class="col s12">
-    <h5 class="light-primary" style="margin-bottom: 0.5em;">Paper Session #1 (10:30 AM &ndash; 11:15 AM)</h5>
+    <h5 class="light-primary" style="margin-bottom: 0.5em;">Paper Session #{{ ps_counter }} ({{ session.time_start | date: "%-I:%M %p" }} &ndash; {{ session.time_end | date: "%-I:%M %p" }})</h5>
     <ul class="collection">
+      {% for paper in session.papers %}
       <li class="collection-item">
-        <h5 class="dark-primary" style="margin: 0.25em 0;">piPE-SA: Enabling Deeply Pipelined Processing Elements in Systolic Arrays</h5>
-        <p class="secondary-text">Jiayi Wang, Chenyi Wang and Ang Li</p>
+        <h5 class="dark-primary" style="margin: 0.25em 0;">{{ paper.title }}</h5>
+        <p class="secondary-text">{{ paper.authors }}</p>
       </li>
-      <li class="collection-item">
-        <h5 class="dark-primary" style="margin: 0.25em 0;">CacheFlex: Explicitly Control What You Need in Your Cache</h5>
-        <p class="secondary-text">Jingqun Zhang, Weihang Li, Maohua Nie, Yung-Jen Cheng, Jiayi Wang, Shwet Chitnis and Ang Li</p>
-      </li>
-      <li class="collection-item">
-        <h5 class="dark-primary" style="margin: 0.25em 0;">IEI: A Composite Infrastructure Efficiency Index for GPU Inference</h5>
-        <p class="secondary-text">Raj Parihar</p>
-      </li>
+      {% endfor %}
     </ul>
   </div>
 </div>
-
-<div class="row">
-  <div class="col s12">
-    <h5 class="light-primary" style="margin-bottom: 0.5em;">Paper Session #2 (2:45 PM &ndash; 3:30 PM)</h5>
-    <ul class="collection">
-      <li class="collection-item">
-        <h5 class="dark-primary" style="margin: 0.25em 0;">Fast NF4 Dequantization Kernels for Large Language Model Inference</h5>
-        <p class="secondary-text">Xiangbo Qi, Chaoyi Jiang and Murali Annavar</p>
-      </li>
-      <li class="collection-item">
-        <h5 class="dark-primary" style="margin: 0.25em 0;">I-Fuse: Profile-Guided Speculative Load Micro-op Fusion for Data Center Applications</h5>
-        <p class="secondary-text">Deepanjali Mishra, Tanvir Ahmed Khan, Gilles Pokam, Heiner Litz and Akshitha Sriraman</p>
-      </li>
-      <li class="collection-item">
-        <h5 class="dark-primary" style="margin: 0.25em 0;">Store or Recompute? Characterizing the Carbon Tradeoff of KV Cache Retention in LLM Inference</h5>
-        <p class="secondary-text">Abnash Bassi, Jaylen Wang, Fiodar Kazhamiaka, Daniel S. Berger and Akshitha Sriraman</p>
-      </li>
-    </ul>
-  </div>
-</div>
+{% endfor %}

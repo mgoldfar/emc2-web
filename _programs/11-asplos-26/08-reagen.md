@@ -1,8 +1,8 @@
 ---
 edition: asplos-26
 type: invited_talk
-time_start: 2026-03-22 11:45:00
-time_end: 2026-03-22 12:15:00
+time_start: 2026-03-22 11:30:00
+time_end: 2026-03-22 12:00:00
 title: "Private Neural Recommendation with Homomorphic Encryption and Orion"
 speaker:
     name: Brandon Reagen
