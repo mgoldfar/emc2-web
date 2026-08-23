@@ -42,6 +42,16 @@ We invite full-length papers describing original, cutting-edge, and even work-in
   {% endif %}
   <div class="col {{ _col_size }}">
     <h3 class="header"><i class="material-icons">format_list_bulleted</i> Topics for the Workshop</h3>
+    {% if cfp_edition.topics %}
+    <ul class="browser-default list">
+		{% for topic in cfp_edition.topics %}
+		<li>{% if topic.title %}<strong>{{ topic.title }}:</strong> {% endif %}{{ topic.description }}</li>
+		{% endfor %}
+		{% if cfp_edition.formatting_note %}
+		<h3 class="header">{{ cfp_edition.formatting_note }}</h3>
+		{% endif %}
+    </ul>
+    {% else %}
     <ul class="browser-default list">
 		<li>Neural network architectures for resource constrained applications.</li>
 		<li>Efficient hardware designs to implement neural networks including sparsity, locality, and systolic designs.</li>
@@ -62,6 +72,7 @@ We invite full-length papers describing original, cutting-edge, and even work-in
 		<h3 class="header">{{ cfp_edition.formatting_note }}</h3>
 		{% endif %}
     </ul>
+    {% endif %}
   </div>
        <div class="center-align">
             {% for ed in accepting_editions %}
