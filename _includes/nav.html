@@ -11,10 +11,19 @@
 <ul class="right hide-on-med-and-down">
     <li><a href="/">Home</a></li>
 
-    {% assign sorted_editions = site.editions|sort:"event_date"|reverse %}
-    {% for ed in sorted_editions limit: 1 %}
-        <li><a href="{{ ed.url }}">{{ ed.colocated_short }}</a></li>
-    {% endfor %}
+    {% if upcoming_editions.size > 0 %}
+        {% assign nav_edition = upcoming_editions | first %}
+    {% else %}
+        {% assign nav_edition = site.editions | sort: "event_date" | reverse | first %}
+    {% endif %}
+    {% if nav_edition %}
+        {% if nav_edition.colocated_short %}
+        <li><a href="{{ nav_edition.url }}">{{ nav_edition.colocated_short }}</a></li>
+        {% else %}
+        {% assign nav_edition_number = nav_edition.title | split: " " | first %}
+        <li><a href="{{ nav_edition.url }}">{% include ordinal.html number=nav_edition_number %} Edition</a></li>
+        {% endif %}
+    {% endif %}
 
     <!--<li><a href="/emcc">EMCC</a></li>-->
     <li><a href="/submission">Submission</a></li>

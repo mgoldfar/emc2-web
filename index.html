@@ -14,32 +14,41 @@ permalink: /index
 {% if upcoming_editions.size > 0 %}
 {% for ed in upcoming_editions %}
 {% assign edition_number = ed.title | split:" " | first %}
-<div class="featured-event fade-in" style="background-image: url('assets/images/editions/{{ ed.slug }}.jpg');">
+{% assign ed_program_items = site.programs | where: "edition", ed.edition %}
+<div class="featured-event fade-in" style="background-image: url('assets/images/editions/{{ ed.slug }}.jpg'), linear-gradient(120deg, #0d2a54, #006978);">
   <div class="featured-event-overlay"></div>
   <div class="featured-event-content">
     <span class="featured-event-label">Upcoming Workshop</span>
+    {% if ed.colocated_short %}
     <h2 class="featured-event-title">{% include ordinal.html number=edition_number %} Edition · <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a></h2>
+    {% else %}
+    <h2 class="featured-event-title">{% include ordinal.html number=edition_number %} Edition</h2>
+    {% endif %}
     <p class="featured-event-colocated">
-      {{ ed.colocated_long }}
+      {% if ed.colocated_long %}{{ ed.colocated_long }}{% else %}Co-located conference and venue to be announced.{% endif %}
     </p>
     <div class="featured-event-meta">
       <span class="featured-event-meta-item">
-        <i class="material-icons">event</i> {{ ed.event_date | date: "%B %d, %Y" }}
+        <i class="material-icons">event</i> {% if ed.event_date %}{{ ed.event_date | date: "%B %d, %Y" }}{% else %}Date to be announced{% endif %}
       </span>
       <span class="featured-event-meta-item">
-        <i class="material-icons">place</i> {{ ed.event_location }}
+        <i class="material-icons">place</i> {% if ed.event_location %}{{ ed.event_location }}{% else %}Location to be announced{% endif %}
       </span>
     </div>
+    {% if ed_program_items.size > 0 or ed.colocated_url %}
     <div class="featured-event-actions">
+      {% if ed_program_items.size > 0 %}
       <a href="{{ ed.url }}" class="featured-event-cta featured-event-cta-primary">
         View Program <i class="material-icons" style="font-size:1em;">arrow_forward</i>
       </a>
+      {% endif %}
       {% if ed.colocated_url %}
       <a href="{{ ed.colocated_url }}" target="_blank" class="featured-event-cta featured-event-cta-secondary">
         {{ ed.colocated_short }} <i class="material-icons" style="font-size:1em;">open_in_new</i>
       </a>
       {% endif %}
     </div>
+    {% endif %}
     {% if ed.is_accepting_submission %}
     <span class="featured-event-badge">Accepting Submissions!</span>
     {% endif %}

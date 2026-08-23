@@ -9,7 +9,7 @@ permalink: /sponsors
     {% assign edition_number = ed.title | split: " " | first %}
     <h3 class="header">
       <i class="material-icons">star</i>
-      {% include ordinal.html number=edition_number %} Edition Sponsors ({{ ed.colocated_short }})
+      {% include ordinal.html number=edition_number %} Edition Sponsors{% if ed.colocated_short %} ({{ ed.colocated_short }}){% endif %}
     </h3>
 
     <div class="sponsor-list">
@@ -46,7 +46,7 @@ permalink: /sponsors
     {% assign edition_number = ed.title | split: " " | first %}
     <h3 class="header">
       <i class="material-icons">emoji_events</i>
-      {% include ordinal.html number=edition_number %} Edition Competition Sponsors ({{ ed.colocated_short }})
+      {% include ordinal.html number=edition_number %} Edition Competition Sponsors{% if ed.colocated_short %} ({{ ed.colocated_short }}){% endif %}
     </h3>
 
     <div class="sponsor-list">

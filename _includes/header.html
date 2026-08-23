@@ -15,13 +15,13 @@
   <link rel="stylesheet" href="assets/css/edition.css" />
   
   <meta property="og:title" content="{{ site.title }}" />
-  <meta property="og:url" content="https://www.emc2-workshop.com{{ page.url }}" />
+  <meta property="og:url" content="https://www.emc2-ai.org{{ page.url }}" />
   <meta property="og:type" content="website" />
-  {% if page.layout == "edition-page" %}
+  {% if page.layout == "edition-page" and page.colocated_short %}
   <meta property="og:image"
-        content="https://www.emc2-workshop.com/assets/images/editions/{{ page.slug }}.jpg" />
+        content="https://www.emc2-ai.org/assets/images/editions/{{ page.slug }}.jpg" />
   {% else %}
-  <meta property="og:image" content="https://www.emc2-workshop.com/assets/images/wordcloud.svg" />
+  <meta property="og:image" content="https://www.emc2-ai.org/assets/images/wordcloud.svg" />
   {% endif %}
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113122174-1"></script>

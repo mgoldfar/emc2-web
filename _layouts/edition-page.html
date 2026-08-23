@@ -20,19 +20,21 @@
 <main>
     <!-- Header Content -->
     <div class="ed-grid-container-header z-depth-2"
-         style="background-image: url(assets/images/editions/{{ page.slug }}.jpg); background-size: cover; background-position: center;">
+         style="background-image: url(assets/images/editions/{{ page.slug }}.jpg), linear-gradient(120deg, #0d2a54, #006978); background-size: cover; background-position: center;">
         <div class="ed-grid-item-header-title">
             <h1>Energy Efficient Machine Learning and Cognitive Computing</h1>
             {% assign edition_number = page.title|split:" "|first %}
             <h2 class="ed-banner-edition">{% include ordinal.html number=edition_number %} Edition</h2>
         </div>
         <div class="ed-grid-item-header-sub-title">
-			{% if page.is_online == False %}
+			{% if page.colocated_short and page.is_online == False %}
             <h2>Co-located with <a href="{{ page.colocated_url }}"
                 target="_blank"><span style="white-space: nowrap;">{{ page.colocated_short }}</span></a> in {{ page.event_location }}</h2>
-			{% else %}
+			{% elsif page.colocated_short %}
             <h2>{{ page.colocated_long }} <a href="{{ page.colocated_url }}"
                 target="_blank"><span style="white-space: nowrap;">{{ page.colocated_short }}</span></a></h2>
+			{% else %}
+            <h2>Co-located conference and venue to be announced</h2>
 			{% endif %}
         </div>
     </div>
@@ -41,7 +43,11 @@
     <div class="ed-info-bar">
         <span class="ed-info-item">
             <i class="material-icons">event</i>
+            {% if page.event_date %}
             {{ page.event_date|date: "%A, %B %d, %Y" }}
+            {% else %}
+            Date to be announced
+            {% endif %}
         </span>
         {% if page.event_room %}
         <span class="ed-info-item">
@@ -129,13 +135,9 @@
     <!-- Program -->
     <div class="program-tab-container">
       <ul class="tabs">
-          <li class="tab col s3">
           {% if program_size > 0 %}
-            <a class="active" href="#tab_program"><i class="material-icons">description</i>  Program</a></li>
-          {% else %}
-            <a href="#tab_program"><i class="material-icons">description</i>  Program</a>
+          <li class="tab col s3"><a class="active" href="#tab_program"><i class="material-icons">description</i>  Program</a></li>
           {% endif %}
-          </li>
           {% assign panels = site.programs | where: "edition", page.edition | where: "type", "panel" %}
           {% if panels.size > 0 %}
           <li class="tab col s3"><a href="#tab_panel"><i class="material-icons">forum</i> Panel</a></li>
@@ -149,7 +151,7 @@
           {% if page.social_hour_deadline %}
           <li class="tab col s3" data-show-until="{{ page.social_hour_deadline | date: '%Y-%m-%d' }}"><a href="#tab_social_hour"><i class="material-icons">local_bar</i> EMC2 Social</a></li>
           {% endif %}
-          <li class="tab col s3"><a href="#tab_cfp"><i class="material-icons">chat</i> CFP</a></li>
+          <li class="tab col s3"><a {% if program_size == 0 %}class="active" {% endif %}href="#tab_cfp"><i class="material-icons">chat</i> CFP</a></li>
       </ul>
     </div>
 
@@ -182,6 +184,7 @@
         {% include cfp.html %}
     </div>
 
+    {% if program_size > 0 %}
     <div id="tab_program" class="program-container">
         {% for p_group in program %}
         {% assign p_group_items_sorted = p_group.items|sort:"time_end" %}
@@ -349,6 +352,7 @@
         {% endfor %}
         {% endfor %}
     </div>
+    {% endif %}
 
 </main>
 

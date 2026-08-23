@@ -1,12 +1,18 @@
 {% assign accepting_editions = site.editions|where: "is_accepting_submission",true|sort:"event_date" %}
+{% if page.collection == "editions" %}
+    {% assign cfp_edition = page %}
+{% else %}
+    {% assign cfp_edition = site.editions | where: "is_upcoming", true | sort: "event_date" | first %}
+{% endif %}
 
+{% if cfp_edition.objective %}
 <div class="row">
   <div class="col s12">
       <h3 class="header"><i class="material-icons">description</i> Workshop Objective</h3>
-	<p>In the Eleventh edition of EMC2 workshop, we plan to facilitate conversation about the sustainability of large-scale AI computing systems being developed to meet the ever-increasing demands of generative AI. This involves discussions spanning multiple interrelated areas. First, we continue to serve as the leading forums for discussing the energy-efficiency aspect of GenAI workloads which directly impact the overall viability and economic value of AI technology. Second, we reassess the scaling laws of AI with the prevalence of agentic, multi-modal, and reasoning-based models in conjunction with novel techniques such as a highly sparse expert architecture and disaggregated computation. Finally, we discuss sustainable and high-performance computing paradigms towards efficient datacenters and hybrid computing models that can cater to the exponential growth in model sizes, application areas, anduser base. This would allow us to explore ideas to build the hardware, software, systems, and scaling infrastructure, as well as model architectures that make AI technology even more prevalent and accessible.
-	</p>
+	{{ cfp_edition.objective | markdownify }}
   </div>
 </div>
+{% endif %}
 <div class="row">
   {% assign _col_size="s12 m6" %}
   {% if include.hide_cfp %}
@@ -52,7 +58,9 @@ We invite full-length papers describing original, cutting-edge, and even work-in
 		<li>Model compression and optimization techniques that preserve reasoning and problem-solving capabilities.</li>
 		<li>Architectures and frameworks for multi-agent systems and retrieval-augmented generation (RAG) pipelines.</li>
 		<li>Systems-level approaches for scaling future foundation models (e.g., Llama 4, GPT-5 and beyond).</li>
-		<h3 class="header">We will follow that same formatting guidelines and duplicate submission policies as ASPLOS.</h3>
+		{% if cfp_edition.formatting_note %}
+		<h3 class="header">{{ cfp_edition.formatting_note }}</h3>
+		{% endif %}
     </ul>
   </div>
        <div class="center-align">
