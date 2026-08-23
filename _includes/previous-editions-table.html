@@ -1,4 +1,4 @@
-{% assign past_editions = site.editions|where: "is_upcoming",false|reverse %}
+{% assign past_editions = site.editions|where: "is_upcoming",false|sort:"event_date"|reverse %}
 {% if include.limit %}
     {% assign _limit=include.limit %}
 {% else %}
