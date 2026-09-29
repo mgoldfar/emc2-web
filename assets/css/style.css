@@ -616,11 +616,13 @@ main {
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, rgba(0,30,50,0.82) 0%, rgba(0,55,90,0.7) 50%, rgba(0,70,115,0.6) 100%);
+    opacity: var(--banner-dim, 1);
 }
 
 .featured-event-content {
     position: relative;
     z-index: 1;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     max-width: 900px;
     width: 100%;
     padding: 2.5em 1.5em;

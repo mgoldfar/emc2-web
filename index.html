@@ -15,7 +15,7 @@ permalink: /index
 {% for ed in upcoming_editions %}
 {% assign edition_number = ed.title | split:" " | first %}
 {% assign ed_program_items = site.programs | where: "edition", ed.edition %}
-<div class="featured-event fade-in" style="background-image: url('assets/images/editions/{{ ed.slug }}.jpg'), linear-gradient(120deg, #0d2a54, #006978);">
+<div class="featured-event fade-in" style="background-image: url('assets/images/editions/{{ ed.slug }}.jpg'), linear-gradient(120deg, #0d2a54, #006978);{% if ed.banner_dim %} --banner-dim: {{ ed.banner_dim }};{% endif %}">
   <div class="featured-event-overlay"></div>
   <div class="featured-event-content">
     <span class="featured-event-label">Upcoming Workshop</span>

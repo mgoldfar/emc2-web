@@ -20,7 +20,7 @@
 <main>
     <!-- Header Content -->
     <div class="ed-grid-container-header z-depth-2"
-         style="background-image: url(assets/images/editions/{{ page.slug }}.jpg), linear-gradient(120deg, #0d2a54, #006978); background-size: cover; background-position: center;">
+         style="background-image: url(assets/images/editions/{{ page.slug }}.jpg), linear-gradient(120deg, #0d2a54, #006978); background-size: cover; background-position: center;{% if page.banner_dim %} --banner-dim: {{ page.banner_dim }};{% endif %}">
         <div class="ed-grid-item-header-title">
             <h1>Energy Efficient Machine Learning and Cognitive Computing</h1>
             {% assign edition_number = page.title|split:" "|first %}
