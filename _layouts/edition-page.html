@@ -29,7 +29,7 @@
         <div class="ed-grid-item-header-sub-title">
 			{% if page.colocated_short and page.is_online == False %}
             <h2>Co-located with <a href="{{ page.colocated_url }}"
-                target="_blank"><span style="white-space: nowrap;">{{ page.colocated_short }}</span></a> in {{ page.event_location }}</h2>
+                target="_blank"><span style="white-space: nowrap;">{{ page.colocated_short }}</span></a>{% if page.event_location %} in {{ page.event_location }}{% endif %}</h2>
 			{% elsif page.colocated_short %}
             <h2>{{ page.colocated_long }} <a href="{{ page.colocated_url }}"
                 target="_blank"><span style="white-space: nowrap;">{{ page.colocated_short }}</span></a></h2>
