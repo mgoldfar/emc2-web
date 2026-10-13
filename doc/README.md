@@ -46,11 +46,15 @@ The table below describes the configuration fields:
 | colocated_long | A long form name of the co-located conference. | 23rd ACM International Conference on Architectural Support for Programming Languages and Operating Systems |
 | colocated_url | A URL to the co-located conference website. | http://hpca2019.seas.gwu.edu/ |
 | event_date | Date of the workshop. Must be formatted as `YYYY-MM-DD` | 2019-02-17 |
+| event_end_date | Optional last day of a multi-day workshop (`YYYY-MM-DD`); dates then render as a range. | 2027-02-23 |
 | event_location | The city where the workshop is to be held. | Washington D.C. |
 | event_room | The room at the conference venue where the workshop is to be held. | Doogwood Room |
 | event_session | Specifies if the workshop is a full or half-day session. Must be one of `full` or `morning` or `afternoon` | full |
 | is_upcoming | Set to true to indicate this edition should be listed as an upcoming workshop. |  |
 | is_accepting_submission | Set to true to indicate this edition is accepting paper submissions. |  |
+| paper_topics | Optional list of suggested paper topics shown under the Call for Papers. |  |
+| submission_contact | Optional `name`/`email` for submission questions, shown on the submission page. |  |
+| submission_camera_ready | Optional camera-ready date; the row is hidden on the submission page when no edition sets it. | 2027-02-10 |
 
 ## Edition Assets
 

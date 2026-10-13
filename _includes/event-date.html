@@ -1,0 +1,17 @@
+{%- comment -%}
+Renders an edition's workshop date, or a range when `event_end_date` is set.
+Params: ed (edition), weekday (true to include day names).
+{%- endcomment -%}
+{%- assign _start = include.ed.event_date -%}
+{%- assign _end = include.ed.event_end_date -%}
+{%- if _start and _end -%}
+  {%- assign _sm = _start | date: "%Y-%m" -%}{%- assign _em = _end | date: "%Y-%m" -%}
+  {%- if include.weekday -%}{{ _start | date: "%A" }}–{{ _end | date: "%A" }}, {% endif -%}
+  {%- if _sm == _em -%}
+    {{ _start | date: "%B %-d" }}–{{ _end | date: "%-d, %Y" }}
+  {%- else -%}
+    {{ _start | date: "%B %-d" }} – {{ _end | date: "%B %-d, %Y" }}
+  {%- endif -%}
+{%- elsif _start -%}
+  {%- if include.weekday -%}{{ _start | date: "%A, %B %d, %Y" }}{%- else -%}{{ _start | date: "%B %d, %Y" }}{%- endif -%}
+{%- endif -%}

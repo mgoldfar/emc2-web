@@ -29,7 +29,7 @@ permalink: /index
     </p>
     <div class="featured-event-meta">
       <span class="featured-event-meta-item">
-        <i class="material-icons">event</i> {% if ed.event_date %}{{ ed.event_date | date: "%B %d, %Y" }}{% else %}Date to be announced{% endif %}
+        <i class="material-icons">event</i> {% if ed.event_date %}{% include event-date.html ed=ed %}{% else %}Date to be announced{% endif %}
       </span>
       <span class="featured-event-meta-item">
         <i class="material-icons">place</i> {% if ed.event_location %}{{ ed.event_location }}{% else %}Location to be announced{% endif %}

@@ -28,7 +28,7 @@
           {% if ed.on_youtube %}
           <a href="{{ ed.youtube_url }}" target="_blank">YouTube</a>
           {% endif %}
-        <span style="float: right;">{{ ed.event_date|date: "%B %d, %Y"}}</span>
+        <span style="float: right;">{% include event-date.html ed=ed %}</span>
       </li>
     {% endfor %}
 </ul>

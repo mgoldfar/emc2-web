@@ -44,7 +44,7 @@
         <span class="ed-info-item">
             <i class="material-icons">event</i>
             {% if page.event_date %}
-            {{ page.event_date|date: "%A, %B %d, %Y" }}
+            {% include event-date.html ed=page weekday=true %}
             {% else %}
             Date to be announced
             {% endif %}

@@ -54,12 +54,15 @@ show_note: True
                     </td>
                     {% endfor %}
                 </tr>
+                {% assign camera_ready_editions = upcoming_editions | where_exp: "ed", "ed.submission_camera_ready" %}
+                {% if camera_ready_editions.size > 0 %}
                 <tr>
                     <td>Camera Ready</td>
                     {% for ed in upcoming_editions %}
-                    <td>{{ ed.submission_camera_ready|date: "%B %d, %Y" }}</td>
+                    <td>{% if ed.submission_camera_ready %}{{ ed.submission_camera_ready|date: "%B %d, %Y" }}{% else %}To be announced{% endif %}</td>
                     {% endfor %}
                 </tr>
+                {% endif %}
 <!--
                 <tr>
                     <td>EMCC Model Submission</td>
@@ -77,7 +80,7 @@ show_note: True
                 <tr>
                     <td>Workshop</td>
                     {% for ed in upcoming_editions %}
-                    <td>{{ ed.event_date|date: "%B %d, %Y" }}</td>
+                    <td>{% include event-date.html ed=ed %}</td>
                     {% endfor %}
                 </tr>
             </tbody>
@@ -100,7 +103,12 @@ show_note: True
 		<li><b>Style</b>: Submissions must  follow the guidelines provided by the <a href="https://www.ieee.org/conferences/publishing/templates.html">IEEE Double Column Format</a>. Submissions  should state the research problem, motivation, and technical contribution. All submissions must be in English. The submissions should be sent in a single PDF file.</li>
 		<li><b>Desk rejection</b>: Submissions that do not follow the length or style requirements above shall be automatically rejected without consideration of their merits.</li> 
 		<li><b>(Optional) Source code</b>: We encourage authors of accepted submissions to provide a link to their source code. To maintain a double-blind review process, you will be allowed to submit or link your code in the camera-ready stage.</li>
+		{% assign contact_edition = accepting_editions | where_exp: "ed", "ed.submission_contact" | first %}
+		{% if contact_edition %}
+		<li>All questions about submissions should be emailed to {{ contact_edition.submission_contact.name }} (<a href="mailto:{{ contact_edition.submission_contact.email }}">{{ contact_edition.submission_contact.email }}</a>)</li>
+		{% else %}
 		<li>If you have any issues, please email the publication and submission chairs Satyam Srivastava (<a href="mailto:ssrivastava@d-matrix.ai">ssrivastava@d-matrix.ai</a>)</li>
+		{% endif %}
 
 
 <!--
