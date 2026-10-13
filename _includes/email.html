@@ -1,0 +1,14 @@
+{%- comment -%}
+Harvest-resistant email link. The address never appears whole in the HTML;
+the footer script joins the parts into a mailto link when the page loads.
+Params: user + domain, or address (split here at build time).
+{%- endcomment -%}
+{%- if include.address -%}
+  {%- assign _email_parts = include.address | split: "@" -%}
+  {%- assign _email_user = _email_parts[0] -%}
+  {%- assign _email_domain = _email_parts[1] -%}
+{%- else -%}
+  {%- assign _email_user = include.user -%}
+  {%- assign _email_domain = include.domain -%}
+{%- endif -%}
+<a class="js-email" data-user="{{ _email_user }}" data-domain="{{ _email_domain }}">{{ _email_user }} [at] {{ _email_domain }}</a>

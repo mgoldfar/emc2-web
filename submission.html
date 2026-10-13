@@ -108,31 +108,10 @@ show_note: True
 		{% endif %}
 		{% assign contact_edition = accepting_editions | where_exp: "ed", "ed.submission_contact" | first %}
 		{% if contact_edition %}
-		<li>All questions about submissions should be emailed to {{ contact_edition.submission_contact.name }} (<a href="mailto:{{ contact_edition.submission_contact.email }}">{{ contact_edition.submission_contact.email }}</a>)</li>
+		<li>All questions about submissions should be emailed to {{ contact_edition.submission_contact.name }} ({% include email.html address=contact_edition.submission_contact.email %})</li>
 		{% else %}
-		<li>If you have any issues, please email the publication and submission chairs Satyam Srivastava (<a href="mailto:ssrivastava@d-matrix.ai">ssrivastava@d-matrix.ai</a>)</li>
+		<li>If you have any issues, please email the publication and submission chairs Satyam Srivastava ({% include email.html user="ssrivastava" domain="d-matrix.ai" %})</li>
 		{% endif %}
-
-
-<!--
-
-
-                <li>Papers can describe an early-stage research project, advocate an opinion about machine learning and
-                    cognitive computing, reflect on trends in the community, or present anything interesting and worth
-                    exploring as a direction.</li>
-                <li>Papers <em>MUST</em> be submitted in printable PDF format.</li>
-                <li>Papers <em>MUST</em> use the double column formatting guidelines and style file provided here: <a href="https://www.ieee.org/conferences/publishing/templates.html">IEEE Double Column Format</a></li>
-                </li>
-                <li>Papers <em>MUST NOT</em> exceed 5 pages including references.</li>
-                <li>Text must be in no smaller than 10pt font size.</li>
-                <li>Review is single-blind, so please include authors’ names and affiliations on the submitted PDF.</li>
-                <li>All accepted papers will be posted to workshop website for download.</li>
-                <li>Accepted papers will be presented in short talk sessions at the workshop.</li>
-                <li>Authors are encouraged to provide artifacts to be included with their final papers.</li>
-                <li>If you have any issues, please email the publication and submission chairs
-                    Satyam Srivastava (<a href="mailto:satyam.srivastava@intel.com">satyam.srivastava@intel.com</a>) and
-                    Tao Sheng (<a href="mailto:tsheng@amazon.com">tsheng@amazon.com</a>)</li>
--->
             </ul>
         {% if accepting_editions.size > 0 %}
         <br /><br />

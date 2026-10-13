@@ -55,7 +55,7 @@ Copy the EasyChair CFP verbatim into the edition's `cfp_intro`, `paper_topics`,
 
     {% if cfp_edition.submission_contact %}
     <h4 class="header">Contact</h4>
-    <p>All questions about submissions should be emailed to: <a href="mailto:{{ cfp_edition.submission_contact.email }}">{{ cfp_edition.submission_contact.email }}</a></p>
+    <p>All questions about submissions should be emailed to: {% include email.html address=cfp_edition.submission_contact.email %}</p>
     {% endif %}
 
     {% if cfp_edition.is_accepting_submission %}

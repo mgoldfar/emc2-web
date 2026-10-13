@@ -22,6 +22,13 @@ Dynamic content for the site is defined in [collections](https://jekyllrb.com/do
 Collections allow for related content to be defined and manipulated using queries and filters.
 For example, a collection of program items can be filtered based on the date or workshop edition.
 
+## Email Addresses
+
+Never write an email address directly into a page. Use the include, which keeps the address out of the HTML
+until the page loads (protection against address harvesting):
+
+`{% include email.html user="name" domain="example.com" %}` or `{% include email.html address=page.some_email %}`
+
 # Editions
 
 The editions collection contains the instances (e.g. 2nd edition at HPCA 2019) of the workshop.

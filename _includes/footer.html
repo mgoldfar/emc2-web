@@ -25,6 +25,14 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.sidenav').sidenav();
+
+      // Build mailto links from split addresses (see _includes/email.html)
+      document.querySelectorAll('a.js-email').forEach(function(el) {
+        var address = el.getAttribute('data-user') + '@' + el.getAttribute('data-domain');
+        el.href = 'mailto:' + address;
+        el.textContent = address;
+      });
+
       var $tabs = $('.tabs');
       $tabs.tabs();
 
