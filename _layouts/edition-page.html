@@ -181,7 +181,11 @@
     {% endif %}
 
     <div id="tab_cfp" class="program-container">
+        {% if page.cfp_intro %}
+        {% include call-for-papers.html %}
+        {% else %}
         {% include cfp.html %}
+        {% endif %}
     </div>
 
     {% if program_size > 0 %}

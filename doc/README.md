@@ -53,7 +53,9 @@ The table below describes the configuration fields:
 | event_session | Specifies if the workshop is a full or half-day session. Must be one of `full` or `morning` or `afternoon` | full |
 | is_upcoming | Set to true to indicate this edition should be listed as an upcoming workshop. |  |
 | is_accepting_submission | Set to true to indicate this edition is accepting paper submissions. |  |
-| paper_topics | Optional list of suggested paper topics shown under the Call for Papers. |  |
+| cfp_intro | Optional CFP introduction (Markdown), copied verbatim from EasyChair. When set, the edition's CFP tab shows only the call for papers (intro, `paper_topics`, `formatting_note`, dates, `cfp_venue`, contact) instead of the workshop objective and topics. |  |
+| paper_topics | Optional list of suggested paper topics for the CFP tab. |  |
+| cfp_venue | Optional venue sentence for the CFP tab, copied verbatim from EasyChair. |  |
 | submission_contact | Optional `name`/`email` for submission questions, shown on the submission page. |  |
 | submission_camera_ready | Optional camera-ready date; the row is hidden on the submission page when no edition sets it. | 2027-02-10 |
 
