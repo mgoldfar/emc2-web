@@ -47,6 +47,7 @@ The table below describes the configuration fields:
 | colocated_url | A URL to the co-located conference website. | http://hpca2019.seas.gwu.edu/ |
 | event_date | Date of the workshop. Must be formatted as `YYYY-MM-DD` | 2019-02-17 |
 | event_end_date | Optional last day of a multi-day workshop (`YYYY-MM-DD`); dates then render as a range. | 2027-02-23 |
+| event_date_tentative | Set to true when the workshop is on one of `event_date`/`event_end_date`, not yet fixed; renders as "February 22/23, 2027". |  |
 | event_location | The city where the workshop is to be held. | Washington D.C. |
 | event_room | The room at the conference venue where the workshop is to be held. | Doogwood Room |
 | event_session | Specifies if the workshop is a full or half-day session. Must be one of `full` or `morning` or `afternoon` | full |
