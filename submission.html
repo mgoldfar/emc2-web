@@ -17,6 +17,7 @@ show_note: True
         <h4 class="header">Important Dates</h4>
         {% if upcoming_editions.size > 0 %}
         <table>
+            {% if upcoming_editions.size > 1 %}
             <thead>
                 <tr>
                     <th></th>
@@ -27,16 +28,17 @@ show_note: True
                     {% endfor %}
                 </tr>
             </thead>
+            {% endif %}
             <tbody>
                 <tr>
                     <td>Paper Submission</td>
                     {% for ed in upcoming_editions %}
                     <td>
                         {% if ed.submission_deadline_extended %}
-                        <strong style="color: red;">{{ ed.submission_deadline_extended|date: "%B %d, %Y" }} (23:59 PST)</strong>
-                        <span style="text-decoration: line-through;">{{ ed.submission_deadline|date: "%B %d, %Y" }} (23:59 PST)</span>
+                        <strong style="color: red;">{{ ed.submission_deadline_extended|date: "%B %-d, %Y" }} (23:59 PST)</strong>
+                        <span style="text-decoration: line-through;">{{ ed.submission_deadline|date: "%B %-d, %Y" }} (23:59 PST)</span>
                         {% else %}
-                        <strong>{{ ed.submission_deadline|date: "%B %d, %Y" }} (23:59 PST)</strong>
+                        <strong>{{ ed.submission_deadline|date: "%B %-d, %Y" }} (23:59 PST)</strong>
                         {% endif %}
                     </td>
                     {% endfor %}
@@ -46,10 +48,10 @@ show_note: True
                     {% for ed in upcoming_editions %}
                     <td>
                         {% if ed.submission_acceptance_extended %}
-                        <strong style="color: red;">{{ ed.submission_acceptance_extended|date: "%B %d, %Y" }} (23:59 PST)</strong>
-                        <span style="text-decoration: line-through;">{{ ed.submission_acceptance|date: "%B %d, %Y" }} (23:59 PST)</span>
+                        <strong style="color: red;">{{ ed.submission_acceptance_extended|date: "%B %-d, %Y" }} (23:59 PST)</strong>
+                        <span style="text-decoration: line-through;">{{ ed.submission_acceptance|date: "%B %-d, %Y" }} (23:59 PST)</span>
                         {% else %}
-                        <strong>{{ ed.submission_acceptance|date: "%B %d, %Y" }} (23:59 PST)</strong>
+                        <strong>{{ ed.submission_acceptance|date: "%B %-d, %Y" }} (23:59 PST)</strong>
                         {% endif %}
                     </td>
                     {% endfor %}
@@ -59,7 +61,7 @@ show_note: True
                 <tr>
                     <td>Camera Ready</td>
                     {% for ed in upcoming_editions %}
-                    <td>{% if ed.submission_camera_ready %}{{ ed.submission_camera_ready|date: "%B %d, %Y" }}{% else %}To be announced{% endif %}</td>
+                    <td>{% if ed.submission_camera_ready %}{{ ed.submission_camera_ready|date: "%B %-d, %Y" }}{% else %}To be announced{% endif %}</td>
                     {% endfor %}
                 </tr>
                 {% endif %}
@@ -69,7 +71,7 @@ show_note: True
                     {% for ed in upcoming_editions %}
                         <td>
                             {% if ed.has_emcc_submission %}
-                                <strong>{{ ed.emcc_submission_deadline|date: "%B %d, %Y" }}  (23:59 PST)</strong>
+                                <strong>{{ ed.emcc_submission_deadline|date: "%B %-d, %Y" }}  (23:59 PST)</strong>
                             {% else %}
                                 N/A
                             {% endif %}
