@@ -20,9 +20,9 @@ permalink: /index
   <div class="featured-event-content">
     <span class="featured-event-label">Upcoming Workshop</span>
     {% if ed.colocated_short %}
-    <h2 class="featured-event-title">{% include ordinal.html number=edition_number %} Edition · <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a></h2>
+    <h2 class="featured-event-title"><a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a> · <a href="{{ ed.colocated_url }}" target="_blank">{{ ed.colocated_short }}</a></h2>
     {% else %}
-    <h2 class="featured-event-title">{% include ordinal.html number=edition_number %} Edition</h2>
+    <h2 class="featured-event-title"><a href="{{ ed.url }}">{% include ordinal.html number=edition_number %} Edition</a></h2>
     {% endif %}
     <p class="featured-event-colocated">
       {% if ed.colocated_long %}{{ ed.colocated_long }}{% else %}Co-located conference and venue to be announced.{% endif %}
@@ -35,11 +35,11 @@ permalink: /index
         <i class="material-icons">place</i> {% if ed.event_location %}{{ ed.event_location }}{% else %}Location to be announced{% endif %}
       </span>
     </div>
-    {% if ed_program_items.size > 0 or ed.colocated_url %}
+    {% if ed_program_items.size > 0 or ed.is_accepting_submission or ed.colocated_url %}
     <div class="featured-event-actions">
-      {% if ed_program_items.size > 0 %}
+      {% if ed_program_items.size > 0 or ed.is_accepting_submission %}
       <a href="{{ ed.url }}" class="featured-event-cta featured-event-cta-primary">
-        View Program <i class="material-icons" style="font-size:1em;">arrow_forward</i>
+        {% if ed_program_items.size > 0 %}View Program{% else %}Call for Papers{% endif %} <i class="material-icons" style="font-size:1em;">arrow_forward</i>
       </a>
       {% endif %}
       {% if ed.colocated_url %}

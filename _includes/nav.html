@@ -17,12 +17,8 @@
         {% assign nav_edition = site.editions | sort: "event_date" | reverse | first %}
     {% endif %}
     {% if nav_edition %}
-        {% if nav_edition.colocated_short %}
-        <li><a href="{{ nav_edition.url }}">{{ nav_edition.colocated_short }}</a></li>
-        {% else %}
         {% assign nav_edition_number = nav_edition.title | split: " " | first %}
-        <li><a href="{{ nav_edition.url }}">{% include ordinal.html number=nav_edition_number %} Edition</a></li>
-        {% endif %}
+        <li><a href="{{ nav_edition.url }}"{% if nav_edition.colocated_short %} title="{{ nav_edition.colocated_short }}"{% endif %}>{% include ordinal.html number=nav_edition_number %} Edition</a></li>
     {% endif %}
 
     <!--<li><a href="/emcc">EMCC</a></li>-->
