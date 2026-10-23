@@ -52,6 +52,13 @@ permalink: /index
     {% if ed.is_accepting_submission %}
     <span class="featured-event-badge">Accepting Submissions!</span>
     {% endif %}
+    {% if ed.competition %}
+    <div class="featured-event-actions" style="margin: 1em 0 0;"{% if ed.competition.deadline %} data-hide-after="{{ ed.competition.deadline | date: '%Y-%m-%d' }}"{% endif %}>
+      <a {% include competition-link.html ed=ed %} class="featured-event-cta featured-event-cta-primary">
+        {{ ed.competition.name }} <i class="material-icons" style="font-size:1em;">{% if ed.competition.url %}open_in_new{% else %}arrow_forward{% endif %}</i>
+      </a>
+    </div>
+    {% endif %}
   </div>
 </div>
 {% endfor %}
@@ -81,22 +88,6 @@ permalink: /index
   {% endif %}
   <p>
     Join us after the workshop for an informal social to connect with fellow researchers, speakers, and organizers.
-  </p>
-</div>
-{% endif %}
-
-{% for ed_check in upcoming_editions %}
-  {% if ed_check.competition %}
-    {% assign comp_ed = ed_check %}
-    {% break %}
-  {% endif %}
-{% endfor %}
-{% if comp_ed %}
-{% assign competition = comp_ed.competition %}
-<div class="section-block fade-in"{% if competition.deadline %} data-hide-after="{{ competition.deadline | date: '%Y-%m-%d' }}"{% endif %}>
-  <h3 class="header"><a {% include competition-link.html ed=comp_ed %}><i class="material-icons">emoji_events</i> EMC2 Competition: {{ competition.name }} <i class="material-icons" style="font-size:1em; vertical-align:middle;">{% if competition.url %}open_in_new{% else %}arrow_forward{% endif %}</i></a></h3>
-  <p>
-    {{ competition.summary }}{% if comp_ed.competition_sponsors.size > 0 %} Sponsored by {% include sponsor-links.html sponsors=comp_ed.competition_sponsors %}.{% endif %}
   </p>
 </div>
 {% endif %}

@@ -65,8 +65,8 @@ The table below describes the configuration fields:
 | cfp_venue | Optional venue sentence for the CFP tab, copied verbatim from EasyChair. |  |
 | submission_contact | Optional `name`/`email` for submission questions, shown on the submission page. |  |
 | submission_camera_ready | Optional camera-ready date; the row is hidden on the submission page when no edition sets it. | 2027-02-10 |
-| competition | Optional competition held with this edition: `name`, `url` (the competition's own site, if it has one), `summary` (one sentence), `description` (Markdown), `contact` (email) and `deadline` (last day to enter, `YYYY-MM-DD`). Adds a Competition tab to the edition page that summarizes the competition and links to its site. While the edition is upcoming, it also adds a home-page section, a note at the top of the edition page and a "Competition" nav link; the home-page section and the note hide after `deadline`. Without a `url`, put the full details in `description` and the links go to the tab instead. |  |
-| competition_sponsors | Optional list of competition sponsors (`name`, `logo`, `url`, `description`), shown on the sponsors page and as "sponsored by" on the competition's tab, note and home-page section. |  |
+| competition | Optional competition held with this edition: `name`, `url` (the competition's own site, if it has one), `summary` (one sentence), `description` (Markdown), `contact` (email) and `deadline` (last day to enter, `YYYY-MM-DD`). Adds a Competition tab to the edition page that summarizes the competition and links to its site. While the edition is upcoming, it also adds a button with the competition's name to the edition's home-page card (below "Accepting Submissions!"), a note at the top of the edition page and a "Competition" nav link; the button and the note hide after `deadline`. Without a `url`, put the full details in `description` and the links go to the tab instead. |  |
+| competition_sponsors | Optional list of competition sponsors (`name`, `logo`, `url`, `description`), shown on the sponsors page and as "sponsored by" on the competition's tab and note. |  |
 
 ## Edition Assets
 
