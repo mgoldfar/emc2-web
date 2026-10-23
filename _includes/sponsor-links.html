@@ -1,0 +1,8 @@
+{%- comment -%}
+Linked sponsor names, joined as "A", "A and B" or "A, B and C".
+Params: sponsors (list of entries with name and url).
+{%- endcomment -%}
+{%- for s in include.sponsors -%}
+  {%- unless forloop.first -%}{%- if forloop.last -%}{{ " and " }}{%- else -%}{{ ", " }}{%- endif -%}{%- endunless -%}
+  <a href="{{ s.url }}" target="_blank">{{ s.name }}</a>
+{%- endfor -%}

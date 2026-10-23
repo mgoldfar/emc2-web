@@ -86,16 +86,17 @@ permalink: /index
 {% endif %}
 
 {% for ed_check in upcoming_editions %}
-  {% if ed_check.competition_deadline %}
+  {% if ed_check.competition %}
     {% assign comp_ed = ed_check %}
     {% break %}
   {% endif %}
 {% endfor %}
 {% if comp_ed %}
-<div class="section-block fade-in" data-hide-after="{{ comp_ed.competition_deadline | date: '%Y-%m-%d' }}">
-  <h3 class="header"><a href="{{ comp_ed.url }}#tab_competition"><i class="material-icons">emoji_events</i> EMC2 Competition: AI Infrastructure Demos <i class="material-icons" style="font-size:1em; vertical-align:middle;">arrow_forward</i></a></h3>
+{% assign competition = comp_ed.competition %}
+<div class="section-block fade-in"{% if competition.deadline %} data-hide-after="{{ competition.deadline | date: '%Y-%m-%d' }}"{% endif %}>
+  <h3 class="header"><a {% include competition-link.html ed=comp_ed %}><i class="material-icons">emoji_events</i> EMC2 Competition: {{ competition.name }} <i class="material-icons" style="font-size:1em; vertical-align:middle;">{% if competition.url %}open_in_new{% else %}arrow_forward{% endif %}</i></a></h3>
   <p>
-    The EMC2 Competition, sponsored by <a href="https://runara.ai" target="_blank">Runara.ai</a>, invites researchers, practitioners, and students to present production-ready AI infrastructure systems demonstrating measurable improvements in efficiency, observability, and operational robustness.
+    {{ competition.summary }}{% if comp_ed.competition_sponsors.size > 0 %} Sponsored by {% include sponsor-links.html sponsors=comp_ed.competition_sponsors %}.{% endif %}
   </p>
 </div>
 {% endif %}

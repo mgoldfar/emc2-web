@@ -1,0 +1,9 @@
+{%- comment -%}
+Link attributes for an edition's competition: its own site when `competition.url`
+is set, otherwise the Competition tab on the edition page. Params: ed.
+{%- endcomment -%}
+{%- if include.ed.competition.url -%}
+href="{{ include.ed.competition.url }}" target="_blank"
+{%- else -%}
+href="{{ include.ed.url }}#tab_competition"
+{%- endif -%}

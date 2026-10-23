@@ -11,6 +11,9 @@
         {% assign nav_edition_number = nav_edition.title | split: " " | first %}
         <li><a href="{{ nav_edition.url }}"{% if nav_edition.colocated_short %} title="{{ nav_edition.colocated_short }}"{% endif %}>{% include ordinal.html number=nav_edition_number %} Edition</a></li>
     {% endif %}
+    {% if nav_edition.is_upcoming and nav_edition.competition %}
+        <li><a {% include competition-link.html ed=nav_edition %}>Competition</a></li>
+    {% endif %}
 
     <!--<li><a href="/emcc">EMCC</a></li>-->
     <li><a href="/submission">Submission</a></li>
