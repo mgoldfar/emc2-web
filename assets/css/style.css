@@ -716,12 +716,12 @@ main {
 }
 
 .featured-event-cta-primary {
-    background: #ff5722;
+    background: #1976D2;
     color: #fff !important;
 }
 
 .featured-event-cta-primary:hover {
-    background: #e64a19;
+    background: #1565C0;
 }
 
 .featured-event-cta-secondary {
