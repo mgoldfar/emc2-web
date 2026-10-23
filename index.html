@@ -61,6 +61,9 @@ permalink: /index
     {% endif %}
   </div>
 </div>
+{% if ed.visa_url %}
+<p class="featured-event-note">Please don't contact the workshop committee for visa help or letters of invitation. See the <a href="{{ ed.visa_url }}" target="_blank">{{ ed.colocated_short | default: "conference" }} visa page</a> instead.</p>
+{% endif %}
 {% endfor %}
 
 {% for ed_check in upcoming_editions %}

@@ -748,6 +748,11 @@ main {
     animation: badge-pulse 2s ease-in-out infinite;
 }
 
+.featured-event-note {
+    margin: 1em 0;
+    text-align: center;
+}
+
 @keyframes badge-pulse {
     0%, 100% { box-shadow: 0 0 0 0 rgba(255,87,34,0.5); }
     50% { box-shadow: 0 0 0 8px rgba(255,87,34,0); }

@@ -52,6 +52,7 @@ The table below describes the configuration fields:
 | colocated_short | A short name of the co-located conference. | HPCA 2019 |
 | colocated_long | A long form name of the co-located conference. | 23rd ACM International Conference on Architectural Support for Programming Languages and Operating Systems |
 | colocated_url | A URL to the co-located conference website. | http://hpca2019.seas.gwu.edu/ |
+| visa_url | Optional link to the co-located conference's visa page. Adds a note below the edition's home-page card asking visitors to use that page instead of contacting the workshop committee. | https://aaai.org/conference/aaai/aaai-27/visa-letters-of-invitation/ |
 | event_date | Date of the workshop. Must be formatted as `YYYY-MM-DD` | 2019-02-17 |
 | event_end_date | Optional last day of a multi-day workshop (`YYYY-MM-DD`); dates then render as a range. | 2027-02-23 |
 | event_date_tentative | Set to true when the workshop is on one of `event_date`/`event_end_date`, not yet fixed; renders as "February 22/23, 2027". |  |
